@@ -1,4 +1,8 @@
+# Regexp Blacklist
+#Tracking and ads
 /(\.)?(logging|crashlytics|metrics|analytics|telemetry|stats|events|crashlyticsreports|tracking|insights\-collector|(d)?trace)(\.)?/
-/^(support|www)\.image-line\.com/
 /^ad([es])?\./
+
+#Specific Site Blocking
+/^(support|www)\.image-line\.com/
 #/^rr[0-9]+-*sn-[A-Za-z0-9]+\.googlevideo\.com/
