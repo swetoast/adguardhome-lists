@@ -25,7 +25,7 @@
 /^(community|images|acoustid|clients|discover\.provider|downloads|scrobbles|lyricfind|mbz|metadata\.provider|songkick|together)?(\.)?plex\.tv/
 
 # Firefox
-/^((profile\.accounts\.)?firefox\.com|^(((firefox\.settings|sync-1-us-west1-g\.sync|shavar|push|token)\.services\.)|(normandy\.cdn|versioncheck-bg\.addons|firefox-settings-attachments\.cdn|aus5|www)(\.)?)?mozilla\.com)/
+/^((profile\.accounts\.)?firefox\.com|^(((firefox\.settings|sync-1-us-west1-g\.sync|shavar|push|token|normandy-cdn)\.services\.)|(versioncheck-bg\.addons|((firefox-settings-attachments|normandy)\.cdn|aus5|www)(\.)?)?mozilla\.(com|net)))/
 
 # Blizzard Launcher
 /^((eu\.(patch|version)|alert-eu|beta\.content-ui|us-legal)\.battle\.net|^((eu\.)?api(\.))?blizzard.com)/
