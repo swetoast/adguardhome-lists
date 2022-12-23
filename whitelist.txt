@@ -49,4 +49,4 @@
 # Nintendo Switch
 /^((broker|dauth|aauth)-lp1\.ndas\.srv|sun\.hac\.lp1\.d4c|broker\.lp1\.npns\.srv|receive-lp1\.dg\.srv|app-a04\.lp1\.npns\.srv|ctest\.cdn|aqua\.hac\.lp1\.d4c|tagaya\.hac\.lp1\.eshop|bcat-(list|data)-lp1\.cdn|accounts|capi\.lp1\.op2|nncs[12]-lp1\.n\.n\.srv|ctest-ul-lp1\.cdn|dragons\.hac\.lp1\.dragons|shop|consumer\.lp1\.npns\.srv|pushmo\.hac\.lp1\.eshop|bcat-topics-lp1\.cdn)\.nintendo\.net/
 # Google
-/^((0\.client-channel|android\.clients|mail|inbox|clients[1-9]|cse|video-stats\.l)\.)?google.com|^googleapis\.com|^gstatic\.com|^(manifest|redirector)\.googlevideo\.com|(geo|yt)3\.ggpht\.com/
+/^((0\.client-channel|android\.clients|mail|inbox|clients[1-9]|cse|video-stats\.l)\.)?google.com|^googleapis\.com|^(ssl\.)?gstatic\.com|^(manifest|redirector)\.googlevideo\.com|(geo|yt)3\.ggpht\.com/
