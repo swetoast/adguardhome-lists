@@ -26,3 +26,5 @@
 /^(d([12]|ci)\.sophosupd\.com|^4\.sophosxl\.net)/
 # Steam
 /^(((test|store)\.steampowered\.com|^(ext2-(ams1|sto[21])|ext4-lhr1|ipv6check-http)\.steamserver\.net)|steam-chat.com)|^(client-update|community)\.akamai\.steamstatic\.com/
+# Authy
+/(^(pkg|electron)\.)?authy\.com)/
