@@ -19,7 +19,7 @@
 # Firefox
 /^((profile\.accounts\.)?firefox\.com|^(((firefox\.settings|sync-1-us-west1-g\.sync|shavar|push|token|normandy-cdn|contile)\.services\.)|(versioncheck-bg\.addons|((firefox-settings-attachments|normandy)\.cdn|aus5|www)(\.)?)?mozilla\.(com|net)))/
 # Blizzard Launcher
-/^((eu\.(patch|version)|alert-eu|beta\.content-ui|us-legal)\.battle\.net|^(((eu\.)?api||level3(\.ssl)?)\.)?blizzard.com)/
+/^((eu\.(patch|version)|alert-eu|beta\.content-ui|us-legal)\.battle\.net|^(((eu\.)?api|eu\.cdn|level3(\.ssl)?)\.)?blizzard.com)/
 # Logitech My Harmony
 /^(((sus\.dhg|svcs|home)\.)?myharmony\.com|^(pubsub|ps-600)\.pubnub\.com)/
 # Sophos Antivirus
