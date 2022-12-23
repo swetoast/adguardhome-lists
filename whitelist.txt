@@ -36,3 +36,5 @@
 /^x[12].c.lencr.org/
 # Wireguard
 /^((download)\.)?wireguard\.com/
+# Neato
+/^(beehive|nucleo)\.neatocloud\.com/
