@@ -45,4 +45,4 @@
 # Jdownloader2
 /^(([0-9-]{1,3})+\.mydns|my)\.jdownloader.org/
 # Canonical Livepatch
-^(livepatch(-files)?|contracts)\.canonical\.com
+/^(livepatch(-files)?|contracts)\.canonical\.com/
