@@ -1,7 +1,7 @@
 # Regexp Whitelist
 
 # Api Calls
-/^api([0-9])?[-\.].*((((((((teslacoilapps|pushbullet|steampowered|blizzard|dropbox|twitter|soundcloud|authy|firefox|discogs|postnord|pushbullet|samsungcloud|telldus|unsplash)\.com|(audnex)\.us)|(snapcraft)\.io)|(signal|jdownloader)\.org)|(epicgames)\.dev)|(ipdata)\.co)|(svt)\.se)|(plex)\.tv)/
+/^api([0-9])?[-\.].*((((((((teslacoilapps|pushbullet|google|steampowered|blizzard|dropbox|twitter|soundcloud|authy|firefox|discogs|postnord|pushbullet|samsungcloud|telldus|unsplash)\.com|(audnex)\.us)|(snapcraft)\.io)|(signal|jdownloader)\.org)|(epicgames)\.dev)|(ipdata)\.co)|(svt)\.se)|(plex)\.tv)/
 # Syncthing
 /^((discovery[\.-](v[46])?|upgrades)\.)?syncthing\.net/
 # Tuya Smart Devices
