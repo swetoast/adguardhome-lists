@@ -44,3 +44,5 @@
 /(^(static|fw-download)\.ubnt|^global\.(stun|turn)\.twilio|^(device|update)\.amplifi|^sp-dir\.uwn)\.com/
 # Jdownloader2
 /^(([0-9-]{1,3})+\.mydns|my)\.jdownloader.org/
+# Canonical Livepatch
+^(livepatch(-files)?|contracts)\.canonical\.com
