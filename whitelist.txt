@@ -28,3 +28,5 @@
 /^(((test|store)\.steampowered\.com|^(ext2-(ams1|sto[21])|ext4-lhr1|ipv6check-http)\.steamserver\.net)|steam-chat.com)|^(client-update|community)\.akamai\.steamstatic\.com/
 # Authy
 /(^(pkg|electron)\.)?authy\.com)/
+# Signal
+/((cdn(2)?|chat|storage|updates(2)?)\.)?signal\.org/
