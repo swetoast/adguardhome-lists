@@ -7,7 +7,7 @@
 # Tuya Smart Devices
 /^(a3|m[12])\.tuyaeu\.com/
 # NTP Pools
-/^[0-3]((\.)?(openwrt|arch|ubnt|debian)?\.pool\.ntp\.org)/
+/^[0-3]((\.)?(android|openwrt|arch|ubnt|debian)?\.pool\.ntp\.org)/
 # Online Certificate Status Protocol
 /^ocsp(2)?\.(((digicert|globalsign|sectigo|sca1b\.amazontrust|starfieldtech|usertrust|(root(ca1|g2)\.amazontrust))\.com|(pki)\.goog)|(swisssign)\.net)/
 # Discord
@@ -48,3 +48,5 @@
 /^(livepatch(-files)?|contracts)\.canonical\.com/
 # Nintendo Switch
 /^((broker|dauth|aauth)-lp1\.ndas\.srv|sun\.hac\.lp1\.d4c|broker\.lp1\.npns\.srv|receive-lp1\.dg\.srv|app-a04\.lp1\.npns\.srv|ctest\.cdn|aqua\.hac\.lp1\.d4c|tagaya\.hac\.lp1\.eshop|bcat-(list|data)-lp1\.cdn|accounts|capi\.lp1\.op2|nncs[12]-lp1\.n\.n\.srv|ctest-ul-lp1\.cdn|dragons\.hac\.lp1\.dragons|shop|consumer\.lp1\.npns\.srv|pushmo\.hac\.lp1\.eshop|bcat-topics-lp1\.cdn)\.nintendo\.net/
+# Google
+/^((0\.client-channel|android\.clients|clients[1-9]|cse|video-stats\.l)\.)?google.com|^googleapis\.com|^gstatic\.com|^(manifest|redirector)\.googlevideo\.com|(geo|yt)3\.ggpht\.com/
