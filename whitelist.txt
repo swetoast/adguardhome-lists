@@ -15,7 +15,7 @@
 # Epic Games
 /^((account|catalog)-public-service-prod0[0-9]|datarouter|entitlement-public-service-prod0[0-9]|friends-public-service-prod0[0-9]|launcher-public-service-prod0[0-9]|lightswitch-public-service-prod0[0-9]|merchantpool[0-9]|orderprocessor-public-service-ecomprod0[0-9]|payment-website-pci|xmpp-service-prod)(\.ol)?\.epicgames\.com/
 # Plex
-/^(community|images|acoustid|clients|discover\.provider|downloads|scrobbles|lyricfind|mbz|metadata\.provider|songkick|together)?(\.)?plex\.tv/
+/^((community|images|acoustid|clients|discover\.provider|downloads|scrobbles|lyricfind|mbz|metadata\.provider|songkick|together)?\.)?plex\.tv|(resources-cdn\.)?plexapp\.com/
 # Firefox
 /^((profile\.accounts\.)?firefox\.com|^(((firefox\.settings|sync-1-us-west1-g\.sync|shavar|push|token|normandy-cdn|contile)\.services\.)|(versioncheck-bg\.addons|((firefox-settings-attachments|normandy)\.cdn|aus5|www)(\.)?)?mozilla\.(com|net)))/
 # Blizzard Launcher
