@@ -32,3 +32,5 @@
 /^((cdn(2)?|chat|storage|updates(2)?)\.)?signal\.org/
 # Telldus
 /^((alya|ishita|fw)\.)?telldus\.com/
+# Lets Encrypt
+/^x[12].c.lencr.org/
