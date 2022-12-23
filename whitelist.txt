@@ -16,7 +16,7 @@
 /^ocsp(2)?\.(((digicert|globalsign|sectigo|sca1b\.amazontrust|starfieldtech|usertrust)\.com|(pki)\.goog)|(swisssign)\.net)/
 
 # Discord
-/^((images-ext-1|cdn|media|dl)\.?discordapp\.(com|net)|^((updates|status)\.)?discord\.com|^(gateway|gateway-us-east1-c)\.discord\.gg|^(latency)\.discord.media)/
+/^((images-ext-[1-9]|cdn|media|dl)\.?discordapp\.(com|net)|^((updates|status)\.)?discord\.com|^(gateway|gateway-us-east1-c)\.discord\.gg|^(latency)\.discord.media)/
 
 # Epic Games
 /^((account|catalog)-public-service-prod0[0-9]|datarouter|entitlement-public-service-prod0[0-9]|friends-public-service-prod0[0-9]|launcher-public-service-prod0[0-9]|lightswitch-public-service-prod0[0-9]|merchantpool[0-9]|orderprocessor-public-service-ecomprod0[0-9]|payment-website->
