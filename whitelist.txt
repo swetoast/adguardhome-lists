@@ -34,3 +34,5 @@
 /^((alya|ishita|fw)\.)?telldus\.com/
 # Lets Encrypt
 /^x[12].c.lencr.org/
+# Wireguard
+/^((download)\.)?wireguard\.com/
