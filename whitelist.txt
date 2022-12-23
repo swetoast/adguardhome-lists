@@ -46,3 +46,5 @@
 /^(([0-9-]{1,3})+\.mydns|my)\.jdownloader.org/
 # Canonical Livepatch
 /^(livepatch(-files)?|contracts)\.canonical\.com/
+# Nintendo Switch
+/^(receive-lp1\.dg\.srv|app-a04\.lp1\.npns\.srv|ctest\.cdn|aqua\.hac\.lp1\.d4c|tagaya\.hac\.lp1\.eshop|bcat-(list|data)-lp1\.cdn)\.nintendo\.net/
