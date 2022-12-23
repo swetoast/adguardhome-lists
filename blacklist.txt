@@ -1,0 +1,4 @@
+/(\.)?(logging|crashlytics|metrics|analytics|telemetry|stats|events|crashlyticsreports|tracking|insights\-collector|(d)?trace)(\.)?/
+/^(support|www)\.image-line\.com/
+/^ad([es])?\./
+#/^rr[0-9]+-*sn-[A-Za-z0-9]+\.googlevideo\.com/

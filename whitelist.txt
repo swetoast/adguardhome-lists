@@ -1,0 +1,11 @@
+/^api([0-9])?[-\.].*((((((((teslacoilapps|pushbullet|blizzard|dropbox|twitter|soundcloud|authy|firefox|discogs|postnord|pushbullet|samsungcloud|telldus|unsplash)\.com|(audnex)\.us)|(snapcraft)\.io)|(signal|jdownloader)\.org)|(epicgames)\.dev)|(ipdata)\.co)|(svt)\.se)|(plex)\.tv)/
+/^discovery[\.-](v[46])?(\.)?syncthing\.net/
+/^(a3|m[12])\.tuyaeu\.com/
+/^[0-3]((\.)?(openwrt|arch|debian)?\.pool\.ntp\.org)/
+/^ocsp(2)?\.(((digicert|globalsign|sectigo|sca1b\.amazontrust|starfieldtech|usertrust)\.com|(pki)\.goog)|(swisssign)\.net)/
+/^((images-ext-1|cdn|media|dl)\.?discordapp\.(com|net)|^((updates|status)\.)?discord\.com|^(gateway|gateway-us-east1-c)\.discord\.gg|^(latency)\.discord.media)/
+/^((account|catalog)-public-service-prod0[0-9]|datarouter|entitlement-public-service-prod0[0-9]|friends-public-service-prod0[0-9]|launcher-public-service-prod0[0-9]|lightswitch-public-service-prod0[0-9]|merchantpool[0-9]|orderprocessor-public-service-ecomprod0[0-9]|payment-website->
+/^(community|images|acoustid|clients|discover\.provider|downloads|scrobbles|lyricfind|mbz|metadata\.provider|songkick|together)?(\.)?plex\.tv/
+^((profile\.accounts\.)?firefox\.com|^(((firefox\.settings|sync-1-us-west1-g\.sync|shavar|push|token)\.services\.)|(normandy\.cdn|versioncheck-bg\.addons|firefox-settings-attachments\.cdn|aus5|www)(\.)?)?mozilla\.com)
+/^((eu\.(patch|version)|alert-eu|beta\.content-ui|us-legal)\.battle\.net|^((eu\.)?api(\.))?blizzard.com)/
+/^(((sus\.dhg|svcs|home)\.)?myharmony\.com|^(pubsub|ps-600)\.pubnub\.com)/
