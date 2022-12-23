@@ -29,4 +29,6 @@
 # Authy
 /(^(pkg|electron)\.)?authy\.com)/
 # Signal
-/((cdn(2)?|chat|storage|updates(2)?)\.)?signal\.org/
+/^((cdn(2)?|chat|storage|updates(2)?)\.)?signal\.org/
+# Telldus
+/^((alya|ishita|fw)\.)?telldus\.com/
