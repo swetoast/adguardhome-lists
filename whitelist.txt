@@ -9,7 +9,7 @@
 # NTP Pools
 /^[0-3]((\.)?(openwrt|arch|ubnt|debian)?\.pool\.ntp\.org)/
 # Online Certificate Status Protocol
-/^ocsp(2)?\.(((digicert|globalsign|sectigo|sca1b\.amazontrust|starfieldtech|usertrust)\.com|(pki)\.goog)|(swisssign)\.net)/
+/^ocsp(2)?\.(((digicert|globalsign|sectigo|sca1b\.amazontrust|starfieldtech|usertrust|(root(ca1|g2)\.amazontrust))\.com|(pki)\.goog)|(swisssign)\.net)/
 # Discord
 /^((images-ext-[1-9]|cdn|media|dl)\.?discordapp\.(com|net)|^((updates|status)\.)?discord\.com|^(gateway|gateway-us-east1-[a-z])\.discord\.gg|^(latency)\.discord.media)/
 # Epic Games
