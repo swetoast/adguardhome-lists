@@ -39,7 +39,7 @@
 # Neato
 /^(beehive|nucleo)\.neatocloud\.com/
 # Armory Crate
-/^((rog-live-service|www|mymessage|rog-content-platform|dlcdn-rogboxbu2|account)\.)?asus.com/
+/^((rog-live-service|gaming-config|www|mymessage|rog-content-platform|dlcdn-rogboxbu2|account)\.)?asus.com/
 # Amplify HD
 /(^(static|fw-download)\.ubnt|^global\.(stun|turn)\.twilio|^(device|update)\.amplifi|^sp-dir\.uwn)\.com/
 # Jdownloader2
