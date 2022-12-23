@@ -22,5 +22,7 @@
 /^((eu\.(patch|version)|alert-eu|beta\.content-ui|us-legal)\.battle\.net|^((eu\.)?api(\.))?blizzard.com)/
 #Logitech My Harmony
 /^(((sus\.dhg|svcs|home)\.)?myharmony\.com|^(pubsub|ps-600)\.pubnub\.com)/
-#Sophos Antivirus
+# Sophos Antivirus
 /^(d([12]|ci)\.sophosupd\.com|^4\.sophosxl\.net)/
+# Steam
+/^(((test|store)\.steampowered\.com|^(ext2-(ams1|sto[21])|ext4-lhr1|ipv6check-http)\.steamserver\.net)|steam-chat.com)|^(client-update|community)\.akamai\.steamstatic\.com/
