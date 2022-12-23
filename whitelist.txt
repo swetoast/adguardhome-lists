@@ -32,3 +32,6 @@
 
 #Logitech My Harmony
 /^(((sus\.dhg|svcs|home)\.)?myharmony\.com|^(pubsub|ps-600)\.pubnub\.com)/
+
+Sophos Antivirus
+/^(d([12]|ci)\.sophosupd\.com|^4\.sophosxl\.net)/
