@@ -7,7 +7,7 @@
 # Tuya Smart Devices
 /^(a3|m[12])\.tuyaeu\.com/
 # NTP Pools
-/^[0-3]((\.)?(openwrt|arch|debian)?\.pool\.ntp\.org)/
+/^[0-3]((\.)?(openwrt|arch|ubnt|debian)?\.pool\.ntp\.org)/
 # Online Certificate Status Protocol
 /^ocsp(2)?\.(((digicert|globalsign|sectigo|sca1b\.amazontrust|starfieldtech|usertrust)\.com|(pki)\.goog)|(swisssign)\.net)/
 # Discord
