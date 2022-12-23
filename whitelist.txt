@@ -38,3 +38,5 @@
 /^((download)\.)?wireguard\.com/
 # Neato
 /^(beehive|nucleo)\.neatocloud\.com/
+# Armory Crate
+/^((rog-live-service|www|mymessage|rog-content-platform|dlcdn-rogboxbu2|account)\.)?asus.com/
