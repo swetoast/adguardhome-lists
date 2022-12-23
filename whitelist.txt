@@ -41,4 +41,4 @@
 # Armory Crate
 /^((rog-live-service|www|mymessage|rog-content-platform|dlcdn-rogboxbu2|account)\.)?asus.com/
 # Amplify HD
-/(^(static|sp-dir\.uwn|fw-download)\.ubnt|^global\.(stun|turn)\.twilio|^(device|update)\.amplifi)\.com/
+/(^(static|fw-download)\.ubnt|^global\.(stun|turn)\.twilio|^(device|update)\.amplifi|^sp-dir\.uwn)\.com/
