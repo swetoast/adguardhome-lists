@@ -9,5 +9,5 @@
 /^pixels?[-.]/
 /^banners?[_.-]/
 
-#Specific Site Blocking
+# Specific Site Blocking (all subdomains and site)
 /(.*\.)?(imrworldwide\.com|sentry\.io)/
