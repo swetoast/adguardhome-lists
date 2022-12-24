@@ -73,7 +73,7 @@
 /^(((sus\.dhg|svcs|home)\.)?myharmony\.com|^(pubsub|ps-600)\.pubnub\.com)/
 
 ## Telldus
-/^((alya|ishita|triya|fw)\.)?telldus\.com/
+/^((alya|ishita|garima|triya|fw)\.)?telldus\.com/
 
 ## Neato
 /^(beehive|nucleo)\.neatocloud\.com/
