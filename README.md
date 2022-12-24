@@ -1,5 +1,5 @@
 # Adguardhome Lists
-White and Blacklist for Popular Applications
+White and Blacklist for Popular Applications and Sites
 
 Add to  your AdGuardHome instance
 
