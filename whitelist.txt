@@ -73,7 +73,7 @@
 /^(px1|^a(3)?|^(m([12]|q\.gw)))\.tuyaeu\.com/
 
 ## Logitech My Harmony
-/^(((sus\.dhg|svcs|home)\.)?myharmony\.com|^(pubsub|ps-600)\.pubnub\.com)/
+/^(((sus\.dhg|svcs|home|appcompatibility)\.)?myharmony\.com|^(pubsub|ps-600)\.pubnub\.com)|accounts\.logi\.com/
 
 ## Telldus
 /^((alya|ishita|garima|triya|kavya|navya|fw)\.)?telldus\.com/
