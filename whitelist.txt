@@ -92,7 +92,7 @@
 /^((s(2)?\.)?youtube\.com|^youtu\.be|^youtube-nocookie\.com|^(i(1)?|s)\.ytimg\.com)/
 
 ## Instagram
-/^((cdn)?instagram|^nstagram\.c10r\.facebook)\.com/
+/^((www|z-p42-instagram\.c10r)\.)?instagram.com|^(s(content|tatic)\.)cdninstagram\.com/
 
 ## Twitter
 /^(twimg|twitter)\.com|^t\.co/
