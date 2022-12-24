@@ -27,6 +27,12 @@
 ## Epic Games
 /^((account|catalog)-public-service-prod0[0-9]|datarouter|entitlement-public-service-prod0[0-9]|friends-public-service-prod0[0-9]|launcher-public-service-prod0[0-9]|lightswitch-public-service-prod0[0-9]|merchantpool[0-9]|orderprocessor-public-service-ecomprod0[0-9]|payment-website-pci|xmpp-service-prod)(\.ol)?\.epicgames\.com/
 
+## Prism Launcher
+/(i18n\.)?prismlauncher.org/
+
+## Rockstar Launcher
+/((^(gamedownloads|(auth-)?rgl-prod\.ros|rgl|prod\.cloud)\.)?rockstargames\.com|^a\.rsg\.sc|^rockstar-api\.arkoselabs\.com)/
+
 ## Plex
 /^((community|dashboard|app|sonos|images|o1\.email|proxy|pubsub|staging|status|tvdb2|o2\.sg0|acoustid|clients|discover\.provider|downloads|scrobbles|lyricfind|mbz|metadata\.provider|songkick|together)?\.)?plex\.tv|((resources-cdn|my|nine\.plugins|node|tvthemes)\.)?plexapp\.com/
 
