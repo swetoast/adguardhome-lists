@@ -33,7 +33,7 @@
 # Telldus
 /^((alya|ishita|fw)\.)?telldus\.com/
 # Lets Encrypt
-/^(x[12]\.c|r3\.o)\.lencr.org/
+/^((x[12]\.c|r3\.o)\.lencr.org|letsencrypt\.org)/
 # Wireguard
 /^((download)\.)?wireguard\.com/
 # Neato
