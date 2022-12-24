@@ -1,7 +1,10 @@
 # Regexp Blacklist
 #Tracking and ads
-/(\.)?(logging|crashlytics|metrics|analytics|telemetry|stats|events|crashlyticsreports|tracking|insights\-collector|(d)?trace)(\.)?/
+/(\.)?(logging|crashlytics|metrics|analytics|telemetry|stat(s|istics)?[|events|crashlyticsreports|track(ing)?|insights\-collector|(d)?trace)(\.)?/
 /^ad([es])?\./
+/^aff(iliat(es?|ion))?[_.-]/
+/^beacons?[0-9]*[_.-]/
+/^count(ers?)?[0-9]*[_.-]/
 
 #Specific Site Blocking
 
