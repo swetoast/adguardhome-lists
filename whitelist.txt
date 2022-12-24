@@ -83,3 +83,6 @@
 
 # Dropbox
 /((^(dl|ns[12])\.)?dropbox\.com|^(dl)\.dropboxusercontent\.com)/
+
+#Twitter
+/^(twimg|twitter)\.com|^t\.co/
