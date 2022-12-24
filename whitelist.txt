@@ -81,7 +81,7 @@
 
 # Websites and Devices
 ## Google
-/^((0\.client-channel|android\.clients|mail|inbox|clients[1-9]|cse|www(3\.l)?|video-stats\.l|id)\.)?google.com|^googleapis\.com|^(ssl\.)?gstatic\.com|^(manifest|redirector)\.googlevideo\.com|(geo|yt)3\.ggpht\.com/
+/^((0\.client-channel|android\.clients|mail|inbox|clients[1-9]|cse|ogs|play|pki-goog\.l|apis|plus\.l|www(3\.l)?|video-stats\.l|id)\.)?google.com|^googleapis\.com|^(ssl\.)?gstatic\.com|^(manifest|redirector)\.googlevideo\.com|(geo|yt)3\.ggpht\.com/
 
 ## Amplify HD
 /(^(static|fw-download)\.ubnt|^global\.(stun|turn)\.twilio|^(device|update)\.amplifi|^sp-dir\.uwn)\.com/
