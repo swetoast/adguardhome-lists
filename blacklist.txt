@@ -11,3 +11,4 @@
 # Specific Site Blocking (all subdomains and site)
 /(.*\.)?(imrworldwide\.com|sentry\.io|brandmetrics\.com|brandmetrics\.com|tsyndicate\.com|adnxs\.com|moatads\.com|app-measurement\.com|admob\.com|statsy\.net)/
 /^app\.adjust\.(world|com|net\.in)/
+/^(developer)\.asustor.com/
