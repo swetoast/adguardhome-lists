@@ -4,6 +4,9 @@
 ## Api Calls
 /^api([0-9])?[-\.].*((((((((teslacoilapps|accounts\.nintendo|minecraftservices|techlandonlineservices|pushbullet|github|google|steampowered|blizzard|dropbox|twitter|soundcloud|authy|firefox|discogs|postnord|pushbullet|samsungcloud|telldus|unsplash)\.com|(audnex)\.us)|(snapcraft)\.io)|(signal|jdownloader)\.org)|(epicgames)\.dev)|(ipdata)\.co)|(svt)\.se)|(plex)\.tv)/
 
+## Google Apis
+/(userlocation|play|steamcloud-eu-fra\.storage|fcm|android|www|fonts|(notifications|geller|jnn)-pa)\.googleapis.com/
+
 ## NTP Pools
 /^[0-3]((\.)?(android|openwrt|arch|ubnt|debian)?\.pool\.ntp\.org)/
 
