@@ -57,7 +57,7 @@
 /^((rog-live-service|gaming-config|www|mymessage|rog-content-platform|dlcdn-rogboxbu2|account)\.)?asus.com/
 
 ## Authy
-/(^(pkg|electron)\.)?authy\.com)/
+/(^(pkg|electron)\.)?authy\.com/
 
 ## Signal
 /^((cdn(2)?|chat|storage|updates(2)?)\.)?signal\.org/
