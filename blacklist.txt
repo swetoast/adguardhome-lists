@@ -5,8 +5,8 @@
 /^beacons?[0-9]*[_.-]/
 /^count(ers?)?[0-9]*[_.-]/
 /^mads\./
-/^pixels?[-.]/
+/^pixel(s)?[-.]/
 /^banners?[_.-]/
 
 # Specific Site Blocking (all subdomains and site)
-/(.*\.)?(imrworldwide\.com|sentry\.io)/
+/(.*\.)?(imrworldwide\.com|sentry\.io|brandmetrics\.com|brandmetrics\.com)/
