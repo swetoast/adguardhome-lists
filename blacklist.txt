@@ -9,5 +9,5 @@
 /^banners?[_.-]/
 
 # Specific Site Blocking (all subdomains and site)
-/(.*\.)?(imrworldwide\.com|sentry\.io|brandmetrics\.com|brandmetrics\.com|tsyndicate\.com|adnxs\.com|moatads\.com|app-measurement\.com)/
+/(.*\.)?(imrworldwide\.com|sentry\.io|brandmetrics\.com|brandmetrics\.com|tsyndicate\.com|adnxs\.com|moatads\.com|app-measurement\.com|admob\.com)/
 /^app\.adjust\.(world|com|net\.in)/
