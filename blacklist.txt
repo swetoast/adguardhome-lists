@@ -1,5 +1,5 @@
 # Regexp Blacklist
-/(\.)?(logging|crashlytics|metrics|analytics|telemetry|stat(s|istics)?[|events|crashlyticsreports|track(ing)?|insights\-collector|(d)?trace)(\.)?/
+/(\.)?(logging|crashlytics|metrics|analytics|telemetry|stat(s|istics)?|events|crashlyticsreports|track(ing)?|insights\-collector|(d)?trace)(\.)?/
 /^ad([sxve]?[0-9]*|system)[_.-]([^.[:space:]]+\.){1,}|[_.-]ad([sxv]?[0-9]*|system)[_.-]/
 /^(.+[_.-])?adse?rv(er?|ice)?s?[0-9]*[_.-]/
 /^(.+[_.-])?telemetry[_.-]/
