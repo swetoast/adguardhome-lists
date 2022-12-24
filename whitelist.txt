@@ -20,6 +20,9 @@
 /^(livepatch(-files)?|contracts)\.canonical\.com/
 
 # Clients
+##Archlinux
+/^((aur|mirrors|bbs|security|accounts|pages|repos|archive|status|wiki|lists|git|svn|www|mail|bugs|md|redirect|dev|monitoring)\.)archlinux\.org/
+
 ## Syncthing
 /^((discovery[\.-](v[46])?|upgrades)\.)?syncthing\.net/
 
