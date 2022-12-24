@@ -65,6 +65,9 @@
 ## Dropbox
 /((^(dl|ns[12])\.)?dropbox\.com|^(dl)\.dropboxusercontent\.com)/
 
+## Lightning Alarm Weatherplaza
+/^(geo|gdpr-wrapper|vendors)\.privacymanager\.io|^maps\.infoplaza\.nl|^cluster\.api\.meteoplaza\.com/
+
 # Smart Devices
 #¤ Tuya Smart Devices
 /^(px1|^a(3)?|^(m([12]|q\.gw)))\.tuyaeu\.com/
