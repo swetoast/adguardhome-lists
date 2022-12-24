@@ -2,7 +2,6 @@
 /(\.)?(logging|crashlytics(reports)?|metrics|analytics|telemetry|stat(s|istics)?|events|track(ing)?|insights\-collector|(d)?trace)(\.)?/
 /^ad([sxve]?[0-9]*|system)[_.-]([^.[:space:]]+\.){1,}|[_.-]ad([sxv]?[0-9]*|system)[_.-]/
 /^(.+[_.-])?adse?rv(er?|ice)?s?[0-9]*[_.-]/
-# /^(adtrack(er|ing)|adim(age|g)s|advert(s|is(ing|ements?))|aff(iliat(es?|ion)))?[0-9]*[_.-]/ //Needs reworking
 /^beacons?[0-9]*[_.-]/
 /^count(ers?)?[0-9]*[_.-]/
 /^mads\./
