@@ -5,7 +5,7 @@
 # Syncthing
 /^((discovery[\.-](v[46])?|upgrades)\.)?syncthing\.net/
 # Tuya Smart Devices
-/^(a3|m[12])\.tuyaeu\.com/
+/^(px1|^a(3)?|^(m([12]|q\.gw)))\.tuyaeu\.com/
 # NTP Pools
 /^[0-3]((\.)?(android|openwrt|arch|ubnt|debian)?\.pool\.ntp\.org)/
 # Online Certificate Status Protocol
