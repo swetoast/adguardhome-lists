@@ -54,3 +54,5 @@
 /^((s(2)?\.)?youtube\.com|^youtu\.be|^youtube-nocookie\.com|^(i(1)?|s)\.ytimg\.com)/
 # Instagram
 /^((cdn)?instagram|^nstagram\.c10r\.facebook)\.com/
+# Dropbox
+/((^(dl|ns[12])\.)?dropbox\.com|^(dl)\.dropboxusercontent\.com)/
