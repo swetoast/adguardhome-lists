@@ -10,3 +10,4 @@
 /^banners?[_.-]/
 
 #Specific Site Blocking
+/(.*\.)?(imrworldwide\.com|sentry\.io)/
