@@ -2,57 +2,84 @@
 
 # Api Calls
 /^api([0-9])?[-\.].*((((((((teslacoilapps|accounts\.nintendo|techlandonlineservices|pushbullet|google|steampowered|blizzard|dropbox|twitter|soundcloud|authy|firefox|discogs|postnord|pushbullet|samsungcloud|telldus|unsplash)\.com|(audnex)\.us)|(snapcraft)\.io)|(signal|jdownloader)\.org)|(epicgames)\.dev)|(ipdata)\.co)|(svt)\.se)|(plex)\.tv)/
+
 # Syncthing
 /^((discovery[\.-](v[46])?|upgrades)\.)?syncthing\.net/
+
 # Tuya Smart Devices
 /^(px1|^a(3)?|^(m([12]|q\.gw)))\.tuyaeu\.com/
+
 # NTP Pools
 /^[0-3]((\.)?(android|openwrt|arch|ubnt|debian)?\.pool\.ntp\.org)/
+
 # Online Certificate Status Protocol
 /^ocsp(2)?\.(((digicert|globalsign|sectigo|sca1b\.amazontrust|starfieldtech|usertrust|(root(ca1|g2)\.amazontrust))\.com|(pki)\.goog)|(swisssign)\.net)/
+
 # Discord
 /^((images-ext-[1-9]|cdn|media|dl)\.?discordapp\.(com|net)|^((updates|status)\.)?discord\.com|^(gateway|gateway-us-east1-[a-z])\.discord\.gg|^(latency)\.discord.media)/
+
 # Epic Games
 /^((account|catalog)-public-service-prod0[0-9]|datarouter|entitlement-public-service-prod0[0-9]|friends-public-service-prod0[0-9]|launcher-public-service-prod0[0-9]|lightswitch-public-service-prod0[0-9]|merchantpool[0-9]|orderprocessor-public-service-ecomprod0[0-9]|payment-website-pci|xmpp-service-prod)(\.ol)?\.epicgames\.com/
+
 # Plex
 /^((community|dashboard|app|sonos|images|o1\.email|proxy|pubsub|staging|status|tvdb2|o2\.sg0|acoustid|clients|discover\.provider|downloads|scrobbles|lyricfind|mbz|metadata\.provider|songkick|together)?\.)?plex\.tv|((resources-cdn|my|nine\.plugins|node|tvthemes)\.)?plexapp\.com/
+
 # Firefox
 /^((profile\.accounts\.)?firefox\.com|^(((firefox\.settings|sync-1-us-west1-g\.sync|shavar|push|token|normandy-cdn|contile)\.services\.)|(versioncheck-bg\.addons|((firefox-settings-attachments|normandy)\.cdn|aus5|www|versioncheck\.addons|classify-client\.services|content-signature-2\.cdn)\.)?mozilla\.(com|net|org)))/
+
 # Blizzard Launcher
 /^((eu\.(patch|version)|alert-eu|beta\.content-ui|us-legal)\.battle\.net|^(((eu\.)?api|eu\.cdn|level3(\.ssl)?)\.)?blizzard.com)/
+
 # Logitech My Harmony
 /^(((sus\.dhg|svcs|home)\.)?myharmony\.com|^(pubsub|ps-600)\.pubnub\.com)/
+
 # Sophos Antivirus
 /^(d([12]|ci)\.sophosupd\.com|^4\.sophosxl\.net)/
+
 # Steam
 /^(((test|store)\.steampowered\.com|^(ext2-(ams1|sto[21])|ext4-lhr1|ipv6check-http)\.steamserver\.net)|steam-chat.com)|^(client-update|community)\.akamai\.steamstatic\.com/
+
 # Authy
 /(^(pkg|electron)\.)?authy\.com)/
+
 # Signal
 /^((cdn(2)?|chat|storage|updates(2)?)\.)?signal\.org/
+
 # Telldus
 /^((alya|ishita|fw)\.)?telldus\.com/
+
 # Lets Encrypt
 /^((x[12]\.c|r3\.o)\.lencr.org|letsencrypt\.org)/
+
 # Wireguard
 /^((download)\.)?wireguard\.com/
+
 # Neato
 /^(beehive|nucleo)\.neatocloud\.com/
+
 # Armory Crate
 /^((rog-live-service|gaming-config|www|mymessage|rog-content-platform|dlcdn-rogboxbu2|account)\.)?asus.com/
+
 # Amplify HD
 /(^(static|fw-download)\.ubnt|^global\.(stun|turn)\.twilio|^(device|update)\.amplifi|^sp-dir\.uwn)\.com/
+
 # Jdownloader2
 /^(([0-9-]{1,3})+\.mydns|my)\.jdownloader.org/
+
 # Canonical Livepatch
 /^(livepatch(-files)?|contracts)\.canonical\.com/
+
 # Nintendo Switch
 /^((broker|dauth|aauth)-lp1\.ndas\.srv|sun\.hac\.lp1\.d4c|broker\.lp1\.npns\.srv|receive-lp1\.dg\.srv|app-a04\.lp1\.npns\.srv|ctest\.cdn|aqua\.hac\.lp1\.d4c|tagaya\.hac\.lp1\.eshop|bcat-(list|data)-lp1\.cdn|accounts|capi\.lp1\.op2|nncs[12]-lp1\.n\.n\.srv|ctest-ul-lp1\.cdn|dragons\.hac\.lp1\.dragons|shop|consumer\.lp1\.npns\.srv|pushmo\.hac\.lp1\.eshop|bcat-topics-lp1\.cdn)\.nintendo\.net/
+
 # Google
 /^((0\.client-channel|android\.clients|mail|inbox|clients[1-9]|cse|www|video-stats\.l)\.)?google.com|^googleapis\.com|^(ssl\.)?gstatic\.com|^(manifest|redirector)\.googlevideo\.com|(geo|yt)3\.ggpht\.com/
+
 # Youtube
 /^((s(2)?\.)?youtube\.com|^youtu\.be|^youtube-nocookie\.com|^(i(1)?|s)\.ytimg\.com)/
+
 # Instagram
 /^((cdn)?instagram|^nstagram\.c10r\.facebook)\.com/
+
 # Dropbox
 /((^(dl|ns[12])\.)?dropbox\.com|^(dl)\.dropboxusercontent\.com)/
