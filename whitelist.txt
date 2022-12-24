@@ -98,4 +98,7 @@
 /^(twimg|twitter)\.com|^t\.co/
 
 ## SVT
-/www\.svt(static)?\.se/
+/^www\.svt(static)?\.se/
+
+##
+/^static\.xx\.fbcdn.net/
