@@ -97,3 +97,6 @@
 
 ## Twitter
 /^(twimg|twitter)\.com|^t\.co/
+
+## SVT
+/www\.svt(static)?\.se/
