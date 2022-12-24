@@ -1,2 +1,2 @@
-# adguardhome-lists
+# Adguardhome Lists
 White and Blacklist for Popular Applications
