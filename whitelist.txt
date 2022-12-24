@@ -95,7 +95,7 @@
 /^((www|z-p42-instagram\.c10r)\.)?instagram.com|^(s(content|tatic)\.)cdninstagram\.com/
 
 ## Twitter
-/^((tpop-api)\.)?twitter\.com|(pbs|video|(abs-(0|zero)))\.twimg.com|^t\.co/
+/^((tpop-api)\.)?twitter\.com|(pbs|ton|video|(abs-(0|zero)))\.twimg.com|^t\.co/
 
 ## SVT
 /^www\.svt(static)?\.se/
