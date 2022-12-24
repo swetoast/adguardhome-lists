@@ -52,3 +52,5 @@
 /^((0\.client-channel|android\.clients|mail|inbox|clients[1-9]|cse|www|video-stats\.l)\.)?google.com|^googleapis\.com|^(ssl\.)?gstatic\.com|^(manifest|redirector)\.googlevideo\.com|(geo|yt)3\.ggpht\.com/
 # Youtube
 /^((s(2)?\.)?youtube\.com|^youtu\.be|^youtube-nocookie\.com|^(i(1)?|s)\.ytimg\.com)/
+# Instagram
+/^((cdn)?instagram|^nstagram\.c10r\.facebook)\.com/
