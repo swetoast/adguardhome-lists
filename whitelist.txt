@@ -24,7 +24,7 @@
 /^((images-ext-[1-9]|cdn|media|dl)\.?discordapp\.(com|net)|^((updates|status)\.)?discord\.com|^(gateway|gateway-us-east1-[a-z])\.discord\.gg|^(latency)\.discord.media)/
 
 ## Epic Games
-/^((account|catalog)-public-service-prod0[0-9]|datarouter|entitlement-public-service-prod0[0-9]|friends-public-service-prod0[0-9]|launcher-public-service-prod0[0-9]|lightswitch-public-service-prod0[0-9]|merchantpool[0-9]|orderprocessor-public-service-ecomprod0[0-9]|payment-website-pci|xmpp-service-prod)(\.ol)?\.epicgames\.com/
+/^((account|catalog)-public-service-prod0[0-9]|datarouter|entitlement-public-service-prod0[0-9]|friends-public-service-prod0[0-9]|launcher-public-service-prod0[0-9]|lightswitch-public-service-prod0[0-9]|merchantpool[0-9]|orderprocessor-public-service-ecomprod0[0-9]|payment-website-pci|xmpp-service-prod|auncher-public-service-prod\.ak|priceengine-public-service-ecomprod0[1-9]|library-service\.live\.use1a\.on)(\.ol)?\.epicgames\.com/
 
 ## Prism Launcher
 /(i18n\.)?prismlauncher.org/
