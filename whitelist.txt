@@ -16,7 +16,7 @@
 ## Lets Encrypt - https://letsencrypt.org/docs/lencr.org/
 /^((x[0-9]\.c|(e[0-9]|r[0-9])\.o)\.lencr\.org|letsencrypt\.org)/
 
-## Canonical Livepatch - https://ubuntu.com/security/livepatch
+## Canonical Livepatch - https://ubuntu.com/security/livepatch/docs/client/firewall
 /^(livepatch(-files)?|contracts)\.canonical\.com/
 
 # Clients
