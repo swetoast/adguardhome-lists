@@ -42,7 +42,7 @@
 /(i18n\.)?prismlauncher.org$/
 
 ## Rockstar Launcher - https://socialclub.rockstargames.com/rockstar-games-launcher
-/((^(gamedownloads|(auth-)?rgl-prod\.ros|rgl|prod\.cloud)\.)?rockstargames\.com$|^a\.rsg\.sc|^rockstar-api\.arkoselabs\.com$)/
+/^((gamedownloads|(auth-)?rgl-prod\.ros|rgl|prod\.cloud)\.)?rockstargames\.com$|^a\.rsg\.sc|^rockstar-api\.arkoselabs\.com$/
 
 ## Plex - https://www.plex.tv/media-server-downloads/
 /^((community|forums|dashboard|app|sonos|images|o1\.email|proxy|pubsub|staging|status|tvdb2|o2\.sg0|acoustid|clients|discover\.provider|downloads|scrobbles|lyricfind|mbz|metadata\.provider|songkick|together)?\.)?plex\.tv$|((resources-cdn|my|nine\.plugins|node|tvthemes)\.)?plexapp\.com|^([0-9-]{1,3})+\.\w+\.plex.direct$/
