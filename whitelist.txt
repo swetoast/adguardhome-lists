@@ -118,3 +118,6 @@
 
 ## Facebook
 /^static\.xx\.fbcdn.net/
+
+## Github
+/^(((a)?live)\.)?github\.com$/
