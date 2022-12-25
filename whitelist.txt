@@ -2,44 +2,44 @@
 
 # General
 ## Api Calls
-/^api([0-9])?[-\.].*((((((((teslacoilapps|accounts\.nintendo|minecraftservices|techlandonlineservices|pushbullet|github|google|steampowered|blizzard|dropbox|twitter|soundcloud|authy|firefox|discogs|postnord|pushbullet|samsungcloud|telldus|unsplash)\.com|(audnex)\.us)|(snapcraft)\.io)|(signal|jdownloader)\.org)|(epicgames)\.dev)|(ipdata)\.co)|(svt)\.se)|(plex)\.tv)/
+/^api([0-9])?[-\.].*((((((((teslacoilapps|accounts\.nintendo|minecraftservices|techlandonlineservices|pushbullet|github|google|steampowered|blizzard|dropbox|twitter|soundcloud|authy|firefox|discogs|postnord|pushbullet|samsungcloud|telldus|unsplash)\.com|(audnex)\.us)|(snapcraft)\.io)|(signal|jdownloader)\.org)|(epicgames)\.dev$)|(ipdata)\.co)|(svt)\.se)|(plex)\.tv$)/
 
 ## Google Apis - https://developers.google.com/discovery/v1/getting_started
-/(userlocation|safebrowsing|play|steamcloud-eu-fra\.storage|fcm|android|www|fonts|(notifications|gnpfesdk|geller|jnn)-pa)\.googleapis.com/
+/^(userlocation|safebrowsing|play|steamcloud-eu-fra\.storage|fcm|android|maps|www|fonts|youtubei|firebaseremoteconfig|(notifications|gnpfesdk|geller|lamssettings|jnn|androidpay-users|deviceintegritytokens|playatoms|ulp1p|people|reach|semanticlocation|reminders|androidtvlauncherxfe|update)-pa|staging-locationhistory-pa\.sandbox)\.googleapis.com$/
 
 ## NTP Pools - https://www.ntppool.org/en/
-/^[0-3]((\.)?(android|openwrt|arch|ubnt|debian)?\.pool\.ntp\.org)/
+/^[0-3]((\.)?(android|openwrt|arch|ubnt|debian)?\.pool\.ntp\.org$)/
 
 ## Online Certificate Status Protocol - https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol
-/^ocsp(2)?\.(((digicert|globalsign|sectigo|sca1b\.amazontrust|starfieldtech|usertrust|(root(ca1|g2)\.amazontrust))\.com|(pki)\.goog)|(swisssign)\.net)/
+/^ocsp(2)?\.(((digicert|globalsign|sectigo|sca1b\.amazontrust|starfieldtech|usertrust|(root(ca1|g2)\.amazontrust))\.com$|(pki)\.goog)|(swisssign)\.net$)/
 
 ## Lets Encrypt - https://letsencrypt.org/docs/lencr.org/
-/^((x[0-9]\.c|(e[0-9]|r[0-9])\.o)\.lencr\.org|letsencrypt\.org)/
+/^((x[0-9]\.c|(e[0-9]|r[0-9])\.o)\.lencr\.org|letsencrypt\.org$)/
 
 ## Canonical Livepatch - https://ubuntu.com/security/livepatch/docs/client/firewall
-/^(livepatch(-files)?|contracts)\.canonical\.com/
+/^(livepatch(-files)?|contracts)\.canonical\.com$/
 
 # Clients
 ## Archlinux
-/^((aur|mirrors|bbs|security|accounts|pages|repos|archive|status|wiki|lists|git|svn|www|mail|bugs|md|redirect|dev|monitoring)\.)archlinux\.org/
+/^((aur|mirrors|bbs|security|accounts|pages|repos|archive|status|wiki|lists|git|svn|www|mail|bugs|md|redirect|dev|monitoring)\.)archlinux\.org$/
 
 ## Syncthing
-/^((discovery[\.-](v[46])?|upgrades)\.)?syncthing\.net/
+/^((discovery[\.-](v[46])?|upgrades)\.)?syncthing\.net$/
 
 ## Discord
-/^((images-ext-[1-9]|cdn|media|dl)\.?discordapp\.(com|net)|^((updates|status)\.)?discord\.com|^(gateway|gateway-us-east1-[a-z])\.discord\.gg|^(latency)\.discord.media)/
+/^((images-ext-[1-9]|cdn|media|dl)\.?discordapp\.(com$|net$)|^((updates|status)\.)?discord\.com$|^(gateway|gateway-us-east1-[a-z])\.discord\.gg|^(latency)\.discord.media$)/
 
 ## Epic Games
-/^((account|catalog)-public-service-prod0[0-9]|datarouter|entitlement-public-service-prod0[0-9]|friends-public-service-prod0[0-9]|launcher-public-service-prod0[0-9]|lightswitch-public-service-prod0[0-9]|merchantpool[0-9]|orderprocessor-public-service-ecomprod0[0-9]|payment-website-pci|xmpp-service-prod|auncher-public-service-prod\.ak|priceengine-public-service-ecomprod0[1-9]|library-service\.live\.use1a\.on|datarouter-prod\.ak)(\.ol)?\.epicgames\.com/
+/^((account|catalog)-public-service-prod0[0-9]|datarouter|entitlement-public-service-prod0[0-9]|friends-public-service-prod0[0-9]|launcher-public-service-prod0[0-9]|lightswitch-public-service-prod0[0-9]|merchantpool[0-9]|orderprocessor-public-service-ecomprod0[0-9]|payment-website-pci|xmpp-service-prod|auncher-public-service-prod\.ak|priceengine-public-service-ecomprod0[1-9]|library-service\.live\.use1a\.on|datarouter-prod\.ak)(\.ol)?\.epicgames\.com$/
 
 ## Ubisoft Launcher
-/^((account|connect|static-account|lb-prod-acc_ount-pdc|dmx\.upc)\.)ubisoft.com|^((uplay)?connect|wallet\.ecom|public-ubiservices|useast1-public.aws-ubiservices|channel-service\.upc|public-ws-ubiservices|)\.ubi.com/
+/^((account|connect|static-account|lb-prod-acc_ount-pdc|dmx\.upc)\.)ubisoft.com$|^((uplay)?connect|wallet\.ecom|public-ubiservices|useast1-public.aws-ubiservices|channel-service\.upc|public-ws-ubiservices|)\.ubi.com$/
 
 ## Prism Launcher
-/(i18n\.)?prismlauncher.org/
+/(i18n\.)?prismlauncher.org$/
 
 ## Rockstar Launcher
-/((^(gamedownloads|(auth-)?rgl-prod\.ros|rgl|prod\.cloud)\.)?rockstargames\.com|^a\.rsg\.sc|^rockstar-api\.arkoselabs\.com)/
+/((^(gamedownloads|(auth-)?rgl-prod\.ros|rgl|prod\.cloud)\.)?rockstargames\.com$|^a\.rsg\.sc|^rockstar-api\.arkoselabs\.com$)/
 
 ## Plex
 /^((community|forums|dashboard|app|sonos|images|o1\.email|proxy|pubsub|staging|status|tvdb2|o2\.sg0|acoustid|clients|discover\.provider|downloads|scrobbles|lyricfind|mbz|metadata\.provider|songkick|together)?\.)?plex\.tv|((resources-cdn|my|nine\.plugins|node|tvthemes)\.)?plexapp\.com|^([0-9-]{1,3})+\.\w+\.plex.direct/
