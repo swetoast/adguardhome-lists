@@ -83,7 +83,6 @@
 /^(geo|gdpr-wrapper|vendors)\.privacymanager\.io$|^maps\.infoplaza\.nl|^cluster\.api\.meteoplaza\.com$/
 
 # Smart Devices
-
 #¤ Tuya Smart Devices
 /^(px[0-9]|^a([0-9])?|^(m([0-9]|q\.gw)|images))\.tuyaeu\.com$/
 
