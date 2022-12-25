@@ -1,7 +1,7 @@
 # Regexp Whitelist
 
 # General
-## Api Calls
+## Api Calls - https://www.cloudflare.com/learning/security/api/what-is-api-call/
 /^api([0-9])?[-\.].*((((((((teslacoilapps|accounts\.nintendo|minecraftservices|techlandonlineservices|gog|pushbullet|github|google|steampowered|blizzard|dropbox|twitter|soundcloud|authy|firefox|discogs|postnord|pushbullet|samsungcloud|telldus|unsplash)\.com|(audnex)\.us)|(snapcraft)\.io)|(signal|jdownloader)\.org)|(epicgames)\.dev$)|(ipdata)\.co)|(svt)\.se)|(plex)\.tv$)/
 
 ## Google Apis - https://developers.google.com/discovery/v1/getting_started
@@ -20,67 +20,68 @@
 /^(livepatch(-files)?|contracts)\.canonical\.com$/
 
 # Clients
-## Archlinux
+## Archlinux - https://archlinux.org/
 /^((aur|mirrors|bbs|security|accounts|pages|repos|archive|status|wiki|lists|git|svn|www|mail|bugs|md|redirect|dev|monitoring)\.)archlinux\.org$/
 
-## Syncthing
+## Syncthing - https://syncthing.net/
 /^((discovery[\.-](v[46])?|upgrades)\.)?syncthing\.net$/
 
-## Discord
+## Discord - https://discord.com/
 /^((images-ext-[1-9]|cdn|media|dl)\.?discordapp\.(com$|net$)|^((updates|status)\.)?discord\.com$|^(gateway|gateway-us-east1-[a-z])\.discord\.gg|^(latency)\.discord.media$)/
 
-## Epicgames Launcher
+## Epicgames Launcher - https://store.epicgames.com/en-US/download
 /^((account|catalog)-public-service-prod0[0-9]|datarouter|entitlement-public-service-prod0[0-9]|friends-public-service-prod0[0-9]|launcher-public-service-prod0[0-9]|lightswitch-public-service-prod0[0-9]|merchantpool[0-9]|orderprocessor-public-service-ecomprod0[0-9]|payment-website-pci|xmpp-service-prod|auncher-public-service-prod\.ak|priceengine-public-service-ecomprod0[1-9]|library-service\.live\.use1a\.on|datarouter-prod\.ak)(\.ol)?\.epicgames\.com$/
 
 ## Gog Galaxy Laucher - https://www.gog.com/galaxy
 /^(auth|c(fg|hat|ontent-system|hat)|e(mbed|xternal-(accounts|users))|galaxy-(library|promos)|game(play|sdb)|images|login|marketing-sections|menu|notifications(-pusher(-aws)?)?|presence|r(ecommendations-api|emote-config)|www)\.gog\.com$/
 
-## Ubisoft Launcher
+## Ubisoft Launcher - https://ubisoftconnect.com/en-US/
 /^((account|connect|static-account|lb-prod-acc_ount-pdc|dmx\.upc)\.)ubisoft.com$|^((uplay)?connect|wallet\.ecom|public-ubiservices|useast1-public.aws-ubiservices|channel-service\.upc|public-ws-ubiservices|)\.ubi.com$/
 
-## Prism Launcher
+## Prism Launcher - https://prismlauncher.org/download/
 /(i18n\.)?prismlauncher.org$/
 
-## Rockstar Launcher
+## Rockstar Launcher - https://socialclub.rockstargames.com/rockstar-games-launcher
 /((^(gamedownloads|(auth-)?rgl-prod\.ros|rgl|prod\.cloud)\.)?rockstargames\.com$|^a\.rsg\.sc|^rockstar-api\.arkoselabs\.com$)/
 
-## Plex
+## Plex - https://www.plex.tv/media-server-downloads/
 /^((community|forums|dashboard|app|sonos|images|o1\.email|proxy|pubsub|staging|status|tvdb2|o2\.sg0|acoustid|clients|discover\.provider|downloads|scrobbles|lyricfind|mbz|metadata\.provider|songkick|together)?\.)?plex\.tv$|((resources-cdn|my|nine\.plugins|node|tvthemes)\.)?plexapp\.com|^([0-9-]{1,3})+\.\w+\.plex.direct$/
 
-## Firefox
+## Firefox - https://www.mozilla.org/en-US/firefox/new/
 /^((profile\.accounts\.)?firefox\.com|^(((firefox\.settings|sync-1-us-west1-g\.sync|shavar|push|token|normandy-cdn|contile)\.services\.)|(versioncheck-bg\.addons|((firefox-settings-attachments|normandy)\.cdn|aus5|www|assets|detectportal|versioncheck\.addons|classify-client\.services|content-signature-2\.cdn)\.)?mozilla\.(com$|net$|org$)))/
 
-## Blizzard Launcher
+## Blizzard Launcher - https://www.blizzard.com/en-us/apps/battle.net/desktop
 /^((eu\.(patch|version)|alert-eu|beta\.content-ui|us-legal)\.battle\.net|^(((eu\.)?api|eu\.cdn|level3(\.ssl)?)\.)?blizzard.com$)/
 
-## Sophos Antivirus
+## Sophos intercept-x - https://www.sophos.com/en-us/products/mobile-control/intercept-x
 /^(d([12]|ci)\.sophosupd\.com$|^4\.sophosxl\.net$)/
 
-## Wireguard
+## Wireguard - https://www.wireguard.com/install/
 /^((download)\.)?wireguard\.com$/
 
-## Jdownloader2
+## Jdownloader2 - https://jdownloader.org/jdownloader2
 /^(([0-9-]{1,3})+\.mydns|my)\.jdownloader.org$/
 
-## Steam
+## Steam Launcher - https://store.steampowered.com/about/
 /^(((test|store)\.steampowered\.com$|^(ext2-(ams1|sto[21])|ext4-lhr1|ipv6check-http)\.steamserver\.net$)|steam-chat.com$)|^(client-update|community|clientconfig)\.akamai\.steamstatic\.com$/
 
-## Armory Crate
+## Armory Crate - https://rog.asus.com/us/armoury-crate/
 /^((rog-live-service|gaming-config|www|mymessage|rog-content-platform|dlcdn-rogboxbu2|account)\.)?asus.com$/
 
-## Authy
+## Authy - https://authy.com/download/
 /(^(pkg|electron)\.)?authy\.com$/
 
-## Signal
+## Signal - https://signal.org/en/download/
 /^((cdn(2)?|chat|storage|updates(2)?)\.)?signal\.org$/
 
-## Dropbox
+## Dropbox - https://www.dropbox.com/install
 /((^(dl|ns[12])\.)?dropbox\.com|^(dl)\.dropboxusercontent\.com$)/
 
-## Lightning Alarm Weatherplaza
+## Lightning Alarm Weatherplaza - https://play.google.com/store/apps/details?id=com.meteoplaza.flash&hl=en&gl=US
 /^(geo|gdpr-wrapper|vendors)\.privacymanager\.io$|^maps\.infoplaza\.nl|^cluster\.api\.meteoplaza\.com$/
 
 # Smart Devices
+
 #¤ Tuya Smart Devices
 /^(px1|^a(3)?|^(m([12]|q\.gw)))\.tuyaeu\.com$/
 
