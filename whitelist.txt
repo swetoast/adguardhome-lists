@@ -83,7 +83,7 @@
 # Smart Devices
 
 #¤ Tuya Smart Devices
-/^(px1|^a(3)?|^(m([12]|q\.gw)))\.tuyaeu\.com$/
+/^(px[0-9]|^a([0-9])?|^(m([0-9]|q\.gw)))\.tuyaeu\.com$/
 
 ## Logitech My Harmony
 /^(((sus\.dhg|svcs|home|appcompatibility)\.)?myharmony\.com$|^(pubsub|ps-[0-9]{3})\.pubnub\.com)|accounts\.logi\.com$/
