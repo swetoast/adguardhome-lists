@@ -14,7 +14,7 @@
 /^ocsp(2)?\.(((digicert|globalsign|sectigo|sca1b\.amazontrust|starfieldtech|usertrust|(root(ca1|g2)\.amazontrust))\.com|(pki)\.goog)|(swisssign)\.net)/
 
 ## Lets Encrypt
-/^((x[12]\.c|(e1|r3)\.o)\.lencr\.org|letsencrypt\.org)/
+/^((x[0-9]\.c|(e[0-9]|r[0-9])\.o)\.lencr\.org|letsencrypt\.org)/
 
 ## Canonical Livepatch
 /^(livepatch(-files)?|contracts)\.canonical\.com/
