@@ -1,5 +1,4 @@
 # Regexp Whitelist
-
 # General
 ## Api Calls - https://www.cloudflare.com/learning/security/api/what-is-api-call/
 /^api([0-9])?[-\.].*((((((((teslacoilapps|accounts\.nintendo|minecraftservices|techlandonlineservices|gog|pushbullet|github|google|steampowered|blizzard|dropbox|twitter|soundcloud|authy|firefox|discogs|postnord|pushbullet|samsungcloud|telldus|unsplash)\.com|(audnex)\.us)|(snapcraft)\.io)|(signal|jdownloader)\.org)|(epicgames)\.dev$)|(ipdata)\.co)|(svt)\.se)|(plex)\.tv$)/
