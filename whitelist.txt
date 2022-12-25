@@ -42,82 +42,82 @@
 /((^(gamedownloads|(auth-)?rgl-prod\.ros|rgl|prod\.cloud)\.)?rockstargames\.com$|^a\.rsg\.sc|^rockstar-api\.arkoselabs\.com$)/
 
 ## Plex
-/^((community|forums|dashboard|app|sonos|images|o1\.email|proxy|pubsub|staging|status|tvdb2|o2\.sg0|acoustid|clients|discover\.provider|downloads|scrobbles|lyricfind|mbz|metadata\.provider|songkick|together)?\.)?plex\.tv|((resources-cdn|my|nine\.plugins|node|tvthemes)\.)?plexapp\.com|^([0-9-]{1,3})+\.\w+\.plex.direct/
+/^((community|forums|dashboard|app|sonos|images|o1\.email|proxy|pubsub|staging|status|tvdb2|o2\.sg0|acoustid|clients|discover\.provider|downloads|scrobbles|lyricfind|mbz|metadata\.provider|songkick|together)?\.)?plex\.tv$|((resources-cdn|my|nine\.plugins|node|tvthemes)\.)?plexapp\.com|^([0-9-]{1,3})+\.\w+\.plex.direct$/
 
 ## Firefox
-/^((profile\.accounts\.)?firefox\.com|^(((firefox\.settings|sync-1-us-west1-g\.sync|shavar|push|token|normandy-cdn|contile)\.services\.)|(versioncheck-bg\.addons|((firefox-settings-attachments|normandy)\.cdn|aus5|www|assets|detectportal|versioncheck\.addons|classify-client\.services|content-signature-2\.cdn)\.)?mozilla\.(com|net|org)))/
+/^((profile\.accounts\.)?firefox\.com|^(((firefox\.settings|sync-1-us-west1-g\.sync|shavar|push|token|normandy-cdn|contile)\.services\.)|(versioncheck-bg\.addons|((firefox-settings-attachments|normandy)\.cdn|aus5|www|assets|detectportal|versioncheck\.addons|classify-client\.services|content-signature-2\.cdn)\.)?mozilla\.(com$|net$|org$)))/
 
 ## Blizzard Launcher
-/^((eu\.(patch|version)|alert-eu|beta\.content-ui|us-legal)\.battle\.net|^(((eu\.)?api|eu\.cdn|level3(\.ssl)?)\.)?blizzard.com)/
+/^((eu\.(patch|version)|alert-eu|beta\.content-ui|us-legal)\.battle\.net|^(((eu\.)?api|eu\.cdn|level3(\.ssl)?)\.)?blizzard.com$)/
 
 ## Sophos Antivirus
-/^(d([12]|ci)\.sophosupd\.com|^4\.sophosxl\.net)/
+/^(d([12]|ci)\.sophosupd\.com$|^4\.sophosxl\.net$)/
 
 ## Wireguard
-/^((download)\.)?wireguard\.com/
+/^((download)\.)?wireguard\.com$/
 
 ## Jdownloader2
-/^(([0-9-]{1,3})+\.mydns|my)\.jdownloader.org/
+/^(([0-9-]{1,3})+\.mydns|my)\.jdownloader.org$/
 
 ## Steam
-/^(((test|store)\.steampowered\.com|^(ext2-(ams1|sto[21])|ext4-lhr1|ipv6check-http)\.steamserver\.net)|steam-chat.com)|^(client-update|community|clientconfig)\.akamai\.steamstatic\.com/
+/^(((test|store)\.steampowered\.com$|^(ext2-(ams1|sto[21])|ext4-lhr1|ipv6check-http)\.steamserver\.net$)|steam-chat.com$)|^(client-update|community|clientconfig)\.akamai\.steamstatic\.com$/
 
 ## Armory Crate
-/^((rog-live-service|gaming-config|www|mymessage|rog-content-platform|dlcdn-rogboxbu2|account)\.)?asus.com/
+/^((rog-live-service|gaming-config|www|mymessage|rog-content-platform|dlcdn-rogboxbu2|account)\.)?asus.com$/
 
 ## Authy
-/(^(pkg|electron)\.)?authy\.com/
+/(^(pkg|electron)\.)?authy\.com$/
 
 ## Signal
-/^((cdn(2)?|chat|storage|updates(2)?)\.)?signal\.org/
+/^((cdn(2)?|chat|storage|updates(2)?)\.)?signal\.org$/
 
 ## Dropbox
-/((^(dl|ns[12])\.)?dropbox\.com|^(dl)\.dropboxusercontent\.com)/
+/((^(dl|ns[12])\.)?dropbox\.com|^(dl)\.dropboxusercontent\.com$)/
 
 ## Lightning Alarm Weatherplaza
-/^(geo|gdpr-wrapper|vendors)\.privacymanager\.io|^maps\.infoplaza\.nl|^cluster\.api\.meteoplaza\.com/
+/^(geo|gdpr-wrapper|vendors)\.privacymanager\.io$|^maps\.infoplaza\.nl|^cluster\.api\.meteoplaza\.com$/
 
 # Smart Devices
 #¤ Tuya Smart Devices
-/^(px1|^a(3)?|^(m([12]|q\.gw)))\.tuyaeu\.com/
+/^(px1|^a(3)?|^(m([12]|q\.gw)))\.tuyaeu\.com$/
 
 ## Logitech My Harmony
-/^(((sus\.dhg|svcs|home|appcompatibility)\.)?myharmony\.com|^(pubsub|ps-[0-9]{3})\.pubnub\.com)|accounts\.logi\.com/
+/^(((sus\.dhg|svcs|home|appcompatibility)\.)?myharmony\.com$|^(pubsub|ps-[0-9]{3})\.pubnub\.com)|accounts\.logi\.com$/
 
 ## Telldus
-/^((alya|ishita|garima|triya|kavya|navya|fw)\.)?telldus\.com/
+/^((alya|ishita|garima|triya|kavya|navya|fw)\.)?telldus\.com$/
 
 ## Neato
-/^(beehive|nucleo)\.neatocloud\.com/
+/^(beehive|nucleo)\.neatocloud\.com$/
 
 # Websites and Devices
 
 ## Asustor
-/^((apns|asustornasapi|update).)?asustor.com/
+/^((apns|asustornasapi|update).)?asustor.com$/
 
 ## Google
-/^((0\.client-channel|android\.clients|mail|youtube-ui\.l|inbox|clients[1-9]|cse|ogs|play|pki-goog\.l|apis|plus\.l|www(3\.l)?|video-stats\.l|id)\.)?google.com|^googleapis\.com|^(ssl\.)?gstatic\.com|^(manifest|redirector)\.googlevideo\.com|(geo|yt)3\.ggpht\.com/
+/^((0\.client-channel|android\.clients|mail|youtube-ui\.l|inbox|clients[1-9]|cse|ogs|play|pki-goog\.l|apis|plus\.l|www(3\.l)?|video-stats\.l|id)\.)?google.com|googleapis\.com|^(ssl\.)?gstatic\.com$|^(manifest|redirector)\.googlevideo\.com|(geo|yt)3\.ggpht\.com$/
 
 ## Ubiquity Devices
-/(^(static|repo|download(s)?|dl|fw-(download|update))\.ubnt|^global\.(stun|turn)\.twilio|^(device|update)\.amplifi|^sp-dir\.uwn)\.com/
+/(^(static|repo|download(s)?|dl|fw-(download|update))\.ubnt|^global\.(stun|turn)\.twilio|^(device|update)\.amplifi|^sp-dir\.uwn)\.com$/
 
 ## Nintendo Switch
-/^((broker|dauth|aauth)-lp1\.ndas\.srv|sun\.hac\.lp1\.d4c|broker\.lp1\.npns\.srv|receive-lp1\.dg\.srv|app-a04\.lp1\.npns\.srv|ctest\.cdn|aqua\.hac\.lp1\.d4c|tagaya\.hac\.lp1\.eshop|bcat-(list|data)-lp1\.cdn|capi\.lp1\.op2|nncs[12]-lp1\.n\.n\.srv|ctest-ul-lp1\.cdn|dragons\.hac\.lp1\.dragons|shop|consumer\.lp1\.npns\.srv|pushmo\.hac\.lp1\.eshop|bcat-topics-lp1\.cdn|accounts)\.nintendo\.net|^((accounts).)?nintendo.com/
+/^((broker|dauth|aauth)-lp1\.ndas\.srv|sun\.hac\.lp1\.d4c|broker\.lp1\.npns\.srv|receive-lp1\.dg\.srv|app-a04\.lp1\.npns\.srv|ctest\.cdn|aqua\.hac\.lp1\.d4c|tagaya\.hac\.lp1\.eshop|bcat-(list|data)-lp1\.cdn|capi\.lp1\.op2|nncs[12]-lp1\.n\.n\.srv|ctest-ul-lp1\.cdn|dragons\.hac\.lp1\.dragons|shop|consumer\.lp1\.npns\.srv|pushmo\.hac\.lp1\.eshop|bcat-topics-lp1\.cdn|accounts)\.nintendo\.net$|^((accounts).)?nintendo.com$/
 
 ## Youtube
-/^((s(2)?\.)?youtube\.com|^youtu\.be|^youtube-nocookie\.com|^(i(1)?|s)\.ytimg\.com)/
+/^((s(2)?\.)?youtube\.com$|^youtu\.be$|^youtube-nocookie\.com$|^(i(1)?|s)\.ytimg\.com$)/
 
 ## Instagram
-/^((www|z-p42-instagram\.c10r)\.)?instagram.com|^(s(content|tatic)\.)cdninstagram\.com/
+/^((www|z-p42-instagram\.c10r)\.)?instagram.com|^(s(content|tatic)\.)cdninstagram\.com$/
 
 ## Twitter
-/^((tpop-api)\.)?twitter\.com|(pbs|ton|video|abs|(abs-(0|zero)))\.twimg.com|^t\.co/
+/^((tpop-api)\.)?twitter\.com$|(pbs|ton|video|abs|(abs-(0|zero)))\.twimg.com$|^t\.co$/
 
 ## SVT
-/^www\.svt(static)?\.se/
+/^www\.svt(static)?\.se$/
 
 ## Facebook
-/^static\.xx\.fbcdn.net/
+/^static\.xx\.fbcdn.net$/
 
 ## Github
 /^(((a)?live)\.)?github\.com$/
