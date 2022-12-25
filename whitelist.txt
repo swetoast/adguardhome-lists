@@ -5,7 +5,7 @@
 /^api([0-9])?[-\.].*((((((((teslacoilapps|accounts\.nintendo|minecraftservices|techlandonlineservices|pushbullet|github|google|steampowered|blizzard|dropbox|twitter|soundcloud|authy|firefox|discogs|postnord|pushbullet|samsungcloud|telldus|unsplash)\.com|(audnex)\.us)|(snapcraft)\.io)|(signal|jdownloader)\.org)|(epicgames)\.dev$)|(ipdata)\.co)|(svt)\.se)|(plex)\.tv$)/
 
 ## Google Apis - https://developers.google.com/discovery/v1/getting_started
-/^(userlocation|safebrowsing|play|steamcloud-eu-fra\.storage|fcm|android|maps|www|fonts|youtubei|firebaseremoteconfig|(notifications|gnpfesdk|geller|lamssettings|jnn|androidpay-users|deviceintegritytokens|playatoms|ulp1p|people|reach|semanticlocation|reminders|androidtvlauncherxfe|update)-pa|staging-locationhistory-pa\.sandbox)\.googleapis.com$/
+/^(userlocation|safebrowsing|play|steamcloud-eu-fra\.storage|fcm|android|maps|www|fonts|youtubei|firebaseremoteconfig|(notifications|gnpfesdk|geller|lamssettings|jnn|androidpay-users|deviceintegritytokens|playatoms|ulp1p|people|reach|semanticlocation|reminders|androidtvlauncherxfe|update)-pa|staging-locationhistory-pa\.sandbox|instantmessaging-pa-preprod-eu)\.googleapis.com$/
 
 ## NTP Pools - https://www.ntppool.org/en/
 /^[0-3]((\.)?(android|openwrt|arch|ubnt|debian)?\.pool\.ntp\.org$)/
