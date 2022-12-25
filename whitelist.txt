@@ -66,7 +66,7 @@
 /^(((test|store)\.steampowered\.com$|^(ext2-(ams1|sto[21])|ext4-lhr1|ipv6check-http)\.steamserver\.net$)|^steam-chat\.com$)|^(client-update|community|clientconfig)\.akamai\.steamstatic\.com$/
 
 ## XBox Gamepass
-/^((achievements|chat|d(evice\.auth|lassets-ssl)|lfghub-anonymous|notificationinbox|p(eoplehub|r(ivacy|ofile))|rta|social|titlehub|userpresence|xblmessaging|(xsts|title|user)\.auth|xccs)\.xboxlive\.com$|^(catalog|profile)\.gamepass\.com$|^www\.xboxab\.com$|^(beige)\.xboxservices\.com$)/
+/^((achievements|chat|d(evice\.auth|lassets-ssl)|lfghub-anonymous|eplists|updatepc|notificationinbox|p(eoplehub|r(ivacy|ofile))|rta|social|titlehub|userpresence|xblmessaging|(xsts|title|user)\.auth|xccs)\.xboxlive\.com$|^(catalog|profile)\.gamepass\.com$|^www\.xboxab\.com$|^(beige)\.xboxservices\.com$)/
 
 ## Armory Crate - https://rog.asus.com/us/armoury-crate/
 /^((rog(-live-service)?|gaming-config|liveupdate01s|dlcdn((web)?imgs|rog)|www|mymessage|rog-content-platform|dlcdn-rogboxbu2|account)\.)?asus.com$/
