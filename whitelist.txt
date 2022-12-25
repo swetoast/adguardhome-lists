@@ -11,7 +11,7 @@
 /^[0-3]((\.)?(android|openwrt|arch|ubnt|debian)?\.pool\.ntp\.org$)/
 
 ## Online Certificate Status Protocol - https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol
-/^ocsp(2)?\.(((digicert|globalsign|sectigo|sca1b\.amazontrust|starfieldtech|usertrust|(root(ca1|g2)\.amazontrust))\.com$|(pki)\.goog)|(swisssign)\.net$)/
+/^ocsp(2)?\.(((digicert|globalsign|sectigo|sca1b\.amazontrust|starfieldtech|usertrust|(root(ca1|g2)\.amazontrust))\.com$|(pki)\.goog)|(swisssign|comodoca\.com\.cdn\.cloudflare)\.net$)/
 
 ## Lets Encrypt - https://letsencrypt.org/docs/lencr.org/
 /^((x[0-9]\.c|(e[0-9]|r[0-9])\.o)\.lencr\.org|letsencrypt\.org$)/
