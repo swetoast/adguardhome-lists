@@ -14,7 +14,7 @@
 /^ocsp(2)?\.(((digicert|globalsign|sectigo|sca1b\.amazontrust|starfieldtech|usertrust|(root(ca1|g2)\.amazontrust))\.com$|(pki)\.goog)|(swisssign|comodoca\.com\.cdn\.cloudflare)\.net$)/
 
 ## Lets Encrypt - https://letsencrypt.org/docs/lencr.org/
-/^((x[0-9]\.c|(e[0-9]|r[0-9])\.o)\.lencr\.org|letsencrypt\.org$)/
+/^(x[0-9]\.c|(e[0-9]|r[0-9])\.o)\.lencr\.org|letsencrypt\.org$/
 
 ## Canonical Livepatch - https://ubuntu.com/security/livepatch/docs/client/firewall
 /^(livepatch(-files)?|contracts)\.canonical\.com$/
@@ -27,7 +27,7 @@
 /^((discovery[\.-](v[46])?|upgrades)\.)?syncthing\.net$/
 
 ## Discord - https://discord.com/
-/^((images-ext-[1-9]|cdn|media|dl)\.?discordapp\.(com$|net$)|^((updates|status)\.)?discord\.com$|^(gateway|gateway-us-east1-[a-z])\.discord\.gg|^(latency)\.discord.media$)/
+/^(images-ext-[1-9]|cdn|media|dl)\.?discordapp\.(com$|net$)|^((updates|status)\.)?discord\.com$|^(gateway|gateway-us-east1-[a-z])\.discord\.gg|^(latency)\.discord\.media$/
 
 ## Epicgames Launcher - https://store.epicgames.com/en-US/download
 /^((account|catalog)-public-service-prod0[0-9]|datarouter|turn\.rtcp\.on|entitlement-public-service-prod0[0-9]|friends-public-service-prod0[0-9]|launcher-public-service-prod0[0-9]|lightswitch-public-service-prod0[0-9]|merchantpool[0-9]|orderprocessor-public-service-ecomprod0[0-9]|payment-website-pci|xmpp-service-prod|auncher-public-service-prod\.ak|priceengine-public-service-ecomprod0[1-9]|library-service\.live\.use1a\.on|datarouter-prod\.ak)(\.ol)?\.epicgames\.com$/
