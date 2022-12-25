@@ -36,7 +36,7 @@
 /^(auth|c(fg|hat|ontent-system|hat)|e(mbed|xternal-(accounts|users))|galaxy-(library|promos)|game(play|sdb)|images|login|marketing-sections|menu|notifications(-pusher(-aws)?)?|presence|r(ecommendations-api|emote-config)|www)\.gog\.com$/
 
 ## Ubisoft Launcher - https://ubisoftconnect.com/en-US/
-/^((account|connect|static-account|api-(uplayplusvault|ubiservices)|lb-prod-acc_ount-pdc|dmx\.upc)\.)ubisoft.com$|^((uplay)?connect|wallet\.ecom|public-ubiservices|useast1-public.aws-ubiservices|channel-service\.upc|public-ws-ubiservices|)\.ubi.com$/
+/^((account|connect|api-(api-(ubiservices|uplayplusvault)|static-account|lb-prod-acc_ount-pdc|dmx\.upc)\.)ubisoft.com$|^((uplay)?connect|wallet\.ecom|public-ubiservices|useast1-public.aws-ubiservices|channel-service\.upc|public-ws-ubiservices|)\.ubi.com$/
 
 ## Prism Launcher - https://prismlauncher.org/download/
 /(i18n\.)?prismlauncher.org$/
@@ -63,10 +63,10 @@
 /^(([0-9-]{1,3})+\.mydns|my)\.jdownloader.org$/
 
 ## Steam Launcher - https://store.steampowered.com/about/
-/^(((test|store)\.steampowered\.com$|^(ext2-(ams1|sto[21])|ext4-lhr1|ipv6check-http)\.steamserver\.net$)|^steam-chat\.com$)|^(client-update|community|clientconfig)\.akamai\.steamstatic\.com$/
+/^(ext2-(ams1|sto[21])|ext4-lhr1|ipv6check-http)\.steamserver\.net$|^steam-chat\.com$|^(client-update|community|clientconfig)\.akamai\.steamstatic\.com$|^(test|store)\.steampowered\.com$/
 
 ## XBox Gamepass
-/^((achievements|chat|d(evice\.auth|lassets-ssl)|lfghub-anonymous|eplists|updatepc|notificationinbox|p(eoplehub|r(ivacy|ofile))|rta|social|titlehub|userpresence|xblmessaging|(xsts|title|user)\.auth|xccs)\.xboxlive\.com$|^(catalog|profile)\.gamepass\.com$|^www\.xboxab\.com$|^(beige)\.xboxservices\.com$)/
+/^((achievements|chat|d(evice\.auth|lassets-ssl)|lfghub-anonymous|eplists|updatepc|notificationinbox|p(eoplehub|r(ivacy|ofile))|rta|social|titlehub|userpresence|images-eds(-ssl)?|streaming|avty|xblmessaging|(xsts|title|user)\.auth|xccs)\.xboxlive\.com$|^(catalog|profile)\.gamepass\.com$|^www\.xboxab\.com$|^(beige)\.xboxservices\.com$)/
 
 ## Armory Crate - https://rog.asus.com/us/armoury-crate/
 /^((rog(-live-service)?|gaming-config|liveupdate01s|dlcdn((web)?imgs|rog)|www|mymessage|rog-content-platform|dlcdn-rogboxbu2|account)\.)?asus.com$/
