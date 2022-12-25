@@ -29,8 +29,11 @@
 ## Discord
 /^((images-ext-[1-9]|cdn|media|dl)\.?discordapp\.(com$|net$)|^((updates|status)\.)?discord\.com$|^(gateway|gateway-us-east1-[a-z])\.discord\.gg|^(latency)\.discord.media$)/
 
-## Epic Games
+## Epicgames Launcher
 /^((account|catalog)-public-service-prod0[0-9]|datarouter|entitlement-public-service-prod0[0-9]|friends-public-service-prod0[0-9]|launcher-public-service-prod0[0-9]|lightswitch-public-service-prod0[0-9]|merchantpool[0-9]|orderprocessor-public-service-ecomprod0[0-9]|payment-website-pci|xmpp-service-prod|auncher-public-service-prod\.ak|priceengine-public-service-ecomprod0[1-9]|library-service\.live\.use1a\.on|datarouter-prod\.ak)(\.ol)?\.epicgames\.com$/
+
+## Gog Galaxy Laucher
+/^(auth|c(fg|hat|ontent-system|hat)|e(mbed|xternal-(accounts|users))|galaxy-(library|promos)|game(play|sdb)|images|login|marketing-sections|menu|notifications(-pusher(-aws)?)?|presence|r(ecommendations-api|emote-config)|www)\.gog\.com$/
 
 ## Ubisoft Launcher
 /^((account|connect|static-account|lb-prod-acc_ount-pdc|dmx\.upc)\.)ubisoft.com$|^((uplay)?connect|wallet\.ecom|public-ubiservices|useast1-public.aws-ubiservices|channel-service\.upc|public-ws-ubiservices|)\.ubi.com$/
