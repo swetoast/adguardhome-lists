@@ -96,7 +96,6 @@
 /^(beehive|nucleo)\.neatocloud\.com$/
 
 # Websites and Devices
-
 ## Asustor
 /^((apns|asustornasapi|update).)?asustor.com$/
 
