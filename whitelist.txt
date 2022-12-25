@@ -8,7 +8,7 @@
 /^(userlocation|safebrowsing|play|steamcloud-eu-fra\.storage|fcm|android|maps|www|fonts|youtubei|firebaseremoteconfig|(notifications|gnpfesdk|geller|lamssettings|jnn|androidpay-users|deviceintegritytokens|playatoms|ulp1p|people|reach|semanticlocation|reminders|androidtvlauncherxfe|update)-pa|staging-locationhistory-pa\.sandbox|instantmessaging-pa-preprod-eu)\.googleapis.com$/
 
 ## NTP Pools - https://www.ntppool.org/en/
-/^[0-3]((\.)?(android|openwrt|arch|ubnt|debian)?\.pool\.ntp\.org$)/
+/^[0-3](\.)?(android|openwrt|arch|ubnt|debian)?\.pool\.ntp\.org$/
 
 ## Online Certificate Status Protocol - https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol
 /^ocsp(2)?\.(((digicert|globalsign|sectigo|sca1b\.amazontrust|starfieldtech|usertrust|(root(ca1|g2)\.amazontrust))\.com$|(pki)\.goog)|(swisssign|comodoca\.com\.cdn\.cloudflare)\.net$)/
@@ -54,7 +54,7 @@
 /^(eu\.(patch|version)|alert-eu|beta\.content-ui|us-legal)\.battle\.net|^(((eu\.)?api|eu\.cdn|level3(\.ssl)?)\.)?blizzard\.com$/
 
 ## Sophos intercept-x - https://www.sophos.com/en-us/products/mobile-control/intercept-x
-/^(d([12]|ci)\.sophosupd\.com$|^4\.sophosxl\.net$)/
+/^d([12]|ci)\.sophosupd\.com$|^4\.sophosxl\.net$/
 
 ## Wireguard - https://www.wireguard.com/install/
 /^((download)\.)?wireguard\.com$/
@@ -78,7 +78,7 @@
 /^((cdn(2)?|chat|storage|updates(2)?)\.)?signal\.org$/
 
 ## Dropbox - https://www.dropbox.com/install
-/((^(dl|ns[12])\.)?dropbox\.com|^(dl)\.dropboxusercontent\.com$)/
+/(^(dl|ns[12])\.)?dropbox\.com|^(dl)\.dropboxusercontent\.com$/
 
 ## Lightning Alarm Weatherplaza - https://play.google.com/store/apps/details?id=com.meteoplaza.flash&hl=en&gl=US
 /^(geo|gdpr-wrapper|vendors)\.privacymanager\.io$|^maps\.infoplaza\.nl|^cluster\.api\.meteoplaza\.com$/
@@ -112,7 +112,7 @@
 /^((broker|dauth|aauth)-lp1\.ndas\.srv|sun\.hac\.lp1\.d4c|broker\.lp1\.npns\.srv|receive-lp1\.dg\.srv|app-a04\.lp1\.npns\.srv|ctest\.cdn|aqua\.hac\.lp1\.d4c|tagaya\.hac\.lp1\.eshop|bcat-(list|data)-lp1\.cdn|capi\.lp1\.op2|nncs[12]-lp1\.n\.n\.srv|ctest-ul-lp1\.cdn|dragons\.hac\.lp1\.dragons|shop|consumer\.lp1\.npns\.srv|pushmo\.hac\.lp1\.eshop|bcat-topics-lp1\.cdn|accounts)\.nintendo\.net$|^((accounts).)?nintendo.com$/
 
 ## Youtube
-/^((s(2)?\.)?youtube\.com$|^youtu\.be$|^youtube-nocookie\.com$|^(i(1)?|s)\.ytimg\.com$)/
+/^(s(2)?\.)?youtube\.com$|^youtu\.be$|^youtube-nocookie\.com$|^(i(1)?|s)\.ytimg\.com$/
 
 ## Instagram
 /^((www|z-p42-instagram\.c10r)\.)?instagram.com|^(s(content|tatic)\.)cdninstagram\.com$/
