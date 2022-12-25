@@ -51,7 +51,7 @@
 /^((profile\.accounts\.)?firefox\.com|^(((firefox\.settings|sync-1-us-west1-g\.sync|shavar|push|token|normandy-cdn|contile)\.services\.)|(versioncheck-bg\.addons|((firefox-settings-attachments|normandy)\.cdn|aus5|www|assets|detectportal|versioncheck\.addons|classify-client\.services|content-signature-2\.cdn)\.)?mozilla\.(com$|net$|org$)))/
 
 ## Blizzard Launcher - https://www.blizzard.com/en-us/apps/battle.net/desktop
-/^((eu\.(patch|version)|alert-eu|beta\.content-ui|us-legal)\.battle\.net|^(((eu\.)?api|eu\.cdn|level3(\.ssl)?)\.)?blizzard.com$)/
+/^(eu\.(patch|version)|alert-eu|beta\.content-ui|us-legal)\.battle\.net|^(((eu\.)?api|eu\.cdn|level3(\.ssl)?)\.)?blizzard\.com$/
 
 ## Sophos intercept-x - https://www.sophos.com/en-us/products/mobile-control/intercept-x
 /^(d([12]|ci)\.sophosupd\.com$|^4\.sophosxl\.net$)/
