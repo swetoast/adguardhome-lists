@@ -90,7 +90,7 @@
 /^(((sus\.dhg|svcs|home|appcompatibility)\.)?myharmony\.com$|^(pubsub|ps-[0-9]{3})\.pubnub\.com)|accounts\.logi\.com$/
 
 ## Telldus
-/^((alya|vega|lisa|live|isha|anaya|ishita|garima|triya|kavya|navya|fw)\.)?telldus\.com$/
+/^((alya|vega|jaya|lisa|live|isha|anaya|ishita|garima|triya|kavya|navya|fw)\.)?telldus\.com$/
 
 ## Neato
 /^(beehive|nucleo)\.neatocloud\.com$/
