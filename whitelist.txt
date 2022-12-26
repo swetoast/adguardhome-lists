@@ -95,6 +95,9 @@
 ## Neato
 /^(beehive|nucleo)\.neatocloud\.com$/
 
+## Should I Answer? - https://play.google.com/store/apps/details?id=org.mistergroup.shouldianswer&hl=en&gl=US
+/^(aapi)\.shouldianswer\.net$)
+
 # Websites and Devices
 ## Asustor
 /^((apns|asustornasapi|update).)?asustor.com$/
