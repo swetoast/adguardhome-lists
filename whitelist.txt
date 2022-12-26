@@ -86,6 +86,9 @@
 #¤ Tuya Smart Devices
 /^(px[0-9]|^a([0-9])?|^(m([0-9]|q\.gw)|images))\.tuyaeu\.com$/
 
+## Minibrew
+/^(pro|broker|api)\.minibrew\.io$/
+
 ## Logitech My Harmony
 /^(((sus\.dhg|svcs|home|appcompatibility)\.)?myharmony\.com$|^(pubsub|ps-[0-9]{3})\.pubnub\.com)|accounts\.logi\.com$/
 
