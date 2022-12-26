@@ -1,5 +1,5 @@
 # Regexp Blacklist
-/([\.\-\_])?(logging|annons|crashlytics(reports)?|metrics|banner(s)?|count(ers)?|marketing|analytics|telemetry|(stats|statistics)|events|track(ing)?|(insights\-)?collector|(d)?trace)([\.\-\_])?/
+/([\.\-\_])?(logging|annons|crashlytics(reports)?|metrics|banner(s)?|count(er(s)?)?|marketing|analytics|telemetry|(stats|statistics)|events|track(ing)?|(insights\-)?collector|(d)?trace)([\.\-\_])?/
 /^ad([sxve]?[0-9]*|system)([\.\-\_])([^.[:space:]]+\.){1,}|([\.\-\_])ad([sxv]?[0-9]*|system|banners)([\.\-\_])/
 /^(.+([\.\-\_]))?adse?rv(er?|ice)?s?[0-9]*([\.\-\_])/
 /^beacons?[0-9]*([\.\-\_])/
@@ -7,6 +7,7 @@
 /^pixel(s)?([\.\-\_])/
 
 # Specific Site Blocking (all subdomains and site)
-/(.*\.)?(imrworldwide\.com$|sentry\.io$|brandmetrics\.com|$brandmetrics\.com$|tsyndicate\.com$|adnxs\.com|moatads\.com$|app-measurement\.com$|admob\.com$|statsy\.net$|footprintdns\.com$|app-measurement\.com$|acuityads\.com$|doubleclick\.net$|ezcybersearch\.com$|affiliator\.(com|nu)$|affiliaxe\.com$)/
+/(.*\.)?(imrworldwide\.com$|sentry\.io$|brandmetrics\.com|$brandmetrics\.com$|tsyndicate\.com$|adnxs\.com|moatads\.com$|app-measurement\.com$|admob\.com$|statsy\.net$|footprintdns\.com$|app-measurement\.com$|acuityads\.com$|doubleclick\.net$|ezcybersearch\.com$|affiliator\.(com|nu)$|affiliaxe\.com$|datadoghq\.(com$|eu$)|findbetterresults\.com|funnelytics\.io|tradedoubler\.com)/
 /^app\.adjust\.(world|com|net\.in$)/
 /^(developer)\.asustor.com$/
+/^svt\.d[0-9]\.sc\.omtrdc\.net$/
