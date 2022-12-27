@@ -4,6 +4,7 @@
 /^(.+([\.\-\_]))?adse?rv(er?|ice)?s?[0-9]*([\.\-\_])/
 /^beacons?[0-9]*([\.\-\_])/
 /^mads\./
+/^footprints([\.\-\_])/
 /^pixel(s)?([\.\-\_])/
 
 # Specific Site Blocking (all subdomains and site)
