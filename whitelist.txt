@@ -55,6 +55,9 @@
 ## Sophos intercept-x - https://www.sophos.com/en-us/products/mobile-control/intercept-x
 /^d([12]|ci)\.sophosupd\.com$|^4\.sophosxl\.net$/
 
+## Postnord
+/^((tracking|app|account|www)\.)?postnord.com$/
+
 ## Wireguard - https://www.wireguard.com/install/
 /^((download)\.)?wireguard\.com$/
 
@@ -131,6 +134,3 @@
 
 ## Github
 /^(((a)?live)\.)?github\.com$/
-
-## Postnord
-/^((tracking|account|www)\.)?postnord.com$/
