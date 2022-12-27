@@ -90,7 +90,7 @@
 /^(pro|broker|api)\.minibrew\.io$/
 
 ## Logitech My Harmony
-/^(((sus\.dhg|svcs|home|appcompatibility)\.)?myharmony\.com$|^(pubsub|ps-[0-9]{3})\.pubnub\.com)|accounts\.logi\.com$/
+/^(((sus\.dhg|svcs|home|appcompatibility)\.)?myharmony\.com$|^(pubsub|ps-[0-9]{1,3})\.pubnub\.com)|accounts\.logi\.com$/
 
 ## Telldus
 /^((alya|vega|jaya|lisa|live|isha|anaya|ishita|garima|triya|kavya|navya|fw)\.)?telldus\.com$/
