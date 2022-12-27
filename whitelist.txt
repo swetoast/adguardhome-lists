@@ -133,4 +133,4 @@
 /^static\.xx\.fbcdn.net$/
 
 ## Github
-/^(((a)?live)\.)?github\.com$/
+/^(((a)?live)\.)?github\.com$|^(repository-images|avatars)\.githubusercontent\.com$|^github\.githubassets\.com$/
