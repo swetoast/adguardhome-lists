@@ -55,8 +55,8 @@
 ## Sophos intercept-x - https://www.sophos.com/en-us/products/mobile-control/intercept-x
 /^d([12]|ci)\.sophosupd\.com$|^4\.sophosxl\.net$/
 
-## Postnord
-/^((tracking|app|account|www)\.)?postnord.com$/
+## PostNord: Track & Send Parcels - https://play.google.com/store/apps/details?id=se.postnord.private&hl=en&gl=US
+/^((tracking|app|portal|account|www)\.)?postnord.com$/
 
 ## Wireguard - https://www.wireguard.com/install/
 /^((download)\.)?wireguard\.com$/
