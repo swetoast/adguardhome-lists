@@ -133,4 +133,4 @@
 /^(((a)?live)\.)?github\.com$/
 
 ## Postnord
-/^((tracking|www)\.)?postnord.com$/
+/^((tracking|account|www)\.)?postnord.com$/
