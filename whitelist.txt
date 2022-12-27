@@ -131,3 +131,6 @@
 
 ## Github
 /^(((a)?live)\.)?github\.com$/
+
+## Postnord
+/^((tracking|www)\.)?postnord.com$/
