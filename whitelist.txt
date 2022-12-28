@@ -23,7 +23,7 @@
 /^((aur|mirrors|bbs|security|accounts|pages|repos|archive|status|wiki|lists|git|svn|www|mail|bugs|md|redirect|dev|monitoring)\.)archlinux\.org$/
 
 ## Syncthing - https://syncthing.net/
-/^((discovery[\.-](v[46])?|upgrades)\.)?syncthing\.net$/
+/^((discovery(-v[46])?|upgrades)\.)?syncthing\.net$/
 
 ## Discord - https://discord.com/
 /^(images-ext-[1-9]|cdn|media|dl)\.?discordapp\.(com$|net$)|^((updates|status)\.)?discord\.com$|^(gateway|gateway-us-east1-[a-z])\.discord\.gg|^(latency)\.discord\.media$/
@@ -54,6 +54,9 @@
 
 ## Sophos intercept-x - https://www.sophos.com/en-us/products/mobile-control/intercept-x
 /^d([12]|ci)\.sophosupd\.com$|^4\.sophosxl\.net$/
+
+## Pushbullet Cli
+/^(websocket)\.)?pushbullet.com$/
 
 ## PostNord: Track & Send Parcels - https://play.google.com/store/apps/details?id=se.postnord.private&hl=en&gl=US
 /^((tracking|app|portal|account|www)\.)?postnord.com$/
