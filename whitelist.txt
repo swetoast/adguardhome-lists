@@ -27,6 +27,7 @@
 
 ## Canonical Livepatch
 # Url: https://ubuntu.com/security/livepatch/docs/client/firewall
+
 /^(livepatch(-files)?|contracts)\.canonical\.com$/
 
 ## Windows Online Check
@@ -168,62 +169,88 @@
 /(^(pkg|electron)\.)?authy\.com$/
 
 ## Signal 
-Url: https://signal.org/en/download/
+# Url: https://signal.org/en/download/
 
 /^((cdn(2)?|chat|storage|updates(2)?)\.)?signal\.org$/
 
-## Dropbox - https://www.dropbox.com/install
+## Dropbox
+# Url: https://www.dropbox.com/install
+
 /(^(dl|ns[12])\.)?dropbox\.com|^(dl)\.dropboxusercontent\.com$/
 
-## Lightning Alarm Weatherplaza - https://play.google.com/store/apps/details?id=com.meteoplaza.flash&hl=en&gl=US
+## Lightning Alarm Weatherplaza
+# Url: https://play.google.com/store/apps/details?id=com.meteoplaza.flash&hl=en&gl=US
+
 /^(geo|gdpr-wrapper|vendors)\.privacymanager\.io$|^maps\.infoplaza\.nl|^cluster\.api\.meteoplaza\.com$/
 
 # Smart Devices
-#¤ Tuya Smart Devices
+## Tuya Smart Devices
+# Url: 
+
 /^(px[0-9]|^a([0-9])?|^(m([0-9]|q\.gw)|images))\.tuyaeu\.com$/
 
 ## Minibrew
+# Url: 
+
 /^(pro|broker|api)\.minibrew\.io$/
 
 ## Logitech My Harmony
+# Url: 
+
 /^(((sus\.dhg|svcs|home|appcompatibility)\.)?myharmony\.com$|^(pubsub|ps-[0-9]{1,3})\.pubnub\.com)|accounts\.logi\.com$/
 
 ## Telldus
+# Url: 
+
 /^((alya|amrita|vega|divya|priya|vanya|jaya|lisa|live|isha|anaya|ishita|garima|triya|kavya|navya|fw)\.)?telldus\.com$/
 
 ## Neato
+# Url: 
+
 /^(beehive|nucleo)\.neatocloud\.com$/
 
-## Should I Answer? - https://play.google.com/store/apps/details?id=org.mistergroup.shouldianswer&hl=en&gl=US
+## Should I Answer?
+# Url: https://play.google.com/store/apps/details?id=org.mistergroup.shouldianswer&hl=en&gl=US
+
 /^((aapi|se)\.)?shouldianswer\.net$/
 
 # Websites and Devices
 ## Asustor
+
 /^((apns|asustornasapi|update).)?asustor.com$/
 
 ## Google
+
 /^((0\.client-channel|android\.clients|mail|youtube-ui\.l|inbox|clients[1-9]|cse|ogs|play|pki-goog\.l|apis|plus\.l|www(3\.l)?|video-stats\.l|id)\.)?google.com|googleapis\.com|^(ssl\.)?gstatic\.com$|^(manifest|redirector)\.googlevideo\.com|(geo|yt)3\.ggpht\.com$/
 
 ## Ubiquity Devices
+
 /(^(static|repo|download(s)?|dl|fw-(download|update))\.ubnt|^global\.(stun|turn)\.twilio|^(client|device|update)\.amplifi|^sp-dir\.uwn)\.com$/
 
 ## Nintendo Switch
+
 /^((broker|dauth|aauth)-lp1\.ndas\.srv|sun\.hac\.lp1\.d4c|broker\.lp1\.npns\.srv|receive-lp1\.dg\.srv|app-a04\.lp1\.npns\.srv|ctest\.cdn|aqua\.hac\.lp1\.d4c|tagaya\.hac\.lp1\.eshop|bcat-(list|data)-lp1\.cdn|capi\.lp1\.op2|nncs[12]-lp1\.n\.n\.srv|ctest-ul-lp1\.cdn|dragons\.hac\.lp1\.dragons|shop|consumer\.lp1\.npns\.srv|pushmo\.hac\.lp1\.eshop|bcat-topics-lp1\.cdn|accounts)\.nintendo\.net$|^((accounts).)?nintendo.com$/
 
 ## Youtube
+
 /^(s(2)?\.)?youtube\.com$|^youtu\.be$|^youtube-nocookie\.com$|^(i(1)?|s)\.ytimg\.com$/
 
 ## Instagram
+
 /^((www|z-p42-instagram\.c10r)\.)?instagram.com|^(s(content|tatic)\.)cdninstagram\.com$/
 
 ## Twitter
+
 /^((tpop-api)\.)?twitter\.com$|(pbs|ton|video|abs|(abs-(0|zero)))\.twimg.com$|^t\.co$/
 
 ## SVT
+
 /^www\.svt(static)?\.se$/
 
 ## Facebook
+
 /^static\.xx\.fbcdn.net$/
 
 ## Github
+
 /^(((a)?live)\.)?github\.com$|^(repository-images|avatars)\.githubusercontent\.com$|^github\.githubassets\.com$/
