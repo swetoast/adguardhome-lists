@@ -56,7 +56,10 @@
 /^d([12]|ci)\.sophosupd\.com$|^4\.sophosxl\.net$/
 
 ## Pushbullet Cli
-/^(websocket)\.)?pushbullet.com$/
+/^(websocket|stream|www|ocelot)\.)?pushbullet.com$/
+
+## Bankid
+^(cava(notification|internal)|mexx|www)\.bankid\.com$
 
 ## PostNord: Track & Send Parcels - https://play.google.com/store/apps/details?id=se.postnord.private&hl=en&gl=US
 /^((tracking|app|portal|account|www)\.)?postnord.com$/
