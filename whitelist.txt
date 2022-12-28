@@ -18,6 +18,9 @@
 ## Canonical Livepatch - https://ubuntu.com/security/livepatch/docs/client/firewall
 /^(livepatch(-files)?|contracts)\.canonical\.com$/
 
+## Windows Online Check
+/^(www|ipv6)\.msftconnecttest\.com$|^dns\.msftncsi\.com$/
+
 # Clients
 ## Archlinux - https://archlinux.org/
 /^((aur|mirrors|bbs|security|accounts|pages|repos|archive|status|wiki|lists|git|svn|www|mail|bugs|md|redirect|dev|monitoring)\.)archlinux\.org$/
