@@ -200,12 +200,12 @@
 /^(((sus\.dhg|svcs|home|appcompatibility)\.)?myharmony\.com$|^(pubsub|ps-[0-9]{1,3})\.pubnub\.com)|accounts\.logi\.com$/
 
 ## Telldus
-# Url: 
+# Url: https://telldus.com/
 
 /^((alya|amrita|vega|divya|priya|vanya|jaya|lisa|live|isha|anaya|ishita|garima|triya|kavya|navya|fw)\.)?telldus\.com$/
 
-## Neato
-# Url: 
+## Neato Robotics
+# Url: https://neatorobotics.com/
 
 /^(beehive|nucleo)\.neatocloud\.com$/
 
@@ -216,6 +216,7 @@
 
 # Websites and Devices
 ## Asustor
+# Url: https://www.asustor.com/en/
 
 /^((apns|asustornasapi|update).)?asustor.com$/
 
