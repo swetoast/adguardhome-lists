@@ -36,7 +36,7 @@
 
 ## Chromecast Online Check
 
-/^connectivitycheck\.gstatic\.com$
+/^connectivitycheck\.gstatic\.com$/
 
 # Clients
 
