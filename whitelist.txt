@@ -32,7 +32,7 @@
 
 ## Windows Online Check
 
-/^(www|ipv6)\.msftconnecttest\.com$|^dns\.msftncsi\.com$/
+/^((www|ipv6)\.msftconnecttest\.com$|^dns\.msftncsi\.com$)/
 
 # Clients
 
