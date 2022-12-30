@@ -34,6 +34,10 @@
 
 /^((www|ipv6)\.msftconnecttest\.com$|^dns\.msftncsi\.com$)/
 
+## Chromecast Online Check
+
+/^connectivitycheck\.gstatic\.com$
+
 # Clients
 
 ## Archlinux
