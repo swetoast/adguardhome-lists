@@ -196,7 +196,7 @@
 ## Homebridge
 # Url: https://homebridge.io/
 
-^homebridge-gsh\.iot\.oz\.nu$
+/^homebridge-gsh\.iot\.oz\.nu$/
 
 ## Minibrew
 # Url: https://www.minibrew.io
