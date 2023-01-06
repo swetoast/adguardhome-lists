@@ -62,7 +62,7 @@
 # Url: https://play.google.com/store/apps/details?id=com.tplink.tpm5&hl=en&gl=US
 # Url: https://apps.apple.com/us/app/tp-link-deco/id1186159417
 
-^((n-(wap-gw|euw1-wap-gw)\.)tplinkcloud\.com$|^api-homecare-cloud\.i\.tplinknbu\.com)$
+/^(n-(devs|wap|euw1-wap)-gw\.tplinkcloud\.com|^api-homecare-cloud\.i\.tplinknbu\.com)$/
 
 ## Epicgames Launcher
 # Url: https://store.epicgames.com/en-US/download
