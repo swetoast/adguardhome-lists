@@ -265,3 +265,7 @@
 ## Github
 
 /^(((a)?live)\.)?github\.com$|^(repository-images|avatars)\.githubusercontent\.com$|^github\.githubassets\.com$/
+
+## Netflix
+
+/^(nrdp(60-appboot|-ipv6\.prod\.ftl|\.prod\.cloud)|android\.prod\.cloud|secure)\.netflix\.com$/
