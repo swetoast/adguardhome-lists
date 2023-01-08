@@ -268,4 +268,4 @@
 
 ## Netflix
 
-/^(nrdp(60-appboot|-ipv6\.prod\.ftl|\.prod\.cloud)|android\.prod\.cloud|secure)\.netflix\.com$/
+/^(nrdp(60-appboot|-ipv6\.prod\.ftl|\.prod\.cloud)|android\.prod\.cloud|secure|push\.prod)\.netflix\.com$/
