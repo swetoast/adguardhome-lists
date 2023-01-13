@@ -206,7 +206,7 @@
 ## Logitech Harmony
 # Url: https://www.myharmony.com/en-se/
 
-/^(((sus\.dhg|svcs|home|appcompatibility)\.)?myharmony\.com$|^(pubsub|ps-[0-9]{1,3})\.pubnub\.com)|accounts\.logi\.com$/
+/^(((cf-svcs|sus\.dhg|svcs|home|appcompatibility)\.)?myharmony\.com$|^(pubsub|ps-[0-9]{1,3})\.pubnub\.com)|accounts\.logi\.com$/
 
 ## Telldus
 # Url: https://telldus.com/
