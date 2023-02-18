@@ -101,7 +101,7 @@
 # Url: https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en&gl=US
 # Url: https://apps.apple.com/us/app/firefox-private-safe-browser/id989804926
 
-/^((profile\.accounts\.)?firefox\.com|^(((firefox\.settings|sync-1-us-west1-g\.sync|shavar|push|token|normandy-cdn|contile)\.services\.)|(versioncheck-bg\.addons|((firefox-settings-attachments|normandy)\.cdn|aus5|www|assets|detectportal|versioncheck\.addons|classify-client\.services|content-signature-2\.cdn)\.)?mozilla\.(com$|net$|org$)))/
+/^((profile\.accounts\.)?firefox\.com|^(((firefox\.settings|sync-1-us-west1-g\.sync|shavar|push|token|normandy-cdn|contile)\.services\.)|(versioncheck-bg\.addons|((firefox-settings-attachments|normandy)\.cdn|aus5|www|assets|detectportal|versioncheck\.addons|classify-client\.services|content-signature-2\.cdn|tracking-protection\.cdn)\.)?mozilla\.(com$|net$|org$)))/
 
 ## Blizzard Launcher
 # Url: https://www.blizzard.com/en-us/apps/battle.net/desktop
@@ -269,3 +269,7 @@
 ## Netflix
 
 /^(nrdp(60-appboot|-ipv6\.prod\.ftl|\.prod\.cloud)|android\.prod\.cloud|secure|push\.prod|nflx-android-tv\.prod\.partner)\.netflix\.(com|net)$/
+
+## Bring
+
+/^tracking\.bring\.se$/
