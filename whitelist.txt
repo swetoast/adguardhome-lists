@@ -273,3 +273,7 @@
 ## Bring
 
 /^tracking\.bring\.se$/
+
+## Aliexpress
+
+/^track\.aliexpress\.com/
