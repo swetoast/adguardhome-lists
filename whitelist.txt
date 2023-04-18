@@ -30,6 +30,11 @@
 
 /^(livepatch(-files)?|contracts)\.canonical\.com$/
 
+## Hardware Firmware Updates
+# Url: https://fwupd.org/
+
+/^cdn\.fwupd\.org$/
+
 ## Windows Online Check
 
 /^((www|ipv6)\.msftconnecttest\.com$|^dns\.msftncsi\.com$)/
