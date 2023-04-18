@@ -218,6 +218,11 @@
 
 /^(beehive|nucleo)\.neatocloud\.com$/
 
+## Withings
+# Url: https://www.withings.com
+
+/^sct01-ws\.withings\.net$/
+
 ## Should I Answer?
 # Url: https://play.google.com/store/apps/details?id=org.mistergroup.shouldianswer&hl=en&gl=US
 
