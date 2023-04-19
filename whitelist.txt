@@ -208,6 +208,11 @@
 
 /^(pro|broker|api)\.minibrew\.io$/
 
+## Sector Alarm
+# Url: https://www.sectoralarm.se/
+
+/^mypagesapi\.sectoralarm\.net$/
+
 ## Logitech Harmony
 # Url: https://www.myharmony.com/en-se/
 
