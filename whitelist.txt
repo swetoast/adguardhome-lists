@@ -116,7 +116,7 @@
 ## Sophos intercept-x
 # Url: https://www.sophos.com/en-us/products/mobile-control/intercept-x
 
-/^d([12]|ci)\.sophosupd\.com$|^4\.sophosxl\.net$/
+/^(d([12]|ci)\.sophosupd\.com$|^4\.sophosxl\.net)$/
 
 ## Pushbullet
 # Url: https://www.pushbullet.com/
