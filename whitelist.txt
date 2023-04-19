@@ -213,6 +213,11 @@
 
 /^mypagesapi\.sectoralarm\.net$/
 
+## Verisure Alarm
+# Url: https://www.verisure.se/
+
+/^https://automation0[12]\.verisure\.com$/
+
 ## Logitech Harmony
 # Url: https://www.myharmony.com/en-se/
 
