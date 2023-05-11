@@ -55,6 +55,10 @@
 # Url: https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid&hl=en&gl=US
 
 /^((discovery(-v[46])?|upgrades)\.)?syncthing\.net$/
+## ClamAV
+# Url: https://www.clamav.net/
+
+/^(current\.cvd|database|www)\.clamav\.net$/
 
 ## Discord - https://discord.com/
 # Url: https://discord.com/download
