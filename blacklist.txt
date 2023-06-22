@@ -16,4 +16,4 @@
 /^svt\.d[0-9]\.sc\.omtrdc\.net$/
 
 # Malware sites
-/cdn[0-9]+\.duc3k\.com$/$badfilter
+/.*duc3k\.com/$badfilter
