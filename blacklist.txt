@@ -14,3 +14,6 @@
 /^(developer)\.asustor\.com$/
 /^galaxy-client-reports\.gog\.com$/
 /^svt\.d[0-9]\.sc\.omtrdc\.net$/
+
+#Malware
+/cdn[0-9]+\.duc3k\.com$/$badfilter
