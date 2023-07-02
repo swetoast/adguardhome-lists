@@ -52,7 +52,7 @@
 
 ## Unraid
 # Url: https://www.unraid.net
-/^((registration|mothership|backup)\.unraid\.net|([0-9]{1,3}-){3}[0-9]{1,3}\.([0-9a-z])+\.myunraid\.net)$/
+/^((registration|craftassets|mothership|backup)\.unraid\.net|([0-9]{1,3}-){3}[0-9]{1,3}\.([0-9a-z])+\.myunraid\.net)$/
 
 ## Syncthing
 # Url: https://syncthing.net/
