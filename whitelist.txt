@@ -50,6 +50,10 @@
 
 /^((aur|mirrors|bbs|security|accounts|openpgpkey(\.master-key)?|pages|repos|archive|status|wiki|lists|git|svn|www|mail|bugs|md|redirect|dev|monitoring)\.)archlinux\.org$/
 
+## Unraid
+# Url: https://www.unraid.net
+/^((registration|mothership|backup)\.unraid\.net|([0-9]{1,3}-){3}[0-9]{1,3}\.([0-9a-z])+\.myunraid\.net)$/
+
 ## Syncthing
 # Url: https://syncthing.net/
 # Url: https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid&hl=en&gl=US
