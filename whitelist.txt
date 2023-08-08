@@ -13,7 +13,7 @@
 ## NTP Pools
 # Url: https://www.ntppool.org/en/
 
-/^([0-3](\.)?)?(nz|android|openwrt|arch|ubnt|debian)?\.pool\.ntp\.org$/
+^([0-3](\.)?)?(nz|android|openwrt|arch|ubnt|debian)?(\.)?pool\.ntp\.org$
 
 ## Online Certificate Status Protocol
 # Url: https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol
