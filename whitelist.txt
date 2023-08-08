@@ -48,7 +48,7 @@
 ## Archlinux
 # Url: https://archlinux.org/
 
-/^((aur|mirrors|bbs|security|accounts|openpgpkey(\.master-key)?|pages|repos|archive|status|wiki|lists|git|svn|www|mail|bugs|md|redirect|dev|monitoring)\.)archlinux\.org$/
+^((aur|mirrors|bbs|security|accounts|openpgpkey(\.master-key)?|pages|ping|repos|archive|status|wiki|lists|git|svn|www|mail|bugs|md|redirect|dev|monitoring)\.)archlinux\.org$
 
 ## Unraid
 # Url: https://www.unraid.net
