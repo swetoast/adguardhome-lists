@@ -114,7 +114,7 @@
 # Url: https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en&gl=US
 # Url: https://apps.apple.com/us/app/firefox-private-safe-browser/id989804926
 
-/(profile\.accounts|detectportal|www)(\.)firefox\.com$|(aus5|www|(services\.)?addons|(versioncheck-bg|services)\.addons)(\.)mozilla\.org|(assets|(normandy|firefox-settings-attachments|content-signature-2)\.cdn)\.mozilla\.net|((firefox\.settings|classify-client)\.services|(token|push)\.services)(\.)mozilla\.com|^firefoxusercontent\.com$/
+/(profile\.accounts|detectportal|www)(\.)firefox\.com$|(aus5|www|(services\.)?addons|(versioncheck-bg|services)\.addons)(\.)mozilla\.org|(assets|(normandy|firefox-settings-attachments|content-signature-2)\.cdn)\.mozilla\.net|((firefox\.settings|classify-client)\.services|(token|push|shavar|location|sync-1-us-west1-g\.sync)\.services)(\.)mozilla\.com|^firefoxusercontent\.com$/
 
 ## Blizzard Launcher
 # Url: https://www.blizzard.com/en-us/apps/battle.net/desktop
