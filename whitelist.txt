@@ -231,6 +231,11 @@
 
 /^(((cf-svcs|sus\.dhg|svcs|home|appcompatibility)\.)?myharmony\.com$|^(pubsub|ps-[0-9]{1,3})\.pubnub\.com)|accounts\.logi\.com$/
 
+## HP Printers
+# Url: https://www.hp.com/us-en/shop/vwa/printers
+
+/(^h(30494|20593)\.www[23]\.hp\.com$|^xmpp005\.hpeprint\.com$)/
+
 ## Telldus
 # Url: https://telldus.com/
 
