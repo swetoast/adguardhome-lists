@@ -14,9 +14,10 @@
 /^(developer)\.asustor\.com$/
 /^galaxy-client-reports\.gog\.com$/
 /^svt\.d[0-9]\.sc\.omtrdc\.net$/
-/^deb\.fdmpkg\.org$/
 
 # Malware sites
 /^(.*)?(duc3k|amazingtodaynotsaidhimherwhathe|ankabuttech|tadogem|deveparty|plus-lema|es-megado|focustopbreed78d|fermonesgobide|sertvs|jqscr|jqueryns|maximumpushtodaynotnowbut|motiontodaynotgogoodnowok|mavelecgr|eerier-safety.000webhostapp|catknock|specialblueitems|violetlovelines|panel.cheater-zone|allfamax|client.cheater-zone|bitcoinpricealertexpert|coindexalerter|uniswapdataprice|immagirls.myvnc|alpatrik|justinstalledpanel|damnater)\.com/
 # Decoy Dog Malware
 /^(cbox4\.ignorelist|atlas-upd)\.com$|^(claudfront|allowlisted)\.net|^hsdps\.cc$|^ads-tm-glb\.click$/
+# Infected Debian/Ubuntu Repo
+/^deb\.fdmpkg\.org$/
