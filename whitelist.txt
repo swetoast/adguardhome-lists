@@ -311,6 +311,10 @@
 
 /^track\.aliexpress\.com/
 
+## World's Air Pollution: Real-time Air Quality Index
+
+/^api\.waqi\.info$/
+
 ## Earlybird
 
 /^tracking\.earlybird\.delivery$/
