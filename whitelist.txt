@@ -239,7 +239,7 @@
 ## Telldus
 # Url: https://telldus.com/
 
-/^((advika|niya|alya|myra|rachita|mahi|amrita|vega|divya|priya|vanya|jaya|lisa|live|isha|anaya|ishita|garima|triya|kavya|navya|fw)\.)?telldus\.com$/
+/^((advika|niya|alya|myra|rachita|mahi|amrita|vega|divya|priya|vanya|jaya|lisa|live|isha|anaya|ishita|garima|triya|kavya|navya|fw|pa-api)\.)?telldus\.com$/
 
 ## Neato Robotics
 # Url: https://neatorobotics.com/
