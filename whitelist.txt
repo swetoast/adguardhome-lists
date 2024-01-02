@@ -43,6 +43,11 @@
 
 /^connectivitycheck\.gstatic\.com$/
 
+## Pixel Watch 1&2
+# Optimized mobile GPS Data - A-GPS Qualcomm
+
+/^(time|path[1-3])\.xtracloud\.net/
+
 # Clients
 
 ## Archlinux
