@@ -18,8 +18,9 @@ AdGuard Home is a network-wide software for blocking ads & tracking. This projec
     - Log into AdGuard Home.
     - Using the top menu, click `Filters` and then `DNS blocklists`.
     - Click the green `Add blocklist` button.
-    - Paste the URL of the `whitelist.txt` and `blacklist.txt` files.
+    - Paste the URL of the `blacklist.txt` files.
     - Click `Add`.
+    - Repeat the process for `whitelist.txt` but adding it under `DNS Allowlist`
 
 ## Contribute
 
