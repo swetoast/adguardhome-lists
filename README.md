@@ -24,7 +24,7 @@ AdGuard Home is a network-wide software for blocking ads & tracking. This projec
 
 ## Contribute
 
-If you want something added, feel free to create a pull request and we'll gladly accept.
+If you want something added, feel free to create a pull request and i'll gladly accept.
 
 ## Support
 
