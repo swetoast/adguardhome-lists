@@ -28,5 +28,5 @@ If you want something added, feel free to create a pull request and i'll gladly 
 
 ## Support
 
-If you find these lists useful, please consider giving us a star on GitHub!
+If you find these lists useful, please consider giving me a star on GitHub!
 
