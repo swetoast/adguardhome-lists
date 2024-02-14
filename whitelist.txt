@@ -273,7 +273,7 @@
 
 ## Ubiquity Devices
 
-/(^(static|repo|download(s)?|dl|fw-(download|update))\.ubnt|^global\.(stun|turn)\.twilio|^(client|device|update)\.amplifi|^sp-dir\.uwn)\.com$/
+/(^(static|repo|download(s)?|dl|fw-(download|update))\.ubnt|^global\.(stun|turn)\.twilio|^(client|device|update)\.amplifi|^sp-dir\.uwn|ips1\.unifi-ai)\.com$/
 
 ## Nintendo Switch
 # Url: https://www.nintendo.com/switch/system/
