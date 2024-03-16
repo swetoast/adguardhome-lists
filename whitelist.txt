@@ -209,7 +209,7 @@
 ## Tuya Smart - Global IoT Development Platform Service Provider
 # Url: https://www.tuya.com/
 
-/^(px[0-9]|^a([0-9])?|^(m([0-9]|q\.gw)|openapi|images))\.tuyaeu\.com$/
+/^(px[0-9]|^a([0-9])?|^(m([0-9]|q\.gw)|openapi|apigw|images))\.tuyaeu\.com$/
 
 ## Homebridge
 # Url: https://homebridge.io/
