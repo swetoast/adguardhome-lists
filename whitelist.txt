@@ -135,7 +135,7 @@
 # Url: https://www.pushbullet.com/
 # Url: https://play.google.com/store/apps/details?id=com.pushbullet.android&hl=en&gl=US
 
-/^(websocket|stream|www|zebra|update|ocelot)\.)?pushbullet.com$/
+/^(websocket|stream|www|zebra|update|ocelot|stream-android|static)\.)?pushbullet.com$/
 
 ## Bankid
 # Url: https://www.bankid.com/
