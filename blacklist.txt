@@ -21,3 +21,6 @@
 /^(cbox4\.ignorelist|atlas-upd)\.com$|^(claudfront|allowlisted)\.net|^hsdps\.cc$|^ads-tm-glb\.click$/
 # Infected Debian/Ubuntu Repo
 /^deb\.fdmpkg\.org$/
+
+# Scam sites (Keep sending these dumbasses)
+/^(track-my-delivery\.net|unsubscribeprime\.info)$/
