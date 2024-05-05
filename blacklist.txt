@@ -22,5 +22,5 @@
 # Infected Debian/Ubuntu Repo
 /^deb\.fdmpkg\.org$/
 
-# Scam sites (Keep sending these dumbasses)
+# Scam sites
 /^(track-my-delivery\.net|unsubscribeprime\.info)$/
