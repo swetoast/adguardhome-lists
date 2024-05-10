@@ -251,6 +251,11 @@
 
 /^(beehive|nucleo)\.neatocloud\.com$/
 
+## Roborock
+# Url: https://global.roborock.com/
+
+/^((api|mqtt)-eu\.roborock\.com|(conf|ultronsplus)-eu-1316693915\.cos\.eu-frankfurt\.myqcloud\.com)$/
+
 ## Withings
 # Url: https://www.withings.net
 
