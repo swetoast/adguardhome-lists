@@ -214,7 +214,7 @@
 ## Airthings
 # Url: https://www.airthings.com/
 
-/^global-api\.airthin\.gs$/
+/(^global-api\.airthin\.gs$|^ext-api\.airthings\.com$)/
 
 ## Homebridge
 # Url: https://homebridge.io/
