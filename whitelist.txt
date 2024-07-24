@@ -211,6 +211,11 @@
 
 /^(px[0-9]|^a([0-9])?|^(m([0-9]|q\.gw)|openapi|apigw|images))\.tuyaeu\.com$/
 
+## Airthings
+# Url: https://www.airthings.com/
+
+/^global-api\.airthin\.gs$/
+
 ## Homebridge
 # Url: https://homebridge.io/
 
