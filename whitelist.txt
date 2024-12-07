@@ -330,6 +330,10 @@
 
 /^tracking\.bring\.se$/
 
+## Airmee
+
+/^tracking\.airmee\.com$/
+
 ## Aliexpress
 
 /^track\.aliexpress\.com/
