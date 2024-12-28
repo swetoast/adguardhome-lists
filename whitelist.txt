@@ -21,7 +21,7 @@
 ## NTP Pools
 # Url: https://www.ntppool.org/en/
 
-/^([0-9]\.(nz|android|openwrt|arch|ubnt|debian)\.)?pool\.ntp\.org$/
+/^(([0-9]\.)?(nz|android|openwrt|arch|ubnt|debian)\.)?pool\.ntp\.org$/
 
 ## Online Certificate Status Protocol
 # Url: https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol
@@ -71,7 +71,8 @@
 # Url: https://syncthing.net/
 # Url: https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid&hl=en&gl=US
 
-/^((discovery(-v[46])?|upgrades)\.)?syncthing\.net$/
+/^((discovery-(announce-v[46]|lookup)|discovery(-v[46])?|upgrades)\.syncthing\.net)$/
+
 ## ClamAV
 # Url: https://www.clamav.net/
 
@@ -143,7 +144,7 @@
 # Url: https://www.pushbullet.com/
 # Url: https://play.google.com/store/apps/details?id=com.pushbullet.android&hl=en&gl=US
 
-/^(websocket|stream|www|zebra|update|ocelot|stream-android|static)\.)?pushbullet.com$/
+/^((websocket|stream(2|-(android|extension))?|www|zebra|update|ocelot|static)\.)?pushbullet\.com$/
 
 ## Bankid
 # Url: https://www.bankid.com/
