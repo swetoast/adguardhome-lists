@@ -10,6 +10,10 @@
 
 /^(userlocation|messages|safebrowsing|play|steamcloud-eu-fra\.storage|fcm|android|maps|www|fonts|youtubei|firebaseremoteconfig|(notifications|gnpfesdk|geller|lamssettings|jnn|androidpay-users|deviceintegritytokens|playatoms|ulp1p|people|reach|semanticlocation|reminders|androidtvlauncherxfe|update)-pa|staging-locationhistory-pa\.sandbox|instantmessaging-pa-preprod-eu)\.googleapis.com$/
 
+## Creality Cloud
+# Url: https://www.crealitycloud.com/
+/^api\.crealitycloud\.com/
+
 ## Flightradar24
 # Url: https://www.flightradar24.com/
 /^(data-cloud|www)\.flightradar24\.com$/
