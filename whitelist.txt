@@ -35,7 +35,7 @@
 ## Lets Encrypt
 ### Url: https://letsencrypt.org/docs/lencr.org/
 
-/(^(x[0-9]\.c|(e[0-9]|r[0-9])\.o)\.lencr\.org$|^letsencrypt\.org$)/
+/(^(x[0-9]{1,2}\.c|(e[0-9]{1,2}|r[0-9]{1,2})\.o)\.lencr\.org$|^letsencrypt\.org$)/
 
 ## Canonical Livepatch
 ### Url: https://ubuntu.com/security/livepatch/docs/client/firewall
