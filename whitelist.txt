@@ -12,12 +12,12 @@
 
 ## Creality Cloud
 # Url: https://www.crealitycloud.com/
-/^api\.crealitycloud\.com/
+/^api\.crealitycloud\.com$/
 
 ## Fitbit
 # Url: https://store.google.com/category/watches_trackers
 
-/^api\.fitbit\.com$/
+/^(api|static0|digital-assets)\.fitbit\.com$/
 
 ## Flightradar24
 # Url: https://www.flightradar24.com/
