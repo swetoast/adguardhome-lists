@@ -346,3 +346,7 @@
 ## Earlybird
 
 /(^tracking\.earlybird\.delivery$|^track\.earlybird\.se$)/
+
+## Adguard Antiblocklist
+
+/^ad-block\.dns\.adguard\.com$/
