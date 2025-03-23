@@ -75,7 +75,7 @@
 # Url: https://syncthing.net/
 # Url: https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid&hl=en&gl=US
 
-/^((discovery-(announce-v[46]|lookup)|discovery(-v[46])?|upgrades)\.syncthing\.net)$/
+/^((stun|discovery-(announce-v[46]|lookup)|discovery(-v[46])?|upgrades)\.syncthing\.net)$/
 
 ## ClamAV
 # Url: https://www.clamav.net/
