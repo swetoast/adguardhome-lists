@@ -108,7 +108,7 @@
 ## Home Assisant
 # Url: https://www.home-assistant.io/
 
-/^(alerts|brands)?\.home-assistant\.io|hooks\.nabu\.casa$/
+/^(alerts|brands|demo|www)?\.home-assistant\.io|hooks\.nabu\.casa$/
 
 ## Ubisoft Launcher
 # Url: https://ubisoftconnect.com/en-US/
