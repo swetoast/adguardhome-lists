@@ -12,16 +12,6 @@
 
 /^(userlocation|messages|safebrowsing|play|steamcloud-eu-fra\.storage|fcm|android|maps|www|fonts|youtubei|firebaseremoteconfig|(notifications|gnpfesdk|geller|lamssettings|jnn|androidpay-users|deviceintegritytokens|playatoms|ulp1p|people|reach|semanticlocation|reminders|androidtvlauncherxfe|update)-pa|staging-locationhistory-pa\.sandbox|instantmessaging-pa-preprod-eu)\.googleapis.com$/
 
-## Creality Cloud
-### Url: https://www.crealitycloud.com/
-
-/^api\.crealitycloud\.com$/
-
-## Fitbit
-### Url: https://store.google.com/category/watches_trackers
-
-/^(api|static0|digital-assets)\.fitbit\.com$/
-
 ## Flightradar24
 ### Url: https://www.flightradar24.com/
 
@@ -228,6 +218,16 @@
 ### Url: https://www.home-assistant.io/
 
 /^(alerts|brands|demo|www)?\.home-assistant\.io|hooks\.nabu\.casa$/
+
+## Creality Cloud
+### Url: https://www.crealitycloud.com/
+
+/^api\.crealitycloud\.com$/
+
+## Fitbit
+### Url: https://store.google.com/category/watches_trackers
+
+/^(api|static0|digital-assets)\.fitbit\.com$/
 
 ## Minibrew
 ### Url: https://www.minibrew.io
