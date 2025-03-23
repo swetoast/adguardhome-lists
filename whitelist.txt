@@ -1,59 +1,64 @@
 # Regexp Whitelist
+
 # General
+
 ## Api Calls
-# Url: https://www.cloudflare.com/learning/security/api/what-is-api-call/
+### Url: https://www.cloudflare.com/learning/security/api/what-is-api-call/
 
 /^api([0-9])?[-\.].*((((((((teslacoilapps|accounts\.nintendo|minecraftservices|techlandonlineservices|gog|pushbullet|github|google|steampowered|blizzard|dropbox|twitter|soundcloud|authy|firefox|discogs|postnord|pushbullet|samsungcloud|telldus|unsplash)\.com|(audnex)\.us)|(snapcraft)\.io)|(signal|jdownloader)\.org)|(epicgames)\.dev$)|(ipdata)\.co)|(svt)\.se)|(plex)\.tv$)/
 
 ## Google Apis 
-# Url: https://developers.google.com/discovery/v1/getting_started
+### Url: https://developers.google.com/discovery/v1/getting_started
 
 /^(userlocation|messages|safebrowsing|play|steamcloud-eu-fra\.storage|fcm|android|maps|www|fonts|youtubei|firebaseremoteconfig|(notifications|gnpfesdk|geller|lamssettings|jnn|androidpay-users|deviceintegritytokens|playatoms|ulp1p|people|reach|semanticlocation|reminders|androidtvlauncherxfe|update)-pa|staging-locationhistory-pa\.sandbox|instantmessaging-pa-preprod-eu)\.googleapis.com$/
 
 ## Creality Cloud
-# Url: https://www.crealitycloud.com/
+### Url: https://www.crealitycloud.com/
+
 /^api\.crealitycloud\.com$/
 
 ## Fitbit
-# Url: https://store.google.com/category/watches_trackers
+### Url: https://store.google.com/category/watches_trackers
 
 /^(api|static0|digital-assets)\.fitbit\.com$/
 
 ## Flightradar24
-# Url: https://www.flightradar24.com/
+### Url: https://www.flightradar24.com/
+
 /^(data-cloud|www)\.flightradar24\.com$/
 
 ## Västtrafik
-# Url: https://www.vasttrafik.se/
+### Url: https://www.vasttrafik.se/
 
 /^ext-api\.vasttrafik\.se$/
 
 ## NTP Pools
-# Url: https://www.ntppool.org/en/
+### Url: https://www.ntppool.org/en/
 
 /^(([0-9]\.)?(nz|android|openwrt|arch|ubnt|debian)\.)?pool\.ntp\.org$/
 
 ## Online Certificate Status Protocol
-# Url: https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol
+### Url: https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol
 
 /^ocsp(2)?\.((digicert|globalsign|sectigo|sca1b\.amazontrust|starfieldtech|usertrust|(root(ca1|g2)\.amazontrust))\.com$|(pki)\.goog)|(swisssign|comodoca\.com\.cdn\.cloudflare)\.net$/
 
 ## Lets Encrypt
-# Url: https://letsencrypt.org/docs/lencr.org/
+### Url: https://letsencrypt.org/docs/lencr.org/
 
 /(^(x[0-9]\.c|(e[0-9]|r[0-9])\.o)\.lencr\.org$|^letsencrypt\.org$)/
 
 ## Canonical Livepatch
-# Url: https://ubuntu.com/security/livepatch/docs/client/firewall
+### Url: https://ubuntu.com/security/livepatch/docs/client/firewall
 
 /^(livepatch(-files)?|contracts)\.canonical\.com$/
 
 ## Hardware Firmware Updates
-# Url: https://fwupd.org/
+### Url: https://fwupd.org/
 
 /^cdn\.fwupd\.org$/
 
 ## Windows Online Check
+### Url: https://www.microsoft.com/en-us/windows
 
 /^((www|ipv6)\.msftconnecttest\.com$|^dns\.msftncsi\.com$)/
 
@@ -62,242 +67,222 @@
 /^connectivitycheck\.gstatic\.com$/
 
 ## Pixel Watch 1&2
-# Optimized mobile GPS Data - A-GPS Qualcomm
+### Optimized mobile GPS Data - A-GPS Qualcomm
 
 /^(time|path[1-3])\.xtracloud\.net/
 
 # Clients
 
 ## Archlinux
-# Url: https://archlinux.org/
+### Url: https://archlinux.org/
 
 /^((aur|mirrors|bbs|security|accounts|openpgpkey(\.master-key)?|pages|ping|repos|archive|status|wiki|lists|git|svn|www|mail|bugs|md|redirect|dev|monitoring|wiki|gitlab|download|security)\.)archlinux\.org$/
 
 ## Unraid
-# Url: https://www.unraid.net
+### Url: https://www.unraid.net
 /^((registration|wanip4|rebindtest4|craftassets|mothership|backup)\.unraid\.net|([0-9]{1,3}-){3}[0-9]{1,3}\.([0-9a-z])+\.myunraid\.net)$/
 
 ## Syncthing
-# Url: https://syncthing.net/
-# Url: https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid&hl=en&gl=US
+### Url: https://syncthing.net/ or https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid&hl=en&gl=US
 
 /^((stun|discovery-(announce-v[46]|lookup)|discovery(-v[46])?|upgrades)\.syncthing\.net)$/
 
 ## ClamAV
-# Url: https://www.clamav.net/
+### Url: https://www.clamav.net/
 
 /^(current\.cvd|database|www)\.clamav\.net$/
 
 ## Discord - https://discord.com/
-# Url: https://discord.com/download
-# Url: https://play.google.com/store/apps/details?id=com.discord&hl=en&gl=US
-# Url: https://apps.apple.com/us/app/discord-chat-talk-hangout/id985746746
+### Url: https://discord.com/download Android: https://play.google.com/store/apps/details?id=com.discord&hl=en&gl=US IOS: https://apps.apple.com/us/app/discord-chat-talk-hangout/id985746746
 
 /^(images-ext-[1-9]|cdn|media|dl)\.?discordapp\.(com$|net$)|^((updates|status)\.)?discord\.com$|^(gateway|gateway-us-east1-[a-z])\.discord\.gg|^(latency)\.discord\.media$/
 
 ## TP-Link Deco
-# Url: https://play.google.com/store/apps/details?id=com.tplink.tpm5&hl=en&gl=US
-# Url: https://apps.apple.com/us/app/tp-link-deco/id1186159417
+### Andrioid: https://play.google.com/store/apps/details?id=com.tplink.tpm5&hl=en&gl=US IOS: https://apps.apple.com/us/app/tp-link-deco/id1186159417
 
 /^(n-(devs|wap|euw1-wap)-gw\.tplinkcloud\.com|^api-homecare-cloud\.i\.tplinknbu\.com)$/
 
 ## Epicgames Launcher
-# Url: https://store.epicgames.com/en-US/download
+### Url: https://store.epicgames.com/en-US/download
 
 /^((account|catalog)-public-service-prod0[0-9]|datarouter|turn\.rtcp\.on|entitlement-public-service-prod0[0-9]|friends-public-service-prod0[0-9]|launcher-public-service-prod0[0-9]|lightswitch-public-service-prod0[0-9]|merchantpool[0-9]|orderprocessor-public-service-ecomprod0[0-9]|payment-website-pci|xmpp-service-prod|auncher-public-service-prod\.ak|priceengine-public-service-ecomprod0[1-9]|library-service\.live\.use1a\.on|datarouter-prod\.ak)(\.ol)?\.epicgames\.com$/
 
 ## Gog Galaxy Laucher
-# Url: https://www.gog.com/galaxy
+### Url: https://www.gog.com/galaxy
 
 /^(auth|c(fg|hat|ontent-system|hat)|e(mbed|xternal-(accounts|users))|galaxy-(library|promos)|game(play|sdb)|images|login|marketing-sections|menu|notifications(-pusher(-aws)?)?|presence|r(ecommendations-api|emote-config)|www)\.gog\.com$/
 
-## Home Assisant
-# Url: https://www.home-assistant.io/
-
-/^(alerts|brands|demo|www)?\.home-assistant\.io|hooks\.nabu\.casa$/
-
 ## Ubisoft Launcher
-# Url: https://ubisoftconnect.com/en-US/
+### Url: https://ubisoftconnect.com/en-US/
 
 /^((account|connect|api-(api-(ubiservices|uplayplusvault)|static-account|lb-prod-acc_ount-pdc|dmx\.upc)\.)ubisoft.com$|^((uplay)?connect|wallet\.ecom|public-ubiservices|useast1-public.aws-ubiservices|channel-service\.upc|public-ws-ubiservices|)\.ubi.com$/
 
 ## Prism Launcher
-# Url: https://prismlauncher.org/download/
+### Url: https://prismlauncher.org/download/
 
 /(i18n\.)?prismlauncher.org$/
 
 ## Rockstar Launcher
-# Url: https://socialclub.rockstargames.com/rockstar-games-launcher
+### Url: https://socialclub.rockstargames.com/rockstar-games-launcher
 
 /^((gamedownloads|(auth-)?rgl-prod\.ros|rgl|prod\.cloud)\.)?rockstargames\.com$|^a\.rsg\.sc|^rockstar-api\.arkoselabs\.com$/
 
 ## Plex
-# Url: https://www.plex.tv/media-server-downloads/
-# Url: https://play.google.com/store/apps/details?id=com.plexapp.android&hl=en&gl=US
-# Url: https://apps.apple.com/us/app/plex-stream-movies-tv/id383457673
+### Url: https://www.plex.tv/media-server-downloads/ or Android: https://play.google.com/store/apps/details?id=com.plexapp.android&hl=en&gl=US IOS: https://apps.apple.com/us/app/plex-stream-movies-tv/id383457673
 
 /^((community|features|forums|dashboard|v4|assets|meta|metadata-static|plexamp|app|sonos|images|o1\.email|proxy|pubsub|staging|status|tvdb2|o2\.sg0|acoustid|clients|discover\.provider|downloads|scrobbles|lyricfind|mbz|metadata\.provider|songkick|together)?\.)?plex\.tv$|((resources-cdn|my|nine\.plugins|node|tvthemes)\.)?plexapp\.com|^([0-9-]{1,3})+\.\w+\.plex.direct$/
 
 ## Firefox
-# Url: https://www.mozilla.org/en-US/firefox/new/
-# Url: https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en&gl=US
-# Url: https://apps.apple.com/us/app/firefox-private-safe-browser/id989804926
+### Url: https://www.mozilla.org/en-US/firefox/new/ Android: https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en&gl=US IOS: https://apps.apple.com/us/app/firefox-private-safe-browser/id989804926
 
 /(profile\.accounts|detectportal|www)(\.)firefox\.com$|(aus5|www|(services\.)?addons|(versioncheck-bg|services)\.addons)(\.)mozilla\.org|(assets|(normandy|firefox-settings-attachments|content-signature-2)\.cdn)\.mozilla\.net|((firefox\.settings|classify-client)\.services|(token|push|shavar|location|sync-1-us-west1-g\.sync)\.services)(\.)mozilla\.com|^firefoxusercontent\.com$/
 
 ## Blizzard Launcher
-# Url: https://www.blizzard.com/en-us/apps/battle.net/desktop
+### Url: https://www.blizzard.com/en-us/apps/battle.net/desktop
 
 /^(eu\.(patch|version)|alert-eu|beta\.content-ui|us-legal)\.battle\.net|^(((eu\.)?api|eu\.cdn|level3(\.ssl)?)\.)?blizzard\.com$/
 
 ## Sophos intercept-x
-# Url: https://www.sophos.com/en-us/products/mobile-control/intercept-x
+### Android: https://www.sophos.com/en-us/products/mobile-control/intercept-x
 
 /^(d([12]|ci)\.sophosupd\.com$|^4\.sophosxl\.net)$/
 
 ## Pushbullet
-# Url: https://www.pushbullet.com/
-# Url: https://play.google.com/store/apps/details?id=com.pushbullet.android&hl=en&gl=US
+### Url: https://www.pushbullet.com/ Android: https://play.google.com/store/apps/details?id=com.pushbullet.android&hl=en&gl=US
 
 /^((websocket|stream(2|-(android|extension))?|www|zebra|update|ocelot|static)\.)?pushbullet\.com$/
 
 ## Bankid
-# Url: https://www.bankid.com/
-# Url: https://play.google.com/store/apps/details?id=com.bankid.bus&hl=en&gl=US
-# Url: https://apps.apple.com/se/app/bankid-s%C3%A4kerhetsapp/id433151512
+### Url: https://www.bankid.com/ Android: https://play.google.com/store/apps/details?id=com.bankid.bus&hl=en&gl=US IOS: https://apps.apple.com/se/app/bankid-s%C3%A4kerhetsapp/id433151512
 
 /^(cava(notification|internal)|mexx|www)\.bankid\.com$/
 
 ## PostNord: Track & Send Parcels
-# Url: https://play.google.com/store/apps/details?id=se.postnord.private&hl=en&gl=US
-# Url: https://apps.apple.com/se/app/postnord-sp%C3%A5ra-dina-paket/id396871673
+### Android: https://play.google.com/store/apps/details?id=se.postnord.private&hl=en&gl=US IOS: https://apps.apple.com/se/app/postnord-sp%C3%A5ra-dina-paket/id396871673
 
 /^((tracking|app|portal|account|www)\.)?postnord.com$/
 
 ## Wireguard
-# Url: https://www.wireguard.com/install/
-# Url: https://play.google.com/store/apps/details?id=com.wireguard.android&hl=en&gl=US
-# Url: https://apps.apple.com/us/app/wireguard/id1441195209
+### Url: https://www.wireguard.com/install/ Android: https://play.google.com/store/apps/details?id=com.wireguard.android&hl=en&gl=US IOS: https://apps.apple.com/us/app/wireguard/id1441195209
 
 /^((download)\.)?wireguard\.com$/
 
 ## Jdownloader2
-# Url: https://jdownloader.org/jdownloader2
-# Url: https://play.google.com/store/apps/details?id=org.appwork.myjdandroid&hl=en&gl=US
-# Url: https://apps.apple.com/us/app/myjdownloader-remote/id1203271558
+### Url: https://jdownloader.org/jdownloader2 Android: https://play.google.com/store/apps/details?id=org.appwork.myjdandroid&hl=en&gl=US IOS: https://apps.apple.com/us/app/myjdownloader-remote/id1203271558
 
-/^(([0-9-]{1,3})+\.mydns|my)\.jdownloader.org$/
+/^(([0-9-]{1,3})+\.mydns|my|updates)\.jdownloader.org$/
 
 ## Steam Launcher
-# Url: https://store.steampowered.com/about/
-# Url: https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community&hl=en&gl=US
-# Url: https://apps.apple.com/us/app/steam-mobile/id495369748
+### Url: https://store.steampowered.com/about/ Android: https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community&hl=en&gl=US IOS: https://apps.apple.com/us/app/steam-mobile/id495369748
 
 /^(ext2-(ams1|sto[21])|ext4-lhr1|ipv6check-http)\.steamserver\.net$|^steam-chat\.com$|^(client-update|community|clientconfig)\.akamai\.steamstatic\.com$|^(test|store)\.steampowered\.com$/
 
 ## Xbox Game Pass
-# Url: https://www.xbox.com/en-US/xbox-game-pass
-# Url: https://play.google.com/store/apps/details?id=com.gamepass&hl=en&gl=US
-# Url: https://apps.apple.com/us/app/xbox-game-pass/id1374542474
+### Url: https://www.xbox.com/en-US/xbox-game-pass Android: https://play.google.com/store/apps/details?id=com.gamepass&hl=en&gl=US IOS: https://apps.apple.com/us/app/xbox-game-pass/id1374542474
 
 /^((achievements|chat|d(evice\.auth|lassets-ssl)|lfghub-anonymous|eplists|updatepc|notificationinbox|p(eoplehub|r(ivacy|ofile))|rta|social|titlehub|userpresence|images-eds(-ssl)?|streaming|avty|xblmessaging|(xsts|title|user)\.auth|xccs)\.xboxlive\.com$|^(catalog|profile)\.gamepass\.com$|^www\.xboxab\.com$|^(beige)\.xboxservices\.com$)/
 
 ## Armory Crate
-# Url: https://rog.asus.com/us/armoury-crate/
+### Url: https://rog.asus.com/us/armoury-crate/
 
 /^((rog(-live-service)?|gaming-config|liveupdate01s|dlcdn((web)?imgs|rog)|www|mymessage|rog-content-platform|dlcdn-rogboxbu2|account)\.)?asus.com$/
 
 ## Twilio Authy Authenticator
-# Url: https://authy.com/download/
-# Url: https://play.google.com/store/apps/details?id=com.authy.authy&hl=en&utm_source=apkvariant.com
-# Url: https://apps.apple.com/us/app/twilio-authy/id494168017
+### Url: https://authy.com/download/ Android: https://play.google.com/store/apps/details?id=com.authy.authy&hl=en&utm_source=apkvariant.com IOS: https://apps.apple.com/us/app/twilio-authy/id494168017
 
 /(^(pkg|electron)\.)?authy\.com$/
 
 ## Signal 
-# Url: https://signal.org/en/download/
+### Url: https://signal.org/en/download/
 
 /^((cdn(2)?|chat|storage|updates(2)?)\.)?signal\.org$/
 
 ## Dropbox
-# Url: https://www.dropbox.com/install
+### Url: https://www.dropbox.com/install
 
 /(^(dl|ns[12])\.)?dropbox\.com|^(dl)\.dropboxusercontent\.com$/
 
 ## Lightning Alarm Weatherplaza
-# Url: https://play.google.com/store/apps/details?id=com.meteoplaza.flash&hl=en&gl=US
+### Url: https://play.google.com/store/apps/details?id=com.meteoplaza.flash&hl=en&gl=US
 
 /^(geo|gdpr-wrapper|vendors)\.privacymanager\.io$|^maps\.infoplaza\.nl|^cluster\.api\.meteoplaza\.com$/
 
 # Smart Devices
+
 ## Tuya Smart - Global IoT Development Platform Service Provider
-# Url: https://www.tuya.com/
+### Url: https://www.tuya.com/
 
 /^(px[0-9]|^a([0-9])?|^(m([0-9]|q\.gw)|openapi|apigw|images))\.tuyaeu\.com$/
 
 ## Airthings
-# Url: https://www.airthings.com/
+### Url: https://www.airthings.com/
 
 /(^(hub-api|global-api)\.airthin\.gs$|^(ext-api|accounts-api)\.airthings\.com$)/
 
 ## Homebridge
-# Url: https://homebridge.io/
+### Url: https://homebridge.io/
 
 /^homebridge-gsh\.iot\.oz\.nu$/
 
+## Home Assisant
+### Url: https://www.home-assistant.io/
+
+/^(alerts|brands|demo|www)?\.home-assistant\.io|hooks\.nabu\.casa$/
+
 ## Minibrew
-# Url: https://www.minibrew.io
+### Url: https://www.minibrew.io
 
 /^(pro|broker|api)\.minibrew\.io$/
 
 ## Sector Alarm
-# Url: https://www.sectoralarm.se/
+### Url: https://www.sectoralarm.se/
 
 /^mypagesapi\.sectoralarm\.net$/
 
 ## Verisure Alarm
-# Url: https://www.verisure.se/
+### Url: https://www.verisure.se/
 
 /^https://automation0[12]\.verisure\.com$/
 
 ## Logitech Harmony
-# Url: https://www.myharmony.com/en-se/
+### Url: https://www.myharmony.com/en-se/
 
 /^(((cf-svcs|sus\.dhg|svcs|home|appcompatibility)\.)?myharmony\.com$|^(pubsub|ps-[0-9]{1,3})\.pubnub\.com)|accounts\.logi\.com$/
 
 ## HP Printers
-# Url: https://www.hp.com/us-en/shop/vwa/printers
+### Url: https://www.hp.com/us-en/shop/vwa/printers
 
 /(^h(30494|20593)\.www[23]\.hp\.com$|^xmpp005\.hpeprint\.com$)/
 
 ## Telldus
-# Url: https://telldus.com/
+### Url: https://telldus.com/
 
 /^((advika|niya|alya|myra|rachita|mahi|amrita|vega|divya|priya|vanya|jaya|lisa|live|isha|anaya|ishita|garima|triya|kavya|navya|fw|pa-api)\.)?telldus\.com$/
 
 ## Neato Robotics
-# Url: https://neatorobotics.com/
+### Url: https://neatorobotics.com/
 
 /^(beehive|nucleo)\.neatocloud\.com$/
 
 ## Roborock
-# Url: https://global.roborock.com/
+### Url: https://global.roborock.com/
 
 /^((api|mqtt)-eu\.roborock\.com|(conf|ultronsplus)-eu-1316693915\.cos\.eu-frankfurt\.myqcloud\.com)$/
 
 ## Withings
-# Url: https://www.withings.net
+### Url: https://www.withings.net
 
 /^(wbsapi|static|sct01-ws|prod\.rudderstack)\.withings\.net$/
 
 ## Should I Answer?
-# Url: https://play.google.com/store/apps/details?id=org.mistergroup.shouldianswer&hl=en&gl=US
+### Url: https://play.google.com/store/apps/details?id=org.mistergroup.shouldianswer&hl=en&gl=US
 
 /^((aapi|se)\.)?shouldianswer\.net$/
 
 # Websites and Devices
+
 ## Asustor
-# Url: https://www.asustor.com/en/
+### Url: https://www.asustor.com/en/
 
 /^((apns|asustornasapi|update).)?asustor.com$/
 
@@ -310,7 +295,7 @@
 /(^(static|repo|download(s)?|dl|fw-(download|update))\.ubnt|^global\.(stun|turn)\.twilio|^(client|device|update)\.amplifi|^sp-dir\.uwn|ips1\.unifi-ai)\.com$/
 
 ## Nintendo Switch
-# Url: https://www.nintendo.com/switch/system/
+### Url: https://www.nintendo.com/switch/system/
 
 /^((broker|dauth|aauth)-lp1\.ndas\.srv|sun\.hac\.lp1\.d4c|broker\.lp1\.npns\.srv|receive-lp1\.dg\.srv|app-a04\.lp1\.npns\.srv|ctest\.cdn|aqua\.hac\.lp1\.d4c|tagaya\.hac\.lp1\.eshop|bcat-(list|data)-lp1\.cdn|capi\.lp1\.op2|nncs[12]-lp1\.n\.n\.srv|ctest-ul-lp1\.cdn|dragons\.hac\.lp1\.dragons|shop|consumer\.lp1\.npns\.srv|pushmo\.hac\.lp1\.eshop|bcat-topics-lp1\.cdn|accounts)\.nintendo\.net$|^((accounts).)?nintendo.com$/
 
@@ -360,5 +345,4 @@
 
 ## Earlybird
 
-/^tracking\.earlybird\.delivery$/
-/^track\.earlybird\.se$/
+/(^tracking\.earlybird\.delivery$|^track\.earlybird\.se$)/
