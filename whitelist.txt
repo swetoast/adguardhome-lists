@@ -217,7 +217,7 @@
 ## Home Assisant
 ### Url: https://www.home-assistant.io/
 
-/^(alerts|brands|demo|www)?\.home-assistant\.io|hooks\.nabu\.casa$/
+/^(((alerts|brands|demo|www)?\.home-assistant\.io$)|^(\w+\.ui|hooks)\.nabu\.casa$)/
 
 ## Creality Cloud
 ### Url: https://www.crealitycloud.com/
