@@ -105,6 +105,11 @@
 
 /^(auth|c(fg|hat|ontent-system|hat)|e(mbed|xternal-(accounts|users))|galaxy-(library|promos)|game(play|sdb)|images|login|marketing-sections|menu|notifications(-pusher(-aws)?)?|presence|r(ecommendations-api|emote-config)|www)\.gog\.com$/
 
+## Home Assisant
+# Url: https://www.home-assistant.io/
+
+/^(alerts|brands)?\.home-assistant\.io|hooks\.nabu\.casa$/
+
 ## Ubisoft Launcher
 # Url: https://ubisoftconnect.com/en-US/
 
