@@ -14,12 +14,18 @@
 # Url: https://www.crealitycloud.com/
 /^api\.crealitycloud\.com/
 
+## Fitbit
+# Url: https://store.google.com/category/watches_trackers
+
+/^api\.fitbit\.com$/
+
 ## Flightradar24
 # Url: https://www.flightradar24.com/
 /^(data-cloud|www)\.flightradar24\.com$/
 
 ## Västtrafik
 # Url: https://www.vasttrafik.se/
+
 /^ext-api\.vasttrafik\.se$/
 
 ## NTP Pools
