@@ -232,7 +232,7 @@
 ## Airthings
 # Url: https://www.airthings.com/
 
-/(^(hub-api|global-api)\.airthin\.gs$|^ext-api\.airthings\.com$)/
+(^(hub-api|global-api)\.airthin\.gs$|^(ext-api|accounts-api)\.airthings\.com$)
 
 ## Homebridge
 # Url: https://homebridge.io/
