@@ -160,7 +160,7 @@
 ## Jdownloader2
 ### Url: https://jdownloader.org/jdownloader2 Android: https://play.google.com/store/apps/details?id=org.appwork.myjdandroid&hl=en&gl=US IOS: https://apps.apple.com/us/app/myjdownloader-remote/id1203271558
 
-/^(([0-9-]{1,3})+\.mydns|my|updates)\.jdownloader.org$/
+/^(([0-9-a-z]{1,3})+\.mydns|my|updates)\.jdownloader.org$/
 
 ## Steam Launcher
 ### Url: https://store.steampowered.com/about/ Android: https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community&hl=en&gl=US IOS: https://apps.apple.com/us/app/steam-mobile/id495369748
