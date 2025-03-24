@@ -20,8 +20,7 @@
 # Decoy Dog Malware
 /^(cbox4\.ignorelist|atlas-upd)\.com$|^(claudfront|allowlisted)\.net|^hsdps\.cc$|^ads-tm-glb\.click$/
 # Infected Debian/Ubuntu Repo
-#/^deb\.fdmpkg\.org$/
-||deb.fdmpkg.org$badfilter 
+/^deb\.fdmpkg\.org$/
 
 # Scam sites
 /^(track-my-delivery\.net|unsubscribeprime\.info)$/
