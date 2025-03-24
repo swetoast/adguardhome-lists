@@ -26,4 +26,4 @@
 /^(track-my-delivery\.net|unsubscribeprime\.info)$/
 
 # Unnessary Tracking
-/^(?:(?:sdkconfig\.ad\.india|thm\.market\.intl|weatherapi\.market)\.xiaomi\.com|(?:cn\.app\.chat|g\.galleryapi\.micloud)\.xiaomi\.net|(?:i|de\.ot(s)?\.io)\.mi\.com)$/
+/^(?:(?:sdkconfig\.ad\.india|thm\.market\.intl|weatherapi\.market)\.xiaomi\.com|(?:cn\.app\.chat|g\.galleryapi\.micloud)\.xiaomi\.net)/
