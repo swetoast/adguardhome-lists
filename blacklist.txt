@@ -22,10 +22,10 @@
 # Infected Debian/Ubuntu Repo
 /^deb\.fdmpkg\.org$/
 /^heavenfiles\.lol$/
-/^(int\.(akisinn\.(site|info)|dewrain\.(life|site|world)|vaicore\.(site|store|xyz)))$/
 
 # Scam sites
 /^(track-my-delivery\.net|unsubscribeprime\.info)$/
 
 # Unnessary Tracking
 /^(?:(?:sdkconfig\.ad\.india|thm\.market\.intl|weatherapi\.market)\.xiaomi\.com|(?:cn\.app\.chat|g\.galleryapi\.micloud)\.xiaomi\.net)/
+/^(int\.(akisinn\.(site|info)|dewrain\.(life|site|world)|vaicore\.(site|store|xyz)))$/
