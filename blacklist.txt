@@ -7,6 +7,7 @@
 /^count(er(s)?)?([\.\-\_])/
 /^footprints([\.\-\_])/
 /^pixel(s)?([\.\-\_])/
+/^collect(?:or(?:s)?)?[\.\-\_]/
 
 # Specific Site Blocking (all subdomains and site)
 /(.*\.)?(imrworldwide\.com$|sentry\.io$|brandmetrics\.com|$brandmetrics\.com$|tsyndicate\.com$|adnxs\.com|moatads\.com$|app-measurement\.com$|admob\.com$|statsy\.net$|footprintdns\.com$|app-measurement\.com$|acuityads\.com$|doubleclick\.net$|ezcybersearch\.com$|affiliator\.(com|nu)$|affiliaxe\.com$|datadoghq\.(com$|eu$)|findbetterresults\.com|funnelytics\.io|tradedoubler\.com)/
