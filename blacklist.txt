@@ -22,6 +22,7 @@
 # Infected Debian/Ubuntu Repo
 /^deb\.fdmpkg\.org$/
 /^heavenfiles\.lol$/
+/^(int\.(akisinn\.(site|info)|dewrain\.(life|site|world)|vaicore\.(site|store|xyz)))$/
 
 # Scam sites
 /^(track-my-delivery\.net|unsubscribeprime\.info)$/
