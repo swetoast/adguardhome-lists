@@ -31,3 +31,4 @@
 /^(?:(?:sdkconfig\.ad\.india|thm\.market\.intl|weatherapi\.market)\.xiaomi\.com|(?:cn\.app\.chat|g\.galleryapi\.micloud)\.xiaomi\.net)/
 /^(o\.akisinn\.info|co\.dewrain\.life|co\.vaicore\.site|co\.vaicore\.xyz|int\.akisinn\.info|int\.akisinn\.me|int\.akisinn\.site|int\.dewrain\.life|int\.dewrain\.site|int\.dewrain\.world|int\.vaicore\.site|int\.vaicore\.store|int\.vaicore\.xyz|int\.vlancaa\.site|int\.vlancaa\.fun|tok\.vaicore\.xyz)$/
 /^anonymousinfo-eu-[0-9]+\.cos\.[a-z-]+\.myqcloud\.com$/
+/^^service[0-9]\.us\.incognia\.com$/
