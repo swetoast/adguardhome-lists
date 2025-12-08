@@ -145,7 +145,7 @@
 ## Bankid
 ### Url: https://www.bankid.com/ Android: https://play.google.com/store/apps/details?id=com.bankid.bus&hl=en&gl=US IOS: https://apps.apple.com/se/app/bankid-s%C3%A4kerhetsapp/id433151512
 
-/^(cava(notification|internal)|mexx|www)\.bankid\.com$/
+/^(cava(notification|internal)|mexx|www|cu)\.bankid\.com$/
 
 ## PostNord: Track & Send Parcels
 ### Android: https://play.google.com/store/apps/details?id=se.postnord.private&hl=en&gl=US IOS: https://apps.apple.com/se/app/postnord-sp%C3%A5ra-dina-paket/id396871673
@@ -350,3 +350,4 @@
 ## Adguard Antiblocklist
 
 /^ad-block\.dns\.adguard\.com$/
+
