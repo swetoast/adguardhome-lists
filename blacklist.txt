@@ -16,13 +16,195 @@
 /^galaxy-client-reports\.gog\.com$/
 /^svt\.d[0-9]\.sc\.omtrdc\.net$/
 
-# Malware sites
-/^(.*)?(duc3k|amazingtodaynotsaidhimherwhathe|ankabuttech|tadogem|deveparty|plus-lema|es-megado|focustopbreed78d|fermonesgobide|sertvs|jqscr|jqueryns|maximumpushtodaynotnowbut|motiontodaynotgogoodnowok|mavelecgr|eerier-safety.000webhostapp|catknock|specialblueitems|violetlovelines|panel.cheater-zone|allfamax|client.cheater-zone|bitcoinpricealertexpert|coindexalerter|uniswapdataprice|immagirls.myvnc|alpatrik|justinstalledpanel|damnater)\.com/
-# Decoy Dog Malware
-/^(cbox4\.ignorelist|atlas-upd)\.com$|^(claudfront|allowlisted)\.net|^hsdps\.cc$|^ads-tm-glb\.click$/
+
 # Infected Debian/Ubuntu Repo
 /^deb\.fdmpkg\.org$/
 /^heavenfiles\.lol$/
+
+# Malware Sites
+## Compromised legitimate sites
+### .com domains
+
+# SocGholish (Fake browser update malware) – Q2/Q3 2025 [CIS\MS-ISAC]
+## Compromised legitimate .com sites used as malware loaders for SocGholish[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025)
+### Last seen active late 2025 (some persisted across quarters)
+/^(?:.*\.)?(symphoniabags|productdevelopmentplan|emeraldpinesolutions|cpa2go|suziestuder|greendreamcannabis|ebuilderssource|keynotecapitals|smthwentwrong|stirngo)\.com$/
+
+# ZPHP (Fake update dropper) – Q2/Q3 2025 [CIS]
+## Malicious .com sites hosting fake update scripts that install malware (NetSupport, Lumma, etc.)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025)
+/^(?:.*\.)?(eddereklam|modandcrackedapk|morniksell|retiregenz|textingworld)\.com$/
+
+# LandUpdate808 (Fake browser update MSI) – Q2 2025 [CIS]
+## Series of .com domains that served malicious MSIX/7zip payloads (NetSupport RAT) via fake update alerts[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?(alhasba|edveha|jimriehls|nypipeline|rajjas|skatkat|swedrent|waxworkx)\.com$/
+
+# ArechClient2 (SectopRAT) – Q2 2025 [CIS]
+## .com domains used as RAT C2 or staging (often masquerading as installers or services)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?(bienvenido|candyconverterpdf|candyxpdf|promooformosa|ninositsolution)\.com$/
+
+# VenomRAT – Q1/Q2 2025 [CIS]
+## Phishing/malware domains mimicking security or finance to deliver VenomRAT[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?(bitdefender-download|dataops-tracxn)\.com$/
+
+# ClearFake (JS loader) – 2025 [CIS]
+## Compromised .com sites serving injected malicious scripts (ClearFake)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?(getlastingro|kargotrong)\.com$/
+
+# Lumma Stealer – 2025 [ThreatFox]
+## Dedicated Lumma C2 exfiltration endpoints on .com[1](https://threatfox.abuse.ch/ioc/1206247/)[4](https://threatfox.abuse.ch/ioc/1581226/)
+/^(?:.*\.)?(digitbasket|marvelvod)\.com$/
+
+# Miscellaneous Malware – 2025
+## Additional .com domains linked to malware campaigns:
+### - advertipros.com – Detour Dog/Strela Stealer redirector (DNS malware delivery)[5](https://www.infoblox.com/blog/threat-intelligence/detour-dog-dns-malware-powers-strela-stealer-campaigns/)[6](https://thehackernews.com/2025/10/detour-dog-caught-running-dns-powered.html)
+### - hostsailor.com (specific subdomain) – Agent Tesla exfil via compromised host (FTP)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025) 
+^(?:.*\.)?advertipros\.com$/
+/^hosting2\.ro\.hostsailor\.com$/
+
+# .net domains
+
+# Gh0st RAT – 2025 [CIS]
+## Unusual .net domain used for Gh0st RAT C2 in 2025[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025)
+/^(?:.*\.)?luyouxia\.net$/
+
+# ArechClient & Others – 2025 [CIS]
+## - key-systems.net – ArechClient2 RAT (C2 or drop site)[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025)
+## - anondns.net – NanoCore RAT dynamic DNS (XOR DDoS/NanoCore C2)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?(key-systems|anondns)\.net$/
+
+# .org domains
+
+# SocGholish – 2025 [CIS]
+## Initial SocGholish loader domain (fake update)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?lanpdt\.org$/
+
+# ZPHP – 2025 [CIS]
+## Fake remote support / update domain used by ZPHP[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?islonline\.org$/
+
+# Gh0st RAT – 2025 [CIS/ThreatFox]
+## Dynamic DNS domain often used for Gh0st/other RAT C2[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025) (subdomains abused; blocking entire domain)
+/^(?:.*\.)?f3322\.org$/
+
+# .top domains
+
+# ZPHP (Fake updates) – 2025 [CIS]
+## .top domains hosting ZPHP payloads (high turnover, discovered 2025)[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025)
+/^(?:.*\.)?(anoteryo|ashesplayer|as5yo|buyedmeds|lqsword|trendings|warpdrive)\.top$/
+
+# Agent Tesla – 2025 [CIS]
+## topendpower.top – Agent Tesla exfil C2 (observed Q2 2025)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?topendpower\.top$/
+
+# .us. domains
+
+# SocGholish – 2025 [CIS]
+## Compromised .us domain used in SocGholish (fake update landing)[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025)
+/^(?:.*\.)?roofnrack\.us$/
+
+# .ai domain
+
+# SocGholish – 2025 [CIS]
+## Compromised .ai site used for SocGholish (subdomain served malicious JS)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?micha\.ai$/
+
+# .ca domain
+
+# ZPHP – 2025 [CIS]
+## .ca domain hosting fake update malware (ZPHP)[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025)
+/^(?:.*\.)?ahmm\.ca$/
+
+# .fun domains
+
+# Lumma Stealer – 2024/2025 [ThreatFox/CIS]
+## Dedicated Lumma Stealer C2 nodes on .fun TLD (active in late 2024 through 2025)[1](https://threatfox.abuse.ch/ioc/1206247/)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?(duhodown|kowersize|mouseoiet|plengreg|katuj)\.fun$/
+
+# .today domains
+
+# ClearFake – 2025 [CIS]
+## Domain delivering Base64 loader script (ClearFake)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?ratatui\.today$/
+
+# .dev domains
+
+# ClearFake (Secondary stage) – 2025 [CIS]
+## Malicious user page on Google Cloud (pages.dev) serving follow-up payload[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^yuun\.pages\.dev$/
+
+# .group domains
+
+# Agent Tesla – 2025 [CIS]
+## Domain used by Agent Tesla for exfil or C2 (likely misused legitimate service)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?sixfiguredigital\.group$/
+
+# .click domain
+
+# ArechClient2 – 2025 [CIS]
+## Domain used to distribute SectopRAT (ArechClient) payload[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?bind-new-connect\.click$/
+
+# .online domain
+
+# VenomRAT – 2025 [CIS]
+## Fake banking/security domain delivering VenomRAT[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?royalbanksecure\.online$/
+
+# .live domain
+
+# VenomRAT – 2025 [CIS]
+## Fake e-payment site (imitation) used to spread VenomRAT[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?idram-secure\.live$/
+
+# .rs domain
+
+# Agent Tesla – 2025 [CIS]
+## Compromised FTP server domain in .rs used by Agent Tesla[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?jeepcommerce\.rs$/
+
+# .me domain
+
+# Agent Tesla – 2025 [CIS]
+## Dynamic DNS domain (No-IP) used by Agent Tesla for C2/exfil[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^(?:.*\.)?myddns\.me$/
+
+# .gg domain
+
+# XWorm / Agent Tesla – 2025 [ThreatFox/DarkWebInformer]
+## Playit.gg tunneling service abused for malware C2 (XWorm RAT, also seen with Agent Tesla)[7](https://darkwebinformer.com/ioc-alert-xworm-command-and-control-infrastructure/)[8](https://threatfox.abuse.ch/ioc/1539397/) 
+### Blocking specific subdomain used in campaigns (gl.at.ply.gg) to avoid overblocking all Playit.gg.
+/^info-power\.gl\.at\.ply\.gg$/
+
+# .ch domain
+# NanoCore RAT – 2025 [CIS]
+## No-IP (DuckDNS) dynamic DNS used by NanoCore for C2 (unique subdomain observed)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
+/^louinc928\.gotdns\.ch$/
+
+# Crypto Scams
+## Only active and recently confirmed malicious domains are included.
+### .com domains
+/^(?:.*\.)?(?:coinhive|coin\-hive|coin\-have|jsecoin|coinimp|crypto\-loot)\.com$/
+
+### .net domains
+/^(?:.*\.)?(?:coinimp)\.net$/
+
+### .org domains (CryptoLoot service)
+/^(?:.*\.)?(?:crypto\-loot)\.org$/
+
+### .pro domains (CryptoLoot service)
+/^(?:.*\.)?(?:cryptoloot)\.pro$/
+
+### .de domains (Cryptojacking C2 – 2025 campaign)
+/^(?:.*\.)?(?:lokilokitwo)\.de$/
+
+### .store domains (Cryptojacking loader – 2024/2025 campaign)
+/^(?:.*\.)?(?:yobox)\.store$/
+
+### .fun domains (Cryptojacking loader – 2024/2025 campaign)
+/^(?:.*\.)?(?:trustisimportant)\.fun$/
+
+### .rocks domains (Monero web miner service)
+/^(?:.*\.)?(?:monerominer)\.rocks$/
 
 # Scam sites
 /^(track-my-delivery\.net|unsubscribeprime\.info)$/
@@ -32,3 +214,4 @@
 /^(o\.akisinn\.info|co\.dewrain\.life|co\.vaicore\.site|co\.vaicore\.xyz|int\.akisinn\.info|int\.akisinn\.me|int\.akisinn\.site|int\.dewrain\.life|int\.dewrain\.site|int\.dewrain\.world|int\.vaicore\.site|int\.vaicore\.store|int\.vaicore\.xyz|int\.vlancaa\.site|int\.vlancaa\.fun|tok\.vaicore\.xyz)$/
 /^anonymousinfo-eu-[0-9]+\.cos\.[a-z-]+\.myqcloud\.com$/
 /^service[0-9]\.us\.incognia\.com$/
+
