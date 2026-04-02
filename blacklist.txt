@@ -40,7 +40,7 @@
 
 # ArechClient2 (SectopRAT) – Q2 2025 [CIS]
 ## .com domains used as RAT C2 or staging (often masquerading as installers or services)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?(bienvenido|candyconverterpdf|candyxpdf|promooformosa|ninositsolution)\.com$/
+/^(?:.*\.)?(bienvenido|candyconverterpdf|candyxpdf|promooformosa|ninositsolution|sfrclak)\.com$/
 
 # VenomRAT – Q1/Q2 2025 [CIS]
 ## Phishing/malware domains mimicking security or finance to deliver VenomRAT[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
