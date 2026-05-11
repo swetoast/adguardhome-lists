@@ -111,6 +111,10 @@
 
 # .ca domain
 
+# JDownloader - 2026 [CIS]
+## Compromised installer that contacts domains for command and control (RAT)[1](https://www.bleepingcomputer.com/news/security/jdownloader-site-hacked-to-replace-installers-with-python-rat-malware/)
+/(?:parkspringshotel(?:\.|\[\.\])com|auraguest(?:\.|\[\.\])lk)/
+
 # ZPHP – 2025 [CIS]
 ## .ca domain hosting fake update malware (ZPHP)[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025)
 /^(?:.*\.)?ahmm\.ca$/
