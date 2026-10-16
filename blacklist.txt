@@ -1,226 +1,253 @@
+! Title: Regexp Blacklist
+! Description: Regex blocklist for AdGuard Home. Hostname rules only.
+! Version: 2026.10.16
+! Last modified: 2026-10-16
+
 # Regexp Blacklist
-/([\.\-\_])?(logging|annons|crashlytics(reports)?|metrics|banner(s)?|marketing|analytics(new)?|telemetry|(stats|statistics)|events|(insights\-)?collector|(d)?trace)([\.\-\_])?/
-/^ad([sxve]?[0-9]*|system)([\.\-\_])([^.[:space:]]+\.){1,}|([\.\-\_])ad([sxv]?[0-9]*|system|banners)([\.\-\_])/
-/^(.+([\.\-\_]))?adse?rv(er?|ice)?s?[0-9]*([\.\-\_])/
-/^beacons?[0-9]*([\.\-\_])/
-/^mads\./
-/^count(er(s)?)?([\.\-\_])/
-/^footprints([\.\-\_])/
-/^pixel(s)?([\.\-\_])/
-/^collect(or(s)?)?([\.\-\_])/
-/^(?!.*announce$)track(?:er|ing)?/
+### Rules are anchored /^...$/ with every literal dot escaped
+### Alternations sorted alphabetically, no .* or \w
+### AdGuard Home uses RE2: no lookaheads, no backreferences
+### Whole-domain blocks use /^([a-z0-9-]+\.)*domain\.tld$/ to cover the domain and every subdomain
+### The allowlist wins over this list, so anything here that is also in whitelist.txt is not blocked
+### Layout: # type, ## vendor, ### comment
 
-# Specific Site Blocking (all subdomains and site)
-/(.*\.)?(imrworldwide\.com$|sentry\.io$|brandmetrics\.com|$brandmetrics\.com$|tsyndicate\.com$|adnxs\.com|moatads\.com$|app-measurement\.com$|admob\.com$|statsy\.net$|footprintdns\.com$|app-measurement\.com$|acuityads\.com$|doubleclick\.net$|ezcybersearch\.com$|affiliator\.(com|nu)$|affiliaxe\.com$|datadoghq\.(com$|eu$)|findbetterresults\.com|funnelytics\.io|tradedoubler\.com)/
-/^app\.adjust\.(world|com|net\.in$)/
-/^(developer)\.asustor\.com$/
+# Patterns
+
+## Telemetry Keywords
+### Matches the keyword only as its own subdomain label, never inside a site name
+### Blocks metrics.icloud.com and telemetry.example.net, leaves dtrace.org and marketingland.com alone
+### "tracking" and "tracker" are left out on purpose: parcel tracking and torrent trackers use them
+
+/^([a-z0-9-]+\.)*([a-z0-9]+-)?(analytics|annons|banners?|beacons?|collect|collectors?|counters?|crashlytics|dtrace|events|footprints|insights-collector|logging|marketing|metrics|pixels?|stats|statistics|telemetry|trace)[0-9]*(-[a-z0-9]+)*\.([a-z0-9-]+\.)+[a-z]{2,}$/
+
+## Ad Server Keywords
+### Same label rule for ad serving hosts: ad., ads1., adx-eu., adserver., adservice., adsystem., mads.
+
+/^([a-z0-9-]+\.)*([a-z0-9]+-)?(ad|adbanners|adserv|adserver|adservers|adservice|adservices|ads|adsystem|adv|adx|mads)[0-9]*(-[a-z0-9]+)*\.([a-z0-9-]+\.)+[a-z]{2,}$/
+
+## High-Abuse TLDs
+### Highest spam scores per 10,000 registrations, Cybercrime Information Center (March to May 2026)
+### and the most phished TLDs in Interisle's Phishing Landscape 2025, plus .zip and .mov
+### Url: https://www.cybercrimeinfocenter.org/spam-activity-in-tlds-march-may-2026
+
+/^([a-z0-9-]+\.)+(bid|bond|cam|cfd|click|help|icu|loan|mom|mov|qpon|rest|sbs|top|vip|win|xin|zip)$/
+
+# Ads & Tracking
+
+## AcuityAds
+
+/^([a-z0-9-]+\.)*acuityads\.com$/
+
+## Adjust
+### Notes: Mobile attribution SDK
+
+/^app\.adjust\.(com|net\.in|world)$/
+
+## Adobe
+### Notes: Adobe Analytics (Omniture) collection servers, SVT among others
+
+/^([a-z0-9-]+\.)*omtrdc\.net$/
+
+## Affiliator
+
+/^([a-z0-9-]+\.)*affiliator\.(com|nu)$/
+
+## Affiliaxe
+
+/^([a-z0-9-]+\.)*affiliaxe\.com$/
+
+## Brandmetrics
+
+/^([a-z0-9-]+\.)*brandmetrics\.com$/
+
+## Funnelytics
+
+/^([a-z0-9-]+\.)*funnelytics\.io$/
+
+## Google
+### Notes: Ad serving, ad conversion, tag manager and analytics
+
+/^([a-z0-9-]+\.)*(admob|google-analytics|googleadservices|googletagmanager)\.com$/
+/^([a-z0-9-]+\.)*app-measurement\.com$/
+/^([a-z0-9-]+\.)*doubleclick\.net$/
+/^([a-z0-9-]+\.)*googlesyndication\.com$/
+
+## Microsoft
+### Notes: footprintdns is network measurement for Microsoft services
+
+/^([a-z0-9-]+\.)*footprintdns\.com$/
+
+## Nielsen
+
+/^([a-z0-9-]+\.)*imrworldwide\.com$/
+
+## Oracle
+### Notes: Moat ad verification
+
+/^([a-z0-9-]+\.)*moatads\.com$/
+
+## Samsung
+### Notes: Ads and ACR (automatic content recognition) on Samsung TVs
+
+/^([a-z0-9-]+\.)*(samsungacr|samsungads)\.com$/
+
+## Statsy
+
+/^([a-z0-9-]+\.)*statsy\.net$/
+
+## TradeDoubler
+
+/^([a-z0-9-]+\.)*tradedoubler\.com$/
+
+## TrafficStars
+
+/^([a-z0-9-]+\.)*tsyndicate\.com$/
+
+## Xandr
+### Notes: AppNexus ad exchange
+
+/^([a-z0-9-]+\.)*adnxs\.com$/
+
+# Telemetry
+
+## Amplitude
+
+/^(api|api2|api\.eu)\.amplitude\.com$/
+
+## AppsFlyer
+
+/^([a-z0-9-]+\.)*(appsflyer|appsflyersdk)\.com$/
+
+## Asustor
+
+/^developer\.asustor\.com$/
+
+## Branch
+### Notes: Deep link attribution SDK
+
+/^(api|api2|api3)\.branch\.io$/
+
+## Bugsnag
+
+/^([a-z0-9-]+\.)*bugsnag\.com$/
+
+## Datadog
+
+/^([a-z0-9-]+\.)*(browser-intake-([a-z0-9]+-)?)?datadoghq\.(com|eu)$/
+
+## Epic Games
+### Notes: datarouter is Epic's analytics pipeline. Also allowlisted, remove it from whitelist.txt for this to apply
+
+/^(datarouter\.ol|datarouter-prod\.ak)\.epicgames\.com$/
+
+## GOG
+
 /^galaxy-client-reports\.gog\.com$/
-/^svt\.d[0-9]\.sc\.omtrdc\.net$/
 
+## Google
+### Notes: Firebase logging and Crashlytics
 
-# Infected Debian/Ubuntu Repo
-/^deb\.fdmpkg\.org$/
-/^heavenfiles\.lol$/
+/^firebaselogging-pa\.googleapis\.com$/
+/^([a-z0-9-]+\.)*crashlytics\.com$/
 
-# Malware Sites
-## Compromised legitimate sites
-### .com domains
+## Google Location
+### Notes: Location history and personalization. Also allowlisted, remove them from whitelist.txt for this to apply
 
-# SocGholish (Fake browser update malware) – Q2/Q3 2025 [CIS\MS-ISAC]
-## Compromised legitimate .com sites used as malware loaders for SocGholish[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025)
-### Last seen active late 2025 (some persisted across quarters)
-/^(?:.*\.)?(symphoniabags|productdevelopmentplan|emeraldpinesolutions|cpa2go|suziestuder|greendreamcannabis|ebuilderssource|keynotecapitals|smthwentwrong|stirngo)\.com$/
+/^(geller-pa|semanticlocation-pa|staging-locationhistory-pa\.sandbox|userlocation)\.googleapis\.com$/
 
-# ZPHP (Fake update dropper) – Q2/Q3 2025 [CIS]
-## Malicious .com sites hosting fake update scripts that install malware (NetSupport, Lumma, etc.)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025)
-/^(?:.*\.)?(eddereklam|modandcrackedapk|morniksell|retiregenz|textingworld)\.com$/
+## Home Assistant
+### Notes: Opt-in analytics. Also allowlisted, remove it from whitelist.txt for this to apply
 
-# LandUpdate808 (Fake browser update MSI) – Q2 2025 [CIS]
-## Series of .com domains that served malicious MSIX/7zip payloads (NetSupport RAT) via fake update alerts[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?(alhasba|edveha|jimriehls|nypipeline|rajjas|skatkat|swedrent|waxworkx)\.com$/
+/^analytics\.home-assistant\.io$/
 
-# ArechClient2 (SectopRAT) – Q2 2025 [CIS]
-## .com domains used as RAT C2 or staging (often masquerading as installers or services)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?(bienvenido|candyconverterpdf|candyxpdf|promooformosa|ninositsolution|sfrclak)\.com$/
+## Incognia
+### Notes: Device fingerprinting SDK
 
-# VenomRAT – Q1/Q2 2025 [CIS]
-## Phishing/malware domains mimicking security or finance to deliver VenomRAT[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?(bitdefender-download|dataops-tracxn)\.com$/
-
-# ClearFake (JS loader) – 2025 [CIS]
-## Compromised .com sites serving injected malicious scripts (ClearFake)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?(getlastingro|kargotrong)\.com$/
-
-# Lumma Stealer – 2025 [ThreatFox]
-## Dedicated Lumma C2 exfiltration endpoints on .com[1](https://threatfox.abuse.ch/ioc/1206247/)[4](https://threatfox.abuse.ch/ioc/1581226/)
-/^(?:.*\.)?(digitbasket|marvelvod)\.com$/
-
-# Miscellaneous Malware – 2025
-## Additional .com domains linked to malware campaigns:
-### - advertipros.com – Detour Dog/Strela Stealer redirector (DNS malware delivery)[5](https://www.infoblox.com/blog/threat-intelligence/detour-dog-dns-malware-powers-strela-stealer-campaigns/)[6](https://thehackernews.com/2025/10/detour-dog-caught-running-dns-powered.html)
-### - hostsailor.com (specific subdomain) – Agent Tesla exfil via compromised host (FTP)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025) 
-^(?:.*\.)?advertipros\.com$/
-/^hosting2\.ro\.hostsailor\.com$/
-
-# .net domains
-
-# Gh0st RAT – 2025 [CIS]
-## Unusual .net domain used for Gh0st RAT C2 in 2025[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025)
-/^(?:.*\.)?luyouxia\.net$/
-
-# ArechClient & Others – 2025 [CIS]
-## - key-systems.net – ArechClient2 RAT (C2 or drop site)[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025)
-## - anondns.net – NanoCore RAT dynamic DNS (XOR DDoS/NanoCore C2)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?(key-systems|anondns)\.net$/
-
-# .org domains
-
-# SocGholish – 2025 [CIS]
-## Initial SocGholish loader domain (fake update)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?lanpdt\.org$/
-
-# ZPHP – 2025 [CIS]
-## Fake remote support / update domain used by ZPHP[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?islonline\.org$/
-
-# Gh0st RAT – 2025 [CIS/ThreatFox]
-## Dynamic DNS domain often used for Gh0st/other RAT C2[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025) (subdomains abused; blocking entire domain)
-/^(?:.*\.)?f3322\.org$/
-
-# .top domains
-
-# ZPHP (Fake updates) – 2025 [CIS]
-## .top domains hosting ZPHP payloads (high turnover, discovered 2025)[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025)
-/^(?:.*\.)?(anoteryo|ashesplayer|as5yo|buyedmeds|lqsword|trendings|warpdrive)\.top$/
-
-# Agent Tesla – 2025 [CIS]
-## topendpower.top – Agent Tesla exfil C2 (observed Q2 2025)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?topendpower\.top$/
-
-# .us. domains
-
-# SocGholish – 2025 [CIS]
-## Compromised .us domain used in SocGholish (fake update landing)[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025)
-/^(?:.*\.)?roofnrack\.us$/
-
-# .ai domain
-
-# SocGholish – 2025 [CIS]
-## Compromised .ai site used for SocGholish (subdomain served malicious JS)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?micha\.ai$/
-
-# .ca domain
-
-# JDownloader Supply Chain Attack – 2026 [BleepingComputer]
-## C2 domains used by Python RAT payload
-/^(?:.*\.)?parkspringshotel\.com$/
-/^(?:.*\.)?auraguest\.lk$/
-
-## Linux payload download domain
-/^(?:.*\.)?checkinnhotels\.com$/
-
-# ZPHP – 2025 [CIS]
-## .ca domain hosting fake update malware (ZPHP)[3](https://www.cisecurity.org/insights/blog/top-10-malware-q3-2025)
-/^(?:.*\.)?ahmm\.ca$/
-
-# .fun domains
-
-# Lumma Stealer – 2024/2025 [ThreatFox/CIS]
-## Dedicated Lumma Stealer C2 nodes on .fun TLD (active in late 2024 through 2025)[1](https://threatfox.abuse.ch/ioc/1206247/)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?(duhodown|kowersize|mouseoiet|plengreg|katuj)\.fun$/
-
-# .today domains
-
-# ClearFake – 2025 [CIS]
-## Domain delivering Base64 loader script (ClearFake)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?ratatui\.today$/
-
-# .dev domains
-
-# ClearFake (Secondary stage) – 2025 [CIS]
-## Malicious user page on Google Cloud (pages.dev) serving follow-up payload[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^yuun\.pages\.dev$/
-
-# .group domains
-
-# Agent Tesla – 2025 [CIS]
-## Domain used by Agent Tesla for exfil or C2 (likely misused legitimate service)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?sixfiguredigital\.group$/
-
-# .click domain
-
-# ArechClient2 – 2025 [CIS]
-## Domain used to distribute SectopRAT (ArechClient) payload[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?bind-new-connect\.click$/
-
-# .online domain
-
-# VenomRAT – 2025 [CIS]
-## Fake banking/security domain delivering VenomRAT[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?royalbanksecure\.online$/
-
-# .live domain
-
-# VenomRAT – 2025 [CIS]
-## Fake e-payment site (imitation) used to spread VenomRAT[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?idram-secure\.live$/
-
-# .rs domain
-
-# Agent Tesla – 2025 [CIS]
-## Compromised FTP server domain in .rs used by Agent Tesla[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?jeepcommerce\.rs$/
-
-# .me domain
-
-# Agent Tesla – 2025 [CIS]
-## Dynamic DNS domain (No-IP) used by Agent Tesla for C2/exfil[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^(?:.*\.)?myddns\.me$/
-
-# .gg domain
-
-# XWorm / Agent Tesla – 2025 [ThreatFox/DarkWebInformer]
-## Playit.gg tunneling service abused for malware C2 (XWorm RAT, also seen with Agent Tesla)[7](https://darkwebinformer.com/ioc-alert-xworm-command-and-control-infrastructure/)[8](https://threatfox.abuse.ch/ioc/1539397/) 
-### Blocking specific subdomain used in campaigns (gl.at.ply.gg) to avoid overblocking all Playit.gg.
-/^info-power\.gl\.at\.ply\.gg$/
-
-# .ch domain
-# NanoCore RAT – 2025 [CIS]
-## No-IP (DuckDNS) dynamic DNS used by NanoCore for C2 (unique subdomain observed)[2](https://www.cisecurity.org/insights/blog/top-10-malware-q2-2025)
-/^louinc928\.gotdns\.ch$/
-
-# Crypto Scams
-## Only active and recently confirmed malicious domains are included.
-### .com domains
-/^(?:.*\.)?(?:coinhive|coin\-hive|coin\-have|jsecoin|coinimp|crypto\-loot)\.com$/
-
-### .net domains
-/^(?:.*\.)?(?:coinimp)\.net$/
-
-### .org domains (CryptoLoot service)
-/^(?:.*\.)?(?:crypto\-loot)\.org$/
-
-### .pro domains (CryptoLoot service)
-/^(?:.*\.)?(?:cryptoloot)\.pro$/
-
-### .de domains (Cryptojacking C2 – 2025 campaign)
-/^(?:.*\.)?(?:lokilokitwo)\.de$/
-
-### .store domains (Cryptojacking loader – 2024/2025 campaign)
-/^(?:.*\.)?(?:yobox)\.store$/
-
-### .fun domains (Cryptojacking loader – 2024/2025 campaign)
-/^(?:.*\.)?(?:trustisimportant)\.fun$/
-
-### .rocks domains (Monero web miner service)
-/^(?:.*\.)?(?:monerominer)\.rocks$/
-
-# Scam sites
-/^(track-my-delivery\.net|unsubscribeprime\.info)$/
-
-# Unnessary Tracking
-/^(?:(?:sdkconfig\.ad\.india|thm\.market\.intl|weatherapi\.market)\.xiaomi\.com|(?:cn\.app\.chat|g\.galleryapi\.micloud)\.xiaomi\.net)/
-/^(o\.akisinn\.info|co\.dewrain\.life|co\.vaicore\.site|co\.vaicore\.xyz|int\.akisinn\.info|int\.akisinn\.me|int\.akisinn\.site|int\.dewrain\.life|int\.dewrain\.site|int\.dewrain\.world|int\.vaicore\.site|int\.vaicore\.store|int\.vaicore\.xyz|int\.vlancaa\.site|int\.vlancaa\.fun|tok\.vaicore\.xyz)$/
-/^anonymousinfo-eu-[0-9]+\.cos\.[a-z-]+\.myqcloud\.com$/
 /^service[0-9]\.us\.incognia\.com$/
 
+## Microsoft
+### Notes: Windows diagnostics upload. events.data and watson.telemetry are caught by the keyword rule
+
+/^vortex(-win)?\.data\.microsoft\.com$/
+
+## Mixpanel
+
+/^([a-z0-9-]+\.)*mixpanel\.com$/
+
+## Mozilla
+### Notes: Firefox experiments and studies (Normandy). Also allowlisted, remove it from whitelist.txt for this to apply
+
+/^normandy\.cdn\.mozilla\.net$/
+
+## New Relic
+
+/^([a-z0-9-]+\.)*nr-data\.net$/
+
+## Nintendo
+### Notes: Switch telemetry upload. Also allowlisted, remove it from whitelist.txt for this to apply
+
+/^receive-lp1\.dg\.srv\.nintendo\.net$/
+
+## Segment
+
+/^(api|cdn)\.segment\.(com|io)$/
+
+## Sentry
+
+/^([a-z0-9-]+\.)*sentry\.io$/
+
+## Tencent Cloud
+### Notes: Anonymous info uploads to Tencent object storage
+
+/^anonymousinfo-eu-[0-9]+\.cos\.[a-z0-9-]+\.myqcloud\.com$/
+
+## Withings
+### Notes: RudderStack analytics pipeline. Also allowlisted, remove it from whitelist.txt for this to apply
+
+/^prod\.rudderstack\.withings\.net$/
+
+## Xiaomi
+
+/^(sdkconfig\.ad\.india|thm\.market\.intl|weatherapi\.market)\.xiaomi\.com$/
+/^(cn\.app\.chat|g\.galleryapi\.micloud)\.xiaomi\.net$/
+
+## Misc App Telemetry
+### Notes: Carried over from the old list
+
+/^(int|o)\.akisinn\.(info|me|site)$/
+/^(co|int)\.dewrain\.(life|site|world)$/
+/^(co|int|tok)\.vaicore\.(site|store|xyz)$/
+/^int\.vlancaa\.(fun|site)$/
+
+# Malware
+
+## JDownloader Supply Chain Attack
+### Notes: Installers on the official site replaced with a Python RAT, May 6 to 7, 2026
+### Url: https://bleepingcomputer.com/news/security/jdownloader-site-hacked-to-replace-installers-with-python-rat-malware
+
+/^([a-z0-9-]+\.)*(checkinnhotels|parkspringshotel)\.com$/
+/^([a-z0-9-]+\.)*auraguest\.lk$/
+
+## Free Download Manager Repo
+### Notes: Infected Debian/Ubuntu repository
+
+/^deb\.fdmpkg\.org$/
+/^([a-z0-9-]+\.)*heavenfiles\.lol$/
+
+## CIS Top 10 Malware, Q2 2025
+### Notes: SocGholish, Arechclient2 and Agent Tesla domains named in the IOC breakdown
+### Url: https://circleid.com/posts/top-10-malware-of-q2-2025-a-deep-dive-into-the-iocs
+
+/^([a-z0-9-]+\.)*(candyxpdf|emeraldpinesolutions)\.com$/
+/^([a-z0-9-]+\.)*sixfiguredigital\.group$/
+
+# Scams & Hijackers
+
+## Search Hijackers
+
+/^([a-z0-9-]+\.)*(ezcybersearch|findbetterresults)\.com$/
+
+## Scam Sites
+
+/^track-my-delivery\.net$/
+/^unsubscribeprime\.info$/
