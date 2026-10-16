@@ -52,6 +52,11 @@
 
 # Networking Equipment
 
+## Loopia
+### Notes: DynDNS updates for the Loopia DynDNS integration
+
+/^dyndns\.loopia\.se$/
+
 ## TP-Link Deco
 ### Android: https://play.google.com/store/apps/details?id=com.tplink.tpm5&hl=en&gl=US
 ### iOS: https://apps.apple.com/us/app/tp-link-deco/id1186159417
@@ -106,12 +111,23 @@
 
 /^(current\.cvd|database|www)\.clamav\.net$/
 
+## Docker
+### Notes: Docker Hub image pulls
+
+/^(auth|registry-1)\.docker\.io$/
+/^production\.cloudflare\.docker\.com$/
+
 ## JDownloader 2
 ### Url: https://jdownloader.org/jdownloader2
 ### Android: https://play.google.com/store/apps/details?id=org.appwork.myjdandroid&hl=en&gl=US
 ### iOS: https://apps.apple.com/us/app/myjdownloader-remote/id1203271558
 
 /^(api|my|update|updates|[a-z0-9-]+\.mydns)\.jdownloader\.org$/
+
+## Ollama
+### Notes: Model downloads
+
+/^registry\.ollama\.ai$/
 
 ## Plex
 ### Url: https://www.plex.tv/media-server-downloads/
@@ -136,12 +152,30 @@
 
 # Development
 
+## Espressif
+### Notes: ESP-IDF and ESP32 toolchain downloads
+
+/^dl\.espressif\.com$/
+
 ## GitHub
 ### Url: https://github.com/
+### Notes: raw, objects and codeload are used by HACS and Zigbee2MQTT OTA updates, ghcr.io for container images
 
-/^((alive|api|live)\.)?github\.com$/
-/^(avatars|repository-images)\.githubusercontent\.com$/
+/^((alive|api|codeload|live)\.)?github\.com$/
+/^(avatars|objects|pkg-containers|raw|repository-images)\.githubusercontent\.com$/
 /^github\.githubassets\.com$/
+/^ghcr\.io$/
+
+## PlatformIO
+### Notes: Package registry for ESP32 builds
+
+/^(api|dl)\.registry\.platformio\.org$/
+
+## Python Software Foundation
+### Notes: PyPI, Home Assistant installs custom component requirements from here at runtime
+
+/^pypi\.org$/
+/^files\.pythonhosted\.org$/
 
 # Browsers
 
@@ -161,7 +195,7 @@
 
 ## Google
 
-/^((0\.client-channel|android\.clients|api|apis|clients[1-6]|cse|id|inbox|mail|ogs|pki-goog\.l|play|plus\.l|www|www3\.l)\.)?google\.com$/
+/^((0\.client-channel|android\.clients|api|apis|clients[1-6]|cse|id|inbox|mail|ogs|pki-goog\.l|play|plus\.l|translate|www|www3\.l)\.)?google\.com$/
 /^(connectivitycheck|ssl)\.gstatic\.com$/
 /^gstatic\.com$/
 /^geo3\.ggpht\.com$/
@@ -189,18 +223,24 @@
 /^((api|eu\.api|eu\.cdn|level3|level3\.ssl)\.)?blizzard\.com$/
 
 ## Epic Games
-### Notes: Epic Games Launcher
+### Notes: Epic Games Launcher, store-* hosts feed the Epic Games Store integration
 ### Url: https://store.epicgames.com/en-US/download
 
 /^(account-public-service-prod03|(catalog|friends|launcher|lightswitch)-public-service-prod06|entitlement-public-service-prod08|(orderprocessor|priceengine)-public-service-ecomprod01|datarouter|payment-website-pci|xmpp-service-prod)\.ol\.epicgames\.com$/
 /^(datarouter-prod\.ak|launcher-public-service-prod\.ak|library-service\.live\.use1a\.on|turn\.rtcp\.on)\.epicgames\.com$/
 /^api\.epicgames\.dev$/
+/^(store-content|store-site-backend-static)\.ak\.epicgames\.com$/
 
 ## GOG
 ### Notes: GOG Galaxy
 ### Url: https://www.gog.com/galaxy
 
 /^(api|auth|cfg|chat|content-system|embed|external-accounts|external-users|galaxy-library|galaxy-promos|gameplay|gamesdb|images|login|marketing-sections|menu|notifications|notifications-pusher|notifications-pusher-aws|presence|recommendations-api|remote-config|www)\.gog\.com$/
+
+## Libretro
+### Notes: RetroArch cores and assets
+
+/^buildbot\.libretro\.com$/
 
 ## Mojang
 ### Notes: Minecraft services
@@ -221,6 +261,10 @@
 
 /^(i18n\.)?prismlauncher\.org$/
 
+## RetroAchievements
+
+/^retroachievements\.org$/
+
 ## Rockstar Games
 ### Notes: Rockstar Games Launcher
 ### Url: https://socialclub.rockstargames.com/rockstar-games-launcher
@@ -240,10 +284,20 @@
 /^steam-chat\.com$/
 /^steamcloud-eu-fra\.storage\.googleapis\.com$/
 
+## ScreenScraper
+### Notes: Game metadata scraping (KNULLI, RomScan)
+
+/^www\.screenscraper\.fr$/
+
 ## Techland
 ### Notes: Dying Light online services
 
 /^api\.techlandonlineservices\.com$/
+
+## TheGamesDB
+### Notes: Game metadata for the TheGamesDB Cache Server
+
+/^(api|cdn)\.thegamesdb\.net$/
 
 ## Ubisoft
 ### Notes: Ubisoft Connect
@@ -404,10 +458,15 @@
 
 /^api\.crealitycloud\.com$/
 
+## HACS
+
+/^data-v2\.hacs\.xyz$/
+
 ## Home Assistant
 ### Url: https://www.home-assistant.io/
+### Notes: mobile-apps is the push notification relay, analytics is only used if opted in
 
-/^((alerts|brands|demo|www)\.)?home-assistant\.io$/
+/^((alerts|analytics|brands|demo|mobile-apps|version|www)\.)?home-assistant\.io$/
 /^(hooks|[a-z0-9-]+\.ui)\.nabu\.casa$/
 
 ## Homebridge
@@ -435,6 +494,16 @@
 ### Url: https://www.minibrew.io
 
 /^(api|broker|pro)\.minibrew\.io$/
+
+## Open Food Facts
+### Notes: Product data for the Shopping Assistant integration
+
+/^world\.openfoodfacts\.org$/
+
+## Rituals
+### Notes: Perfume Genie cloud API
+
+/^rituals(\.apiv2)?\.sense-company\.com$/
 
 ## Roborock
 ### Url: https://global.roborock.com/
@@ -506,6 +575,12 @@
 
 # Travel & Weather
 
+## Blitzortung
+### Notes: Lightning strike feed (MQTT) for the Blitzortung integration
+
+/^blitzortung\.ha\.sed\.pl$/
+/^map\.blitzortung\.org$/
+
 ## Flightradar24
 ### Url: https://www.flightradar24.com/
 
@@ -519,6 +594,34 @@
 /^maps\.infoplaza\.nl$/
 /^cluster\.api\.meteoplaza\.com$/
 
+## MET Norway
+### Notes: Met.no forecasts
+
+/^api\.met\.no$/
+
+## Météo-France
+
+/^webservice\.meteofrance\.com$/
+
+## NOAA
+### Notes: Space Weather Prediction Center, used by the NOAA Aurora integration
+
+/^services\.swpc\.noaa\.gov$/
+
+## Open-Meteo
+### Notes: Weather, air quality and pollen
+
+/^(air-quality-api|api)\.open-meteo\.com$/
+
+## Sensor.Community
+
+/^data\.sensor\.community$/
+
+## SMHI
+### Notes: Forecast, fire risk (metfcst), warnings, STRÅNG (metanalys) and radar
+
+/^opendata-download-(metanalys|metfcst|radar|warnings)\.smhi\.se$/
+
 ## Västtrafik
 ### Url: https://www.vasttrafik.se/
 
@@ -528,3 +631,30 @@
 ### Url: https://waqi.info/
 
 /^api\.waqi\.info$/
+
+# Energy
+
+## Electricity Maps
+
+/^api\.electricitymaps\.com$/
+
+## Nord Pool
+### Notes: Spot prices for the Nord Pool integration
+
+/^dataportal-api\.nordpoolgroup\.com$/
+
+# Public Safety
+
+## Brottsplatskartan
+
+/^brottsplatskartan\.se$/
+
+## GDACS
+### Notes: Global Disaster Alert and Coordination System
+
+/^www\.gdacs\.org$/
+
+## MSB
+### Notes: Fire risk data for the Brandrisk Ute integration
+
+/^api\.msb\.se$/
