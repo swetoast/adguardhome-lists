@@ -136,7 +136,7 @@
 /^([a-z0-9-]+\.)*(browser-intake-([a-z0-9]+-)?)?datadoghq\.(com|eu)$/
 
 ## Epic Games
-### Notes: datarouter is Epic's analytics pipeline. Also allowlisted, remove it from whitelist.txt for this to apply
+### Notes: datarouter is Epic's analytics pipeline
 
 /^(datarouter\.ol|datarouter-prod\.ak)\.epicgames\.com$/
 
@@ -151,12 +151,12 @@
 /^([a-z0-9-]+\.)*crashlytics\.com$/
 
 ## Google Location
-### Notes: Location history and personalization. Also allowlisted, remove them from whitelist.txt for this to apply
+### Notes: Location history and personalization
 
 /^(geller-pa|semanticlocation-pa|staging-locationhistory-pa\.sandbox|userlocation)\.googleapis\.com$/
 
 ## Home Assistant
-### Notes: Opt-in analytics. Also allowlisted, remove it from whitelist.txt for this to apply
+### Notes: Opt-in analytics
 
 /^analytics\.home-assistant\.io$/
 
@@ -175,7 +175,7 @@
 /^([a-z0-9-]+\.)*mixpanel\.com$/
 
 ## Mozilla
-### Notes: Firefox experiments and studies (Normandy). Also allowlisted, remove it from whitelist.txt for this to apply
+### Notes: Firefox experiments and studies (Normandy)
 
 /^normandy\.cdn\.mozilla\.net$/
 
@@ -184,7 +184,7 @@
 /^([a-z0-9-]+\.)*nr-data\.net$/
 
 ## Nintendo
-### Notes: Switch telemetry upload. Also allowlisted, remove it from whitelist.txt for this to apply
+### Notes: Switch telemetry upload
 
 /^receive-lp1\.dg\.srv\.nintendo\.net$/
 
@@ -202,7 +202,7 @@
 /^anonymousinfo-eu-[0-9]+\.cos\.[a-z0-9-]+\.myqcloud\.com$/
 
 ## Withings
-### Notes: RudderStack analytics pipeline. Also allowlisted, remove it from whitelist.txt for this to apply
+### Notes: RudderStack analytics pipeline
 
 /^prod\.rudderstack\.withings\.net$/
 
