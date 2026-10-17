@@ -1,13 +1,14 @@
 ! Title: Regexp Whitelist
 ! Description: Regex allowlist for AdGuard Home (DNS allowlist). Hostname rules only.
-! Version: 2026.10.16
-! Last modified: 2026-10-16
+! Version: 2026.10.17
+! Last modified: 2026-10-17
 
 # Regexp Whitelist
 ### Rules are anchored /^...$/ with every literal dot escaped
 ### Alternations sorted alphabetically, no .* or \w
 ### AdGuard Home uses RE2: no lookaheads, no backreferences
 ### Layout: # type, ## vendor, ### comment
+### Telemetry is blocked in blacklist.txt, do not allow it here
 
 # Network & PKI
 
@@ -188,7 +189,7 @@
 /^(detectportal|profile\.accounts|www)\.firefox\.com$/
 /^firefoxusercontent\.com$/
 /^(addons|aus5|services\.addons|versioncheck-bg\.addons|www)\.mozilla\.org$/
-/^(assets|content-signature-2\.cdn|firefox-settings-attachments\.cdn|normandy\.cdn)\.mozilla\.net$/
+/^(assets|content-signature-2\.cdn|firefox-settings-attachments\.cdn)\.mozilla\.net$/
 /^(classify-client|firefox\.settings|location|push|shavar|sync-1-us-west1-g\.sync|token)\.services\.mozilla\.com$/
 
 # Google
@@ -203,9 +204,9 @@
 ## Google APIs
 ### Url: https://developers.google.com/discovery/v1/getting_started
 
-/^(android|fcm|firebaseremoteconfig|fonts|maps|messages|play|safebrowsing|userlocation|www)\.googleapis\.com$/
-/^(androidpay-users|androidtvlauncherxfe|deviceintegritytokens|geller|gnpfesdk|jnn|lamssettings|notifications|people|playatoms|reach|reminders|semanticlocation|ulp1p|update)-pa\.googleapis\.com$/
-/^(instantmessaging-pa-preprod-eu|staging-locationhistory-pa\.sandbox)\.googleapis\.com$/
+/^(android|fcm|firebaseremoteconfig|fonts|maps|messages|play|safebrowsing|www)\.googleapis\.com$/
+/^(androidpay-users|androidtvlauncherxfe|deviceintegritytokens|gnpfesdk|jnn|lamssettings|notifications|people|playatoms|reach|reminders|ulp1p|update)-pa\.googleapis\.com$/
+/^instantmessaging-pa-preprod-eu\.googleapis\.com$/
 
 # Gaming
 
@@ -226,8 +227,8 @@
 ### Notes: Epic Games Launcher, store-* hosts feed the Epic Games Store integration
 ### Url: https://store.epicgames.com/en-US/download
 
-/^(account-public-service-prod03|(catalog|friends|launcher|lightswitch)-public-service-prod06|entitlement-public-service-prod08|(orderprocessor|priceengine)-public-service-ecomprod01|datarouter|payment-website-pci|xmpp-service-prod)\.ol\.epicgames\.com$/
-/^(datarouter-prod\.ak|launcher-public-service-prod\.ak|library-service\.live\.use1a\.on|turn\.rtcp\.on)\.epicgames\.com$/
+/^(account-public-service-prod03|(catalog|friends|launcher|lightswitch)-public-service-prod06|entitlement-public-service-prod08|(orderprocessor|priceengine)-public-service-ecomprod01|payment-website-pci|xmpp-service-prod)\.ol\.epicgames\.com$/
+/^(launcher-public-service-prod\.ak|library-service\.live\.use1a\.on|turn\.rtcp\.on)\.epicgames\.com$/
 /^api\.epicgames\.dev$/
 /^(store-content|store-site-backend-static)\.ak\.epicgames\.com$/
 
@@ -252,7 +253,7 @@
 ### Url: https://www.nintendo.com/switch/system/
 
 /^((accounts|api\.accounts)\.)?nintendo\.com$/
-/^((aauth|dauth)-lp1\.ndas|nncs[12]-lp1\.n\.n|receive-lp1\.dg)\.srv\.nintendo\.net$/
+/^((aauth|dauth)-lp1\.ndas|nncs[12]-lp1\.n\.n)\.srv\.nintendo\.net$/
 /^(bcat-(data|list|topics)-lp1|ctest|ctest-ul-lp1)\.cdn\.nintendo\.net$/
 /^((aqua|sun)\.hac\.lp1\.d4c|(pushmo|tagaya)\.hac\.lp1\.eshop|capi\.lp1\.op2|dragons\.hac\.lp1\.dragons|shop)\.nintendo\.net$/
 
@@ -464,9 +465,9 @@
 
 ## Home Assistant
 ### Url: https://www.home-assistant.io/
-### Notes: mobile-apps is the push notification relay, analytics is only used if opted in
+### Notes: mobile-apps is the push notification relay
 
-/^((alerts|analytics|brands|demo|mobile-apps|version|www)\.)?home-assistant\.io$/
+/^((alerts|brands|demo|mobile-apps|version|www)\.)?home-assistant\.io$/
 /^(hooks|[a-z0-9-]+\.ui)\.nabu\.casa$/
 
 ## Homebridge
@@ -546,7 +547,7 @@
 ## Withings
 ### Url: https://www.withings.net
 
-/^(prod\.rudderstack|sct01-ws|wbsapi)\.withings\.net$/
+/^(sct01-ws|wbsapi)\.withings\.net$/
 
 # Delivery & Tracking
 
