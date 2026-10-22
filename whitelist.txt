@@ -1,7 +1,7 @@
 ! Title: Regexp Whitelist
 ! Description: Regex allowlist for AdGuard Home (DNS allowlist). Hostname rules only.
-! Version: 2026.10.17
-! Last modified: 2026-10-17
+! Version: 2026.10.22.2
+! Last modified: 2026-10-22
 
 # Regexp Whitelist
 ### Rules are anchored /^...$/ with every literal dot escaped
@@ -17,31 +17,13 @@
 
 /^ad-block\.dns\.adguard\.com$/
 
-## Microsoft
-### Notes: Windows connectivity check
-### Url: https://www.microsoft.com/en-us/windows
+## Apple
+### Notes: Captive portal check
 
-/^(ipv6|www)\.msftconnecttest\.com$/
-/^(dns|ipv6)\.msftncsi\.com$/
-
-## ipdata
-### Notes: IP geolocation API
-
-/^api\.ipdata\.co$/
-
-## Let's Encrypt
-### Url: https://letsencrypt.org/docs/lencr.org/
-
-/^letsencrypt\.org$/
-/^x[12]\.c\.lencr\.org$/
-
-## NTP Pool
-### Url: https://www.ntppool.org/en/
-
-/^([0-3]\.)?((android|arch|debian|nz|openwrt|ubnt)\.)?pool\.ntp\.org$/
+/^captive\.apple\.com$/
 
 ## Certificate Authorities
-### Notes: OCSP (Online Certificate Status Protocol)
+### Notes: OCSP and CRL, ctldl is the Windows root certificate list
 ### Url: https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol
 
 /^ocsp2?\.(digicert|globalsign)\.com$/
@@ -50,24 +32,80 @@
 /^ocsp2?\.pki\.goog$/
 /^ocsp2?\.comodoca\.com\.cdn\.cloudflare\.net$/
 /^ocsp\.swisssign\.net$/
+/^c\.pki\.goog$/
+/^ctldl\.windowsupdate\.com$/
+
+## ConnMan
+### Notes: Connectivity check
+
+/^ipv4\.connman\.net$/
+
+## icanhazip
+### Notes: Public IP lookup
+
+/^ipv4\.icanhazip\.com$/
+
+## ipdata
+### Notes: IP geolocation API
+
+/^api\.ipdata\.co$/
+
+## ipify
+### Notes: Public IP lookup
+
+/^api\.ipify\.org$/
+
+## Let's Encrypt
+### Notes: CRL hosts, OCSP was shut down in 2025
+### Url: https://letsencrypt.org/docs/lencr.org/
+
+/^letsencrypt\.org$/
+/^[a-z][a-z0-9]{0,2}\.c\.lencr\.org$/
+
+## Microsoft
+### Notes: Windows connectivity check
+### Url: https://www.microsoft.com/en-us/windows
+
+/^(ipv6|www)\.msftconnecttest\.com$/
+/^(dns|ipv6)\.msftncsi\.com$/
+
+## NIST
+### Notes: Time servers
+
+/^time\.nist\.gov$/
+
+## NTP Pool
+### Url: https://www.ntppool.org/en/
+
+/^([0-3]\.)?((android|arch|debian|nz|openwrt|ubnt)\.)?pool\.ntp\.org$/
 
 # Networking Equipment
 
 ## Loopia
-### Notes: DynDNS updates for the Loopia DynDNS integration
+### Notes: DynDNS updates
 
 /^dyndns\.loopia\.se$/
 
-## TP-Link Deco
+## Tailscale
+### Url: https://tailscale.com/
+### Notes: Control plane API and packages. log.tailscale.com is telemetry and is blocked
+
+/^(api|pkgs)\.tailscale\.com$/
+
+## TP-Link
+### Notes: Deco and smart home cloud
 ### Android: https://play.google.com/store/apps/details?id=com.tplink.tpm5&hl=en&gl=US
 ### iOS: https://apps.apple.com/us/app/tp-link-deco/id1186159417
 
 /^n-(devs|euw1-wap|wap)-gw\.tplinkcloud\.com$/
 /^api-homecare-cloud\.i\.tplinknbu\.com$/
+/^(ase1-device-cloudgateway|security)\.iot\.i\.tplinknbu\.com$/
 
 ## Ubiquiti
+### Notes: trace and crash-report-service on svc.ui.com are telemetry and stay blocked
 
-/^(dl|download|downloads|fw-download|fw-update|repo|static)\.ubnt\.com$/
+/^((cloudaccess\.svc|config|dl|download|downloads|fw-download|fw-update|repo|static|svc)\.)?ubnt\.com$/
+/^((dl|sso|static|svc|www)\.)?ui\.com$/
 /^(client|device|update)\.amplifi\.com$/
 /^global\.(stun|turn)\.twilio\.com$/
 /^ips1\.unifi-ai\.com$/
@@ -86,19 +124,27 @@
 ### Url: https://archlinux.org/
 
 /^((accounts|archive|aur|bbs|bugs|git|gitlab|lists|mail|md|monitoring|openpgpkey|openpgpkey\.master-key|pages|ping|redirect|repos|security|status|wiki|www)\.)?archlinux\.org$/
+/^geo\.mirror\.pkgbuild\.com$/
 
 ## Canonical
-### Notes: Livepatch and Snap Store
+### Notes: Ubuntu archive, ESM, PPAs, Livepatch and Snap Store
 ### Url: https://ubuntu.com/security/livepatch/docs/client/firewall
 
 /^(contracts|livepatch|livepatch-files)\.canonical\.com$/
 /^api\.snapcraft\.io$/
+/^(archive|esm)\.ubuntu\.com$/
+/^ppa\.launchpad(content)?\.net$/
 
 ## fwupd
 ### Notes: Hardware firmware updates (LVFS)
 ### Url: https://fwupd.org/
 
 /^cdn\.fwupd\.org$/
+
+## MongoDB
+### Notes: Package repository
+
+/^repo\.mongodb\.org$/
 
 # Self-hosted & NAS
 
@@ -115,8 +161,8 @@
 ## Docker
 ### Notes: Docker Hub image pulls
 
-/^(auth|registry-1)\.docker\.io$/
-/^production\.cloudflare\.docker\.com$/
+/^((auth|registry-1)\.)?docker\.io$/
+/^production\.cloud(flare|front)\.docker\.com$/
 
 ## JDownloader 2
 ### Url: https://jdownloader.org/jdownloader2
@@ -129,21 +175,25 @@
 ### Notes: Model downloads
 
 /^registry\.ollama\.ai$/
+/^ollama\.com$/
 
 ## Plex
 ### Url: https://www.plex.tv/media-server-downloads/
 ### Android: https://play.google.com/store/apps/details?id=com.plexapp.android&hl=en&gl=US
 ### iOS: https://apps.apple.com/us/app/plex-stream-movies-tv/id383457673
 
-/^((acoustid|api|app|assets|clients|community|dashboard|discover\.provider|downloads|features|forums|images|lyricfind|mbz|meta|metadata\.provider|metadata-static|o1\.email|o2\.sg0|plexamp|proxy|pubsub|scrobbles|songkick|sonos|staging|status|together|tvdb2|v4)\.)?plex\.tv$/
+/^((acoustid|api|app|assets|clients|community|dashboard|discover\.provider|downloads|features|forums|images|lyricfind|mbz|meta|metadata\.provider|metadata-static|o1\.email|o2\.sg0|plexamp|proxy|pubsub|repo|scrobbles|servers|songkick|sonos|staging|status|together|tvdb2|v4|www)\.)?plex\.tv$/
+/^(location|pubsub)\.plex\.bz$/
+/^pubsub[0-9]{2}\.pop\.[a-z]{3}\.plex\.bz$/
 /^((my|nine\.plugins|tvthemes)\.)?plexapp\.com$/
-/^([0-9]{1,3}-){3}[0-9]{1,3}\.[a-f0-9]+\.plex\.direct$/
+/^(_[0-9]{1,5}\._https\.)?([0-9a-f]{1,4}-){3,7}[0-9a-f]{1,4}\.[a-z0-9]+\.plex\.direct$/
 
 ## Syncthing
 ### Url: https://syncthing.net/
 ### Android: https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid&hl=en&gl=US
 
 /^(discovery|discovery-announce-v[46]|discovery-lookup|discovery-v[46]|stun|upgrades)\.syncthing\.net$/
+/^apt\.syncthing\.net$/
 
 ## Unraid
 ### Url: https://www.unraid.net
@@ -153,6 +203,24 @@
 
 # Development
 
+## Anthropic
+### Notes: Claude apps and API
+
+/^(api|assets-proxy|s-cdn)\.anthropic\.com$/
+/^((assets|downloads)\.)?claude\.ai$/
+/^([a-f0-9-]+\.frame|bridge)\.claudeusercontent\.com$/
+/^[a-f0-9]{32}\.claudemcpcontent\.com$/
+
+## cdnjs
+### Notes: Front-end libraries
+
+/^cdnjs\.cloudflare\.com$/
+
+## ESPHome
+### Notes: Firmware downloads
+
+/^firmware\.esphome\.io$/
+
 ## Espressif
 ### Notes: ESP-IDF and ESP32 toolchain downloads
 
@@ -160,12 +228,17 @@
 
 ## GitHub
 ### Url: https://github.com/
-### Notes: raw, objects and codeload are used by HACS and Zigbee2MQTT OTA updates, ghcr.io for container images
 
-/^((alive|api|codeload|live)\.)?github\.com$/
-/^(avatars|objects|pkg-containers|raw|repository-images)\.githubusercontent\.com$/
+/^((alive|api|codeload|gist|live)\.)?github\.com$/
+/^api\.individual\.githubcopilot\.com$/
+/^(avatars|camo|objects|pkg-containers|raw|release-assets|repository-images)\.githubusercontent\.com$/
 /^github\.githubassets\.com$/
 /^ghcr\.io$/
+
+## jsDelivr
+### Notes: Front-end libraries
+
+/^cdn\.jsdelivr\.net$/
 
 ## PlatformIO
 ### Notes: Package registry for ESP32 builds
@@ -173,10 +246,15 @@
 /^(api|dl)\.registry\.platformio\.org$/
 
 ## Python Software Foundation
-### Notes: PyPI, Home Assistant installs custom component requirements from here at runtime
+### Notes: PyPI
 
 /^pypi\.org$/
 /^files\.pythonhosted\.org$/
+
+## unpkg
+### Notes: npm CDN
+
+/^unpkg\.com$/
 
 # Browsers
 
@@ -195,18 +273,24 @@
 # Google
 
 ## Google
+### Notes: mtalk is push notifications (FCM), gvt1 is Chrome and Android update downloads
 
 /^((0\.client-channel|android\.clients|api|apis|clients[1-6]|cse|id|inbox|mail|ogs|pki-goog\.l|play|plus\.l|translate|www|www3\.l)\.)?google\.com$/
-/^(connectivitycheck|ssl)\.gstatic\.com$/
+/^(accounts|android\.apis|dl|mtalk|time)\.google\.com$/
+/^(connectivitycheck|fonts|ssl|www)\.gstatic\.com$/
 /^gstatic\.com$/
 /^geo3\.ggpht\.com$/
+/^(edgedl\.me|rr[0-9]{1,2}---sn-[a-z0-9-]+)\.gvt1\.com$/
 
 ## Google APIs
+### Notes: Wear OS sync, Google Home, Thread and Matter
 ### Url: https://developers.google.com/discovery/v1/getting_started
 
 /^(android|fcm|firebaseremoteconfig|fonts|maps|messages|play|safebrowsing|www)\.googleapis\.com$/
 /^(androidpay-users|androidtvlauncherxfe|deviceintegritytokens|gnpfesdk|jnn|lamssettings|notifications|people|playatoms|reach|reminders|ulp1p|update)-pa\.googleapis\.com$/
 /^instantmessaging-pa-preprod-eu\.googleapis\.com$/
+/^(firebaseinstallations|gmail|threadcredentialsdistribution|update)\.googleapis\.com$/
+/^(androidwearcloudsync|googlehomefoyer|homeplatformmesh|pixelweatherhub|playgateway)-pa\.googleapis\.com$/
 
 # Gaming
 
@@ -224,12 +308,13 @@
 /^((api|eu\.api|eu\.cdn|level3|level3\.ssl)\.)?blizzard\.com$/
 
 ## Epic Games
-### Notes: Epic Games Launcher, store-* hosts feed the Epic Games Store integration
+### Notes: Epic Games Launcher and store
 ### Url: https://store.epicgames.com/en-US/download
 
 /^(account-public-service-prod03|(catalog|friends|launcher|lightswitch)-public-service-prod06|entitlement-public-service-prod08|(orderprocessor|priceengine)-public-service-ecomprod01|payment-website-pci|xmpp-service-prod)\.ol\.epicgames\.com$/
 /^(launcher-public-service-prod\.ak|library-service\.live\.use1a\.on|turn\.rtcp\.on)\.epicgames\.com$/
 /^api\.epicgames\.dev$/
+/^eosh\.epicgamescdn\.com$/
 /^(store-content|store-site-backend-static)\.ak\.epicgames\.com$/
 
 ## GOG
@@ -238,10 +323,32 @@
 
 /^(api|auth|cfg|chat|content-system|embed|external-accounts|external-users|galaxy-library|galaxy-promos|gameplay|gamesdb|images|login|marketing-sections|menu|notifications|notifications-pusher|notifications-pusher-aws|presence|recommendations-api|remote-config|www)\.gog\.com$/
 
+## KNULLI
+### Notes: System updates
+
+/^updates\.knulli\.org$/
+
 ## Libretro
 ### Notes: RetroArch cores and assets
 
 /^buildbot\.libretro\.com$/
+
+## Logitech G
+### Notes: G HUB updates
+
+/^updates\.ghub\.logitechg\.com$/
+
+## Microsoft
+### Notes: Xbox Game Pass. The mp.microsoft.com hosts are Microsoft Store licensing
+### Url: https://www.xbox.com/en-US/xbox-game-pass
+### Android: https://play.google.com/store/apps/details?id=com.gamepass&hl=en&gl=US
+### iOS: https://apps.apple.com/us/app/xbox-game-pass/id1374542474
+
+/^(achievements|avty|chat|device\.auth|dlassets-ssl|eplists|images-eds|images-eds-ssl|notificationinbox|peoplehub|privacy|profile|rta|social|streaming|title\.auth|titlehub|updatepc|user\.auth|userpresence|xblmessaging|xccs|xsts\.auth)\.xboxlive\.com$/
+/^(catalog|profile)\.gamepass\.com$/
+/^beige\.xboxservices\.com$/
+/^www\.xboxab\.com$/
+/^(collections|displaycatalog)\.mp\.microsoft\.com$/
 
 ## Mojang
 ### Notes: Minecraft services
@@ -256,6 +363,18 @@
 /^((aauth|dauth)-lp1\.ndas|nncs[12]-lp1\.n\.n)\.srv\.nintendo\.net$/
 /^(bcat-(data|list|topics)-lp1|ctest|ctest-ul-lp1)\.cdn\.nintendo\.net$/
 /^((aqua|sun)\.hac\.lp1\.d4c|(pushmo|tagaya)\.hac\.lp1\.eshop|capi\.lp1\.op2|dragons\.hac\.lp1\.dragons|shop)\.nintendo\.net$/
+
+## NVIDIA
+### Notes: Driver downloads and app config. Telemetry and experiment hosts are blocked
+
+/^international-gfe\.download\.nvidia\.com$/
+/^localized-config-api\.gx\.nvidia\.com$/
+/^gfwsl\.geforce\.com$/
+
+## PortMaster
+### Notes: Ports for handhelds
+
+/^portmaster\.games$/
 
 ## Prism Launcher
 ### Url: https://prismlauncher.org/download/
@@ -273,20 +392,8 @@
 /^(((auth-)?rgl-prod\.ros|gamedownloads|prod\.cloud|rgl)\.)?rockstargames\.com$/
 /^rockstar-api\.arkoselabs\.com$/
 
-## Valve
-### Notes: Steam
-### Url: https://store.steampowered.com/about/
-### Android: https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community&hl=en&gl=US
-### iOS: https://apps.apple.com/us/app/steam-mobile/id495369748
-
-/^(api|store|test)\.steampowered\.com$/
-/^(client-update|clientconfig|community)\.akamai\.steamstatic\.com$/
-/^(ext2-ams1|ext2-sto1|ext2-sto2|ext4-lhr1|ipv6check-http)\.steamserver\.net$/
-/^steam-chat\.com$/
-/^steamcloud-eu-fra\.storage\.googleapis\.com$/
-
 ## ScreenScraper
-### Notes: Game metadata scraping (KNULLI, RomScan)
+### Notes: Game metadata scraping
 
 /^www\.screenscraper\.fr$/
 
@@ -296,7 +403,7 @@
 /^api\.techlandonlineservices\.com$/
 
 ## TheGamesDB
-### Notes: Game metadata for the TheGamesDB Cache Server
+### Notes: Game metadata
 
 /^(api|cdn)\.thegamesdb\.net$/
 
@@ -307,16 +414,21 @@
 /^(account|connect)\.ubisoft\.com$/
 /^(channel-service\.upc|connect|public-ubiservices|public-ws-ubiservices|wallet\.ecom)\.ubi\.com$/
 
-## Microsoft
-### Notes: Xbox Game Pass
-### Url: https://www.xbox.com/en-US/xbox-game-pass
-### Android: https://play.google.com/store/apps/details?id=com.gamepass&hl=en&gl=US
-### iOS: https://apps.apple.com/us/app/xbox-game-pass/id1374542474
+## Valve
+### Notes: Steam
+### Url: https://store.steampowered.com/about/
+### Android: https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community&hl=en&gl=US
+### iOS: https://apps.apple.com/us/app/steam-mobile/id495369748
 
-/^(achievements|avty|chat|device\.auth|dlassets-ssl|eplists|images-eds|images-eds-ssl|notificationinbox|peoplehub|privacy|profile|rta|social|streaming|title\.auth|titlehub|updatepc|user\.auth|userpresence|xblmessaging|xccs|xsts\.auth)\.xboxlive\.com$/
-/^(catalog|profile)\.gamepass\.com$/
-/^beige\.xboxservices\.com$/
-/^www\.xboxab\.com$/
+/^(api|store|test)\.steampowered\.com$/
+/^(client-update|clientconfig|community)\.akamai\.steamstatic\.com$/
+/^(ext2-ams1|ext2-sto1|ext2-sto2|ext4-lhr1|ipv6check-http)\.steamserver\.net$/
+/^(cmp[0-9]-[a-z]{3}[0-9]|p2p-[a-z]{3}[0-9]\.discovery)\.steamserver\.net$/
+/^([a-z0-9-]+\.)?steamcontent\.com$/
+/^steamcommunity\.com$/
+/^avatars\.steamstatic\.com$/
+/^steam-chat\.com$/
+/^steamcloud-eu-fra\.storage\.googleapis\.com$/
 
 # Communication
 
@@ -330,11 +442,16 @@
 /^gateway(-us-east1-[a-z])?\.discord\.gg$/
 /^latency\.discord\.media$/
 
+## GSMA
+### Notes: Wi-Fi calling (ePDG) for Swedish operators, MCC 240
+
+/^epdg\.epc\.mnc[0-9]{3}\.mcc240\.pub\.3gppnetwork\.org$/
+
 ## Pushbullet
 ### Url: https://www.pushbullet.com/
 ### Android: https://play.google.com/store/apps/details?id=com.pushbullet.android&hl=en&gl=US
 
-/^((api|ocelot|static|stream|stream2|stream-android|stream-extension|update|websocket|www|zebra)\.)?pushbullet\.com$/
+/^((api|api2|ocelot|static|stream|stream2|stream-android|stream-extension|update|websocket|www|zebra)\.)?pushbullet\.com$/
 
 ## Signal
 ### Url: https://signal.org/en/download/
@@ -373,10 +490,25 @@
 
 /^api\.soundcloud\.com$/
 
+## SponsorBlock
+### Notes: Skips sponsor segments on YouTube
+
+/^sponsor\.ajay\.app$/
+
 ## SVT
 
 /^(api|www)\.svt\.se$/
 /^www\.svtstatic\.se$/
+
+## TheTVDB
+### Notes: Movie and TV metadata and artwork
+
+/^artworks\.thetvdb\.com$/
+
+## TMDB
+### Notes: Movie and TV metadata and artwork
+
+/^(api|image)\.tmdb\.org$/
 
 ## Unsplash
 
@@ -384,12 +516,13 @@
 
 ## YouTube
 
-/^(s\.)?youtube\.com$/
+/^((img|s|www)\.)?youtube\.com$/
 /^youtube-nocookie\.com$/
 /^youtu\.be$/
 /^(i|i1|s)\.ytimg\.com$/
 /^(video-stats\.l|youtube-ui\.l)\.google\.com$/
 /^(manifest|redirector)\.googlevideo\.com$/
+/^rr[0-9]{1,2}(---|\.)sn-[a-z0-9-]+\.googlevideo\.com$/
 /^youtubei\.googleapis\.com$/
 /^yt3\.ggpht\.com$/
 
@@ -454,6 +587,16 @@
 /^(global-api|hub-api)\.airthin\.gs$/
 /^(accounts-api|ext-api)\.airthings\.com$/
 
+## Battery Notes
+### Notes: Device battery type library
+
+/^battery-notes-data\.codechimp\.org$/
+
+## Connectivity Standards Alliance
+### Notes: Matter Distributed Compliance Ledger, used when commissioning Matter devices
+
+/^on\.dcl\.csa-iot\.org$/
+
 ## Creality Cloud
 ### Url: https://www.crealitycloud.com/
 
@@ -469,6 +612,8 @@
 
 /^((alerts|brands|demo|mobile-apps|version|www)\.)?home-assistant\.io$/
 /^(hooks|[a-z0-9-]+\.ui)\.nabu\.casa$/
+/^(account-link|api|cloud|servicehandlers)\.nabucasa\.com$/
+/^wheels\.home-assistant\.io$/
 
 ## Homebridge
 ### Notes: Google Smart Home plugin
@@ -483,11 +628,16 @@
 /^h20593\.www2\.hp\.com$/
 /^xmpp005\.hpeprint\.com$/
 
+## iNaturalist
+### Notes: Open data photos
+
+/^inaturalist-open-data\.s3\.amazonaws\.com$/
+
 ## Logitech
-### Notes: Harmony
+### Notes: Harmony. logging.dhg is telemetry and stays blocked
 ### Url: https://www.myharmony.com/en-se/
 
-/^((appcompatibility|cf-svcs|home|sus\.dhg|svcs)\.)?myharmony\.com$/
+/^((appcompatibility|cf-svcs|home|rcbu-prod-ssl-amr|sl\.dhg|sus\.dhg|svcs)\.)?myharmony\.com$/
 /^(ps-[0-9]{1,3}|pubsub)\.pubnub\.com$/
 /^accounts\.logi\.com$/
 
@@ -497,19 +647,24 @@
 /^(api|broker|pro)\.minibrew\.io$/
 
 ## Open Food Facts
-### Notes: Product data for the Shopping Assistant integration
+### Notes: Product database
 
 /^world\.openfoodfacts\.org$/
+
+## Powercalc
+### Notes: Power profile library
+
+/^api\.powercalc\.nl$/
 
 ## Rituals
 ### Notes: Perfume Genie cloud API
 
-/^rituals(\.apiv2)?\.sense-company\.com$/
+/^(rituals|rituals\.apiv2|sockets\.rituals)\.sense-company\.com$/
 
 ## Roborock
 ### Url: https://global.roborock.com/
 
-/^(api-eu|mqtt-eu)\.roborock\.com$/
+/^(api-eu|euiot|mqtt-eu|wood-eu)\.roborock\.com$/
 /^(conf|ultronsplus)-eu-1316693915\.cos\.eu-frankfurt\.myqcloud\.com$/
 
 ## Sector Alarm
@@ -523,14 +678,22 @@
 /^((advika|alya|amrita|anaya|api|divya|fw|garima|isha|ishita|jaya|kavya|lisa|live|mahi|myra|navya|niya|pa-api|priya|rachita|triya|vanya|vega)\.)?telldus\.com$/
 
 ## Tuya
+### Notes: airtake is camera snapshot storage
 ### Url: https://www.tuya.com/
 
-/^(a[1-46]?|apigw|images|m[1-46]|mq\.gw|openapi|px1)\.tuyaeu\.com$/
+/^(a[1-46]?|apigw|images|m[1-46]|mq\.gw|openapi|px1|stream)\.tuyaeu\.com$/
+/^airtake-private-data-eu\.s3\.eu-central-1\.amazonaws\.com$/
 
 ## Verisure
 ### Url: https://www.verisure.se/
 
 /^automation0[12]\.verisure\.com$/
+
+## Zigbee2MQTT
+### Notes: OTA firmware index and docs
+
+/^koenkk\.github\.io$/
+/^www\.zigbee2mqtt\.io$/
 
 # Wearables & Health
 
@@ -540,7 +703,7 @@
 /^(api|digital-assets|static0)\.fitbit\.com$/
 
 ## Qualcomm
-### Notes: XTRA A-GPS data, used by Pixel Watch
+### Notes: XTRA A-GPS data
 
 /^(path[1-3]|time)\.xtracloud\.net$/
 
@@ -551,17 +714,23 @@
 
 # Delivery & Tracking
 
-## AliExpress
-
-/^track\.aliexpress\.com$/
-
 ## Airmee
 
 /^tracking\.airmee\.com$/
 
+## AliExpress
+### Notes: Cainiao is AliExpress logistics
+
+/^track\.aliexpress\.com$/
+/^global\.cainiao\.com$/
+
 ## Bring
 
 /^tracking\.bring\.se$/
+
+## DHL
+
+/^hamta\.dhl\.com$/
 
 ## Early Bird
 
@@ -576,8 +745,13 @@
 
 # Travel & Weather
 
+## Air Matters
+### Notes: Pollen and air quality
+
+/^air-quality\.com$/
+
 ## Blitzortung
-### Notes: Lightning strike feed (MQTT) for the Blitzortung integration
+### Notes: Lightning strike feed (MQTT)
 
 /^blitzortung\.ha\.sed\.pl$/
 /^map\.blitzortung\.org$/
@@ -605,7 +779,7 @@
 /^webservice\.meteofrance\.com$/
 
 ## NOAA
-### Notes: Space Weather Prediction Center, used by the NOAA Aurora integration
+### Notes: Space Weather Prediction Center
 
 /^services\.swpc\.noaa\.gov$/
 
@@ -614,14 +788,25 @@
 
 /^(air-quality-api|api)\.open-meteo\.com$/
 
+## Overdrop
+### Notes: Weather app
+
+/^weather\.overdrop\.app$/
+
 ## Sensor.Community
 
 /^data\.sensor\.community$/
 
 ## SMHI
-### Notes: Forecast, fire risk (metfcst), warnings, STRÅNG (metanalys) and radar
+### Notes: Forecast, fire risk (metfcst), warnings, STRÅNG (metanalys), radar and satellite
 
-/^opendata-download-(metanalys|metfcst|radar|warnings)\.smhi\.se$/
+/^opendata-download-(metanalys|metfcst|radar|satellite|warnings)\.smhi\.se$/
+
+## Transitous
+### Url: https://transitous.org/
+### Notes: Public transport routing API
+
+/^api\.transitous\.org$/
 
 ## Västtrafik
 ### Url: https://www.vasttrafik.se/
@@ -639,8 +824,13 @@
 
 /^api\.electricitymaps\.com$/
 
+## elprisetjustnu.se
+### Notes: Swedish electricity spot prices
+
+/^(www\.)?elprisetjustnu\.se$/
+
 ## Nord Pool
-### Notes: Spot prices for the Nord Pool integration
+### Notes: Electricity spot prices
 
 /^dataportal-api\.nordpoolgroup\.com$/
 
@@ -656,6 +846,6 @@
 /^www\.gdacs\.org$/
 
 ## MSB
-### Notes: Fire risk data for the Brandrisk Ute integration
+### Notes: Fire risk data
 
 /^api\.msb\.se$/
