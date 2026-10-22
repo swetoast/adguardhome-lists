@@ -9,6 +9,7 @@
 ### AdGuard Home uses RE2: no lookaheads, no backreferences
 ### Whole-domain blocks use /^([a-z0-9-]+\.)*domain\.tld$/ to cover the domain and every subdomain
 ### The allowlist wins over this list, so anything here that is also in whitelist.txt is not blocked
+### Exception: rules ending in $important win over the allowlist. Used where a vendor is allowlisted as a whole
 ### Layout: # type, ## vendor, ### comment
 
 # Patterns
@@ -283,6 +284,12 @@
 
 /^([a-z0-9-]+\.)*dc-telemetry\.net$/
 
+## WhatsApp
+### Notes: Crash log upload. $important so it stays blocked while whatsapp.net is allowlisted
+### Notes: Analytics travel inside the encrypted chat connection, so DNS cannot separate them
+
+/^crashlogs\.whatsapp\.net$/$important
+
 ## Withings
 ### Notes: RudderStack analytics pipeline
 
@@ -324,4 +331,4 @@
 
 ## Search Hijackers
 
-/^([a-z0-9-]+\.)*(ezcybersearch|findbetterresults)\.com$
+/^([a-z0-9-]+\.)*(ezcybersearch|findbetterresults)\.com$/
