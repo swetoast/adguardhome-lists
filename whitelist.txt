@@ -458,6 +458,13 @@
 
 /^((api|cdn|cdn2|chat|storage|updates|updates2)\.)?signal\.org$/
 
+## WhatsApp
+### Url: https://www.whatsapp.com/download
+### Notes: All subdomains. The crash log upload is blocked by an $important rule in blacklist.txt
+
+/^([a-z0-9-]+\.)*whatsapp\.(com|net)$/
+/^wa\.me$/
+
 # Android Apps
 
 ## Mister Group
