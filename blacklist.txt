@@ -1,7 +1,7 @@
 ! Title: Regexp Blacklist
 ! Description: Regex blocklist for AdGuard Home. Hostname rules only.
-! Version: 2026.10.16
-! Last modified: 2026-10-16
+! Version: 2026.10.22
+! Last modified: 2026-10-22
 
 # Regexp Blacklist
 ### Rules are anchored /^...$/ with every literal dot escaped
@@ -12,13 +12,6 @@
 ### Layout: # type, ## vendor, ### comment
 
 # Patterns
-
-## Telemetry Keywords
-### Matches the keyword only as its own subdomain label, never inside a site name
-### Blocks metrics.icloud.com and telemetry.example.net, leaves dtrace.org and marketingland.com alone
-### "tracking" and "tracker" are left out on purpose: parcel tracking and torrent trackers use them
-
-/^([a-z0-9-]+\.)*([a-z0-9]+-)?(analytics|annons|banners?|beacons?|collect|collectors?|counters?|crashlytics|dtrace|events|footprints|insights-collector|logging|marketing|metrics|pixels?|stats|statistics|telemetry|trace)[0-9]*(-[a-z0-9]+)*\.([a-z0-9-]+\.)+[a-z]{2,}$/
 
 ## Ad Server Keywords
 ### Same label rule for ad serving hosts: ad., ads1., adx-eu., adserver., adservice., adsystem., mads.
@@ -31,6 +24,13 @@
 ### Url: https://www.cybercrimeinfocenter.org/spam-activity-in-tlds-march-may-2026
 
 /^([a-z0-9-]+\.)+(bid|bond|cam|cfd|click|help|icu|loan|mom|mov|qpon|rest|sbs|top|vip|win|xin|zip)$/
+
+## Telemetry Keywords
+### Matches the keyword only as its own subdomain label, never inside a site name
+### Blocks metrics.icloud.com and telemetry.example.net, leaves dtrace.org and marketingland.com alone
+### "tracking" and "tracker" are left out on purpose: parcel tracking and torrent trackers use them
+
+/^([a-z0-9-]+\.)*([a-z0-9]+-)?(analytics|annons|banners?|beacons?|collect|collectors?|counters?|crashlytics|dtrace|events|footprints|insights-collector|logging|marketing|metrics|pixels?|stats|statistics|telemetry|trace)[0-9]*(-[a-z0-9]+)*\.([a-z0-9-]+\.)+[a-z]{2,}$/
 
 # Ads & Tracking
 
@@ -48,6 +48,10 @@
 
 /^([a-z0-9-]+\.)*omtrdc\.net$/
 
+## AdsNinja
+
+/^([a-z0-9-]+\.)*adsninja\.ca$/
+
 ## Affiliator
 
 /^([a-z0-9-]+\.)*affiliator\.(com|nu)$/
@@ -55,6 +59,13 @@
 ## Affiliaxe
 
 /^([a-z0-9-]+\.)*affiliaxe\.com$/
+
+## Bonnier News
+### Notes: Ad network (Bonad), consent platform and Borås Tidning tracking
+
+/^([a-z0-9-]+\.)*bonad\.io$/
+/^cmp\.bonniernews\.se$/
+/^tracking\.bt\.se$/
 
 ## Brandmetrics
 
@@ -65,12 +76,15 @@
 /^([a-z0-9-]+\.)*funnelytics\.io$/
 
 ## Google
-### Notes: Ad serving, ad conversion, tag manager and analytics
+### Notes: Ad serving, ad conversion, tag manager, analytics, in-app promos and YouTube panel research
 
 /^([a-z0-9-]+\.)*(admob|google-analytics|googleadservices|googletagmanager)\.com$/
 /^([a-z0-9-]+\.)*app-measurement\.com$/
 /^([a-z0-9-]+\.)*doubleclick\.net$/
 /^([a-z0-9-]+\.)*googlesyndication\.com$/
+/^fundingchoicesmessages\.google\.com$/
+/^(appsgrowthpromo|ogads)-pa\.clients6\.google\.com$/
+/^eligibility-panelresearch\.googlevideo\.com$/
 
 ## Microsoft
 ### Notes: footprintdns is network measurement for Microsoft services
@@ -81,6 +95,11 @@
 
 /^([a-z0-9-]+\.)*imrworldwide\.com$/
 
+## OneTrust
+### Notes: Consent geolocation lookup
+
+/^geolocation\.onetrust\.com$/
+
 ## Oracle
 ### Notes: Moat ad verification
 
@@ -90,6 +109,13 @@
 ### Notes: Ads and ACR (automatic content recognition) on Samsung TVs
 
 /^([a-z0-9-]+\.)*(samsungacr|samsungads)\.com$/
+
+## Schibsted
+### Notes: Pulse analytics, ad inventory and ad identity hashing (Aftonbladet, SvD, Omni)
+
+/^([a-z0-9-]+\.)*(inventory|pulse)\.schibsted\.io$/
+/^hasher\.schibsted\.com$/
+/^cmp\.omni\.se$/
 
 ## Statsy
 
@@ -127,13 +153,28 @@
 
 /^(api|api2|api3)\.branch\.io$/
 
+## Braze
+### Notes: Marketing automation SDK
+
+/^([a-z0-9-]+\.)*braze\.(com|eu)$/
+
 ## Bugsnag
 
 /^([a-z0-9-]+\.)*bugsnag\.com$/
 
+## Cloudflare
+### Notes: Network Error Logging reports
+
+/^a\.nel\.cloudflare\.com$/
+
 ## Datadog
 
 /^([a-z0-9-]+\.)*(browser-intake-([a-z0-9]+-)?)?datadoghq\.(com|eu)$/
+
+## Delivery Hero
+### Notes: Product analytics (Foodora)
+
+/^perseus-productanalytics\.deliveryhero\.net$/
 
 ## Epic Games
 ### Notes: datarouter is Epic's analytics pipeline
@@ -145,15 +186,16 @@
 /^galaxy-client-reports\.gog\.com$/
 
 ## Google
-### Notes: Firebase logging and Crashlytics
+### Notes: Firebase logging, Crashlytics, Android context upload, client tracing, federated learning, feedback and experiments
 
-/^firebaselogging-pa\.googleapis\.com$/
+/^(android-context-data|clienttracing-pa|federatedcompute-pa|firebaselogging|firebaselogging-pa)\.googleapis\.com$/
+/^(feedback|peoplestackwebexperiments)-pa\.clients6\.google\.com$/
 /^([a-z0-9-]+\.)*crashlytics\.com$/
 
 ## Google Location
 ### Notes: Location history and personalization
 
-/^(geller-pa|semanticlocation-pa|staging-locationhistory-pa\.sandbox|userlocation)\.googleapis\.com$/
+/^(geller-pa|locationhistoryaggregates-pa|semanticlocation-pa|staging-locationhistory-pa\.sandbox|userlocation)\.googleapis\.com$/
 
 ## Home Assistant
 ### Notes: Opt-in analytics
@@ -166,13 +208,27 @@
 /^service[0-9]\.us\.incognia\.com$/
 
 ## Microsoft
-### Notes: Windows diagnostics upload. events.data and watson.telemetry are caught by the keyword rule
+### Notes: Windows diagnostics upload and activity history. events.data and watson.telemetry are caught by the keyword rule
 
 /^vortex(-win)?\.data\.microsoft\.com$/
+/^activity\.windows\.com$/
+
+## Misc App Telemetry
+### Notes: Carried over from the old list
+
+/^(int|o)\.akisinn\.(info|me|site)$/
+/^(co|int)\.dewrain\.(life|site|world)$/
+/^(co|int|tok)\.vaicore\.(site|store|xyz)$/
+/^int\.vlancaa\.(fun|site)$/
 
 ## Mixpanel
 
 /^([a-z0-9-]+\.)*mixpanel\.com$/
+
+## MoEngage
+### Notes: Marketing automation SDK
+
+/^([a-z0-9-]+\.)*moengage\.com$/
 
 ## Mozilla
 ### Notes: Firefox experiments and studies (Normandy)
@@ -188,6 +244,17 @@
 
 /^receive-lp1\.dg\.srv\.nintendo\.net$/
 
+## NVIDIA
+### Notes: NVIDIA app telemetry and experiments
+
+/^([a-z0-9-]+\.)*telemetry\.data\.nvidia\.com$/
+/^gx-target-experiments-frontend-api\.gx\.nvidia\.com$/
+
+## OneSignal
+### Notes: Push and analytics SDK. Some apps deliver their push notifications through it
+
+/^([a-z0-9-]+\.)*onesignal\.com$/
+
 ## Segment
 
 /^(api|cdn)\.segment\.(com|io)$/
@@ -196,10 +263,25 @@
 
 /^([a-z0-9-]+\.)*sentry\.io$/
 
+## Tailscale
+### Notes: Client log upload. Can also be turned off with tailscale up --no-logs-no-support
+
+/^log\.tailscale\.com$/
+
 ## Tencent Cloud
 ### Notes: Anonymous info uploads to Tencent object storage
 
 /^anonymousinfo-eu-[0-9]+\.cos\.[a-z0-9-]+\.myqcloud\.com$/
+
+## Ubiquiti
+### Notes: UniFi crash reports and tracing
+
+/^(crash-report-service|trace)\.svc\.ui\.com$/
+
+## Unknown Vendor
+### Notes: Telemetry encoded in DNS labels, vendor not identified
+
+/^([a-z0-9-]+\.)*dc-telemetry\.net$/
 
 ## Withings
 ### Notes: RudderStack analytics pipeline
@@ -211,28 +293,7 @@
 /^(sdkconfig\.ad\.india|thm\.market\.intl|weatherapi\.market)\.xiaomi\.com$/
 /^(cn\.app\.chat|g\.galleryapi\.micloud)\.xiaomi\.net$/
 
-## Misc App Telemetry
-### Notes: Carried over from the old list
-
-/^(int|o)\.akisinn\.(info|me|site)$/
-/^(co|int)\.dewrain\.(life|site|world)$/
-/^(co|int|tok)\.vaicore\.(site|store|xyz)$/
-/^int\.vlancaa\.(fun|site)$/
-
 # Malware
-
-## JDownloader Supply Chain Attack
-### Notes: Installers on the official site replaced with a Python RAT, May 6 to 7, 2026
-### Url: https://bleepingcomputer.com/news/security/jdownloader-site-hacked-to-replace-installers-with-python-rat-malware
-
-/^([a-z0-9-]+\.)*(checkinnhotels|parkspringshotel)\.com$/
-/^([a-z0-9-]+\.)*auraguest\.lk$/
-
-## Free Download Manager Repo
-### Notes: Infected Debian/Ubuntu repository
-
-/^deb\.fdmpkg\.org$/
-/^([a-z0-9-]+\.)*heavenfiles\.lol$/
 
 ## CIS Top 10 Malware, Q2 2025
 ### Notes: SocGholish, Arechclient2 and Agent Tesla domains named in the IOC breakdown
@@ -241,17 +302,26 @@
 /^([a-z0-9-]+\.)*(candyxpdf|emeraldpinesolutions)\.com$/
 /^([a-z0-9-]+\.)*sixfiguredigital\.group$/
 
+## Free Download Manager Repo
+### Notes: Infected Debian/Ubuntu repository
+
+/^deb\.fdmpkg\.org$/
+/^([a-z0-9-]+\.)*heavenfiles\.lol$/
+
+## JDownloader Supply Chain Attack
+### Notes: Installers on the official site replaced with a Python RAT, May 6 to 7, 2026
+### Url: https://bleepingcomputer.com/news/security/jdownloader-site-hacked-to-replace-installers-with-python-rat-malware
+
+/^([a-z0-9-]+\.)*(checkinnhotels|parkspringshotel)\.com$/
+/^([a-z0-9-]+\.)*auraguest\.lk$/
+
 # Scams & Hijackers
-
-## Search Hijackers
-
-/^([a-z0-9-]+\.)*(ezcybersearch|findbetterresults)\.com$/
 
 ## Scam Sites
 
 /^track-my-delivery\.net$/
 /^unsubscribeprime\.info$/
 
-## Cryptominers
+## Search Hijackers
 
-/^ota\.proxystream\.st$/
+/^([a-z0-9-]+\.)*(ezcybersearch|findbetterresults)\.com$
